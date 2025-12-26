@@ -7,43 +7,41 @@
   body {
     background:#0b0f14;
     color:#e5e7eb;
-    font-family: system-ui;
-    padding:40px;
+    font-family: monospace;
+    padding:20px;
   }
-  h1 { color:#60a5fa }
+  h1 { color:#60a5fa; }
   .row {
-    display:grid;
-    grid-template-columns: 160px 100px 80px 100px;
+    display:flex;
+    gap:20px;
     padding:10px 0;
     border-bottom:1px solid #1f2937;
   }
-  .long { color:#22c55e }
-  .short { color:#ef4444 }
+  .long { color:#22c55e; }
+  .short { color:#ef4444; }
 </style>
 </head>
-
 <body>
-  <h1>Gate 異常監控</h1>
-  <div id="time"></div>
-  <br>
-  <div id="list"></div>
+
+<h1>Gate 異常監控</h1>
+<div id="updated"></div>
+<div id="list"></div>
 
 <script>
-fetch("./data_fast.json?t=" + Date.now())
+fetch("./data_fast.json")
   .then(r => r.json())
-  .then(data => {
-    document.getElementById("time").textContent =
-      "最後更新：" + data.updated;
+  .then(d => {
+    document.getElementById("updated").innerText =
+      "最後更新：" + d.updated;
 
     const list = document.getElementById("list");
-    list.innerHTML = "";
 
-    if (!data.items || data.items.length === 0) {
-      list.innerHTML = "目前沒有異常幣種";
+    if (!d.items.length) {
+      list.innerHTML = "<p>目前沒有異常幣種</p>";
       return;
     }
 
-    data.items.forEach(i => {
+    d.items.forEach(i => {
       const row = document.createElement("div");
       row.className = "row";
       row.innerHTML = `
@@ -51,17 +49,13 @@ fetch("./data_fast.json?t=" + Date.now())
         <div class="${i.direction}">
           ${i.direction.toUpperCase()}
         </div>
-        <div>${i.score}%</div>
+        <div>${i.change}%</div>
         <div>$${i.price}</div>
       `;
       list.appendChild(row);
     });
-  })
-  .catch(err => {
-    document.getElementById("list").textContent =
-      "讀取 data_fast.json 失敗";
-    console.error(err);
   });
 </script>
+
 </body>
 </html>
