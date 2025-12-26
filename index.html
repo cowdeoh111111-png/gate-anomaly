@@ -1,70 +1,67 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8" />
-  <title>Gate 異常監控</title>
-  <style>
-    body {
-      margin: 0;
-      background: #0b0f14;
-      color: #e5e7eb;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont;
-    }
-    .wrap {
-      padding: 24px;
-    }
-    h1 {
-      color: #60a5fa;
-      margin-bottom: 8px;
-    }
-    .time {
-      color: #9ca3af;
-      margin-bottom: 16px;
-    }
-    .item {
-      padding: 12px 0;
-      border-bottom: 1px solid #1f2937;
-      display: flex;
-      gap: 16px;
-      font-size: 15px;
-    }
-    .long { color: #22c55e; }
-    .short { color: #ef4444; }
-  </style>
+<meta charset="UTF-8" />
+<title>Gate 異常監控</title>
+<style>
+  body {
+    background:#0b0f14;
+    color:#e5e7eb;
+    font-family: system-ui;
+    padding:40px;
+  }
+  h1 { color:#60a5fa }
+  .row {
+    display:grid;
+    grid-template-columns: 160px 100px 80px 100px;
+    padding:10px 0;
+    border-bottom:1px solid #1f2937;
+  }
+  .long { color:#22c55e }
+  .short { color:#ef4444 }
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <h1>Gate 異常監控（前端測試）</h1>
-    <div class="time">測試時間：<span id="time"></span></div>
-    <div id="list"></div>
-  </div>
+  <h1>Gate 異常監控</h1>
+  <div id="time"></div>
+  <br>
+  <div id="list"></div>
 
-  <script>
-    // 🔴 強制假資料（用來測試畫面）
-    const data = {
-      updated: new Date().toLocaleString("zh-TW"),
-      items: [
-        { symbol: "BTC_USDT", direction: "long", score: 0.52, price: 43000 },
-        { symbol: "ETH_USDT", direction: "short", score: 0.41, price: 2200 },
-        { symbol: "SOL_USDT", direction: "long", score: 0.37, price: 98 }
-      ]
-    };
-
-    document.getElementById("time").textContent = data.updated;
+<script>
+fetch("./data_fast.json?t=" + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById("time").textContent =
+      "最後更新：" + data.updated;
 
     const list = document.getElementById("list");
+    list.innerHTML = "";
+
+    if (!data.items || data.items.length === 0) {
+      list.innerHTML = "目前沒有異常幣種";
+      return;
+    }
 
     data.items.forEach(i => {
-      const div = document.createElement("div");
-      div.className = "item";
-      div.innerHTML = `
+      const row = document.createElement("div");
+      row.className = "row";
+      row.innerHTML = `
         <div>${i.symbol}</div>
-        <div class="${i.direction}">${i.direction.toUpperCase()}</div>
+        <div class="${i.direction}">
+          ${i.direction.toUpperCase()}
+        </div>
         <div>${i.score}%</div>
         <div>$${i.price}</div>
       `;
-      list.appendChild(div);
+      list.appendChild(row);
     });
-  </script>
+  })
+  .catch(err => {
+    document.getElementById("list").textContent =
+      "讀取 data_fast.json 失敗";
+    console.error(err);
+  });
+</script>
 </body>
 </html>
