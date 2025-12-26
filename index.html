@@ -1,129 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8" />
-  <title>Gate 異常監控</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <style>
-    body {
-      margin: 0;
-      padding: 32px;
-      background: #0b0f14;
-      color: #e5e7eb;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, "Noto Sans TC", Arial, sans-serif;
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: 28px;
-      color: #60a5fa;
-    }
-
-    .updated {
-      color: #9ca3af;
-      font-size: 14px;
-      margin-bottom: 24px;
-    }
-
-    .empty {
-      color: #9ca3af;
-      padding: 24px 0;
-    }
-
-    .row {
-      display: grid;
-      grid-template-columns: 160px 80px 80px 120px 80px;
-      align-items: center;
-      padding: 14px 0;
-      border-bottom: 1px solid #1f2937;
-      font-size: 15px;
-    }
-
-    .row.header {
-      color: #9ca3af;
-      font-size: 13px;
-      padding-bottom: 10px;
-    }
-
-    .symbol {
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-
-    .long {
-      color: #22c55e;
-      font-weight: 600;
-    }
-
-    .short {
-      color: #ef4444;
-      font-weight: 600;
-    }
-
-    .score {
-      font-weight: 700;
-      text-align: right;
-    }
-  </style>
+<meta charset="utf-8" />
+<title>Gate 異常監控</title>
+<style>
+body {
+  background:#0b0f14;
+  color:#e5e7eb;
+  font-family: monospace;
+  padding:20px;
+}
+h1 { color:#60a5fa; }
+.time { color:#9ca3af; margin-bottom:20px; }
+.section { margin-top:30px; }
+.row {
+  display:grid;
+  grid-template-columns: 140px 80px 80px 120px 80px;
+  padding:10px 0;
+  border-bottom:1px solid #1f2937;
+}
+.long { color:#22c55e; }
+.short { color:#ef4444; }
+.score { font-weight:bold; }
+</style>
 </head>
-
 <body>
 
-  <h1>Gate 異常監控</h1>
-  <div id="updated" class="updated">讀取中…</div>
+<h1>Gate 異常監控</h1>
+<div class="time" id="time"></div>
+<div id="app"></div>
 
-  <div class="row header">
-    <div>幣種</div>
-    <div>方向</div>
-    <div>變動</div>
-    <div>價格</div>
-    <div>強度</div>
-  </div>
+<script>
+fetch("data_fast.json?_=" + Date.now())
+  .then(r => r.json())
+  .then(d => {
+    document.getElementById("time").textContent =
+      "最後更新：" + d.updated;
 
-  <div id="list"></div>
+    const groups = {};
+    d.items.forEach(i => {
+      if (!groups[i.category]) groups[i.category] = [];
+      groups[i.category].push(i);
+    });
 
-  <script>
-    fetch("data_fast.json")
-      .then(res => res.json())
-      .then(data => {
-        const updatedEl = document.getElementById("updated");
-        const listEl = document.getElementById("list");
+    const app = document.getElementById("app");
 
-        updatedEl.textContent = "最後更新：" + data.updated;
-
-        if (!data.items || data.items.length === 0) {
-          listEl.innerHTML =
-            '<div class="empty">目前盤面平靜，沒有異常幣種</div>';
-          return;
-        }
-
-        listEl.innerHTML = "";
-
-        data.items.forEach(item => {
-          const row = document.createElement("div");
-          row.className = "row";
-
-          row.innerHTML = `
-            <div class="symbol">${item.symbol}</div>
-            <div class="${item.direction}">
-              ${item.direction.toUpperCase()}
-            </div>
-            <div>${item.change.toFixed(2)}%</div>
-            <div>$${Number(item.price).toLocaleString()}</div>
-            <div class="score">${item.score}</div>
-          `;
-
-          listEl.appendChild(row);
-        });
-      })
-      .catch(err => {
-        document.getElementById("list").innerHTML =
-          '<div class="empty">資料讀取失敗</div>';
-        console.error(err);
+    ["主流","山寨","瘋狗"].forEach(cat => {
+      if (!groups[cat]) return;
+      const sec = document.createElement("div");
+      sec.className = "section";
+      sec.innerHTML = `<h2>${cat}</h2>`;
+      groups[cat].forEach(i => {
+        sec.innerHTML += `
+          <div class="row">
+            <div>${i.symbol}</div>
+            <div class="${i.direction}">${i.direction}</div>
+            <div>${i.change}%</div>
+            <div>$${i.price}</div>
+            <div class="score">${i.score}</div>
+          </div>`;
       });
-  </script>
+      app.appendChild(sec);
+    });
+  });
+</script>
 
 </body>
 </html>
