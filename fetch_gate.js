@@ -1,45 +1,38 @@
 const fs = require("fs");
 
-const MODE = process.env.MODE || "fast";
-
-// Gate API（永續合約）
-const API =
-  "https://api.gateio.ws/api/v4/futures/usdt/tickers";
-
-async function run() {
-  const res = await fetch(API);
-  const data = await res.json();
-
-  // 將所有幣轉成漲跌幅
-  const all = data
-    .map(t => {
-      const last = Number(t.last);
-      const prev = Number(t.prev_settle_price);
-      if (!last || !prev) return null;
-
-      const pct = ((last - prev) / prev) * 100;
-
-      return {
-        symbol: t.contract,
-        direction: pct > 0 ? "long" : "short",
-        score: Number(Math.abs(pct).toFixed(2)),
-        price: last,
-        category: "測試"
-      };
-    })
-    .filter(Boolean)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 5); // 只取前 5 名
+function run() {
+  const items = [
+    {
+      symbol: "BTC_USDT",
+      direction: "long",
+      score: 0.52,
+      price: 43000
+    },
+    {
+      symbol: "ETH_USDT",
+      direction: "short",
+      score: 0.41,
+      price: 2200
+    },
+    {
+      symbol: "SOL_USDT",
+      direction: "long",
+      score: 0.37,
+      price: 98
+    }
+  ];
 
   const out = {
     updated: new Date().toLocaleString("zh-TW"),
-    items: all
+    items
   };
 
-  const file =
-    MODE === "fast" ? "data_fast.json" : "data_slow.json";
+  fs.writeFileSync(
+    "data_fast.json",
+    JSON.stringify(out, null, 2)
+  );
 
-  fs.writeFileSync(file, JSON.stringify(out, null, 2));
+  console.log("data_fast.json written");
 }
 
 run();
