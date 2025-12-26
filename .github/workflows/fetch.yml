@@ -1,0 +1,36 @@
+name: Update Gate Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"   # 每 5 分鐘跑一次（之後可改）
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Run fetch script (fast)
+        run: |
+          node fetch_gate.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@users.noreply.github.com"
+
+          if git status --porcelain | grep .; then
+            git add data_fast.json data_slow.json || true
+            git commit -m "update market data"
+            git push
+          else
+            echo "No changes to commit"
+          fi
