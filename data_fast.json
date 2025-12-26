@@ -1,23 +1,26 @@
 {
-  "updated": "2025/12/26 下午6:26:32",
+  "updated": "2025/12/26 下午6:31:10",
   "items": [
-    {
-      "symbol": "BTC_USDT",
-      "direction": "long",
-      "score": 0.52,
-      "price": 43000
-    },
     {
       "symbol": "ETH_USDT",
       "direction": "short",
-      "score": 0.41,
-      "price": 2200
+      "change": -1.07,
+      "price": 2921,
+      "score": 107
     },
     {
       "symbol": "SOL_USDT",
-      "direction": "long",
-      "score": 0.37,
-      "price": 98
+      "direction": "short",
+      "change": -1.47,
+      "price": 122,
+      "score": 147
+    },
+    {
+      "symbol": "BTC_USDT",
+      "direction": "short",
+      "change": -1.1,
+      "price": 87223,
+      "score": 110
     }
   ]
 }
