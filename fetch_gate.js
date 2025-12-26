@@ -1,53 +1,36 @@
-// Node.js 18+（GitHub Actions 內建 fetch）
-const fs = require("fs");
+// fetch_gate.js
+import fs from "fs";
 
 const MODE = process.env.MODE || "fast";
-const INTERVAL = MODE === "fast" ? "1m" : "5m";
-const LIMIT = 50;
 
-async function fetchJSON(url) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  return res.json();
-}
-
-async function fetchTickers() {
-  return fetchJSON("https://api.gateio.ws/api/v4/futures/usdt/tickers");
-}
-
-async function fetchCandles(symbol) {
-  return fetchJSON(
-    `https://api.gateio.ws/api/v4/futures/usdt/candlesticks?contract=${symbol}&interval=${INTERVAL}&limit=${LIMIT}`
-  );
-}
+// Gate API（USDT 永續）
+const URL =
+  "https://api.gateio.ws/api/v4/futures/usdt/contracts";
 
 async function run() {
-  const tickers = await fetchTickers();
-
-  const top = tickers
-    .filter(t => t.contract.endsWith("USDT"))
-    .slice(0, 30); // 🔴 先少一點，保證穩
+  const res = await fetch(URL);
+  const data = await res.json();
 
   const items = [];
 
-  for (const t of top) {
+  for (const t of data) {
     try {
-      const candles = await fetchCandles(t.contract);
-      if (!candles || candles.length < 10) continue;
+      const last = Number(t.last);
+      const prev = Number(t.prev_settle_price);
 
-      const last = candles[candles.length - 1];
-      const prev = candles[candles.length - 2];
+      if (!last || !prev) continue;
 
-      const close = Number(last[2]);
-      const prevClose = Number(prev[2]);
-      if (!close || !prevClose) continue;
+      // 單幣漲跌幅（百分比）
+      const pct = ((last - prev) / prev) * 100;
 
-      const change = (close - prevClose) / prevClose;
+      // 實戰門檻（偏鬆，但不亂）
+      if (Math.abs(pct) < 0.8) continue;
 
       items.push({
-        symbol: t.contract,
-        direction: change > 0 ? "long" : "short",
-        score: Math.round(Math.abs(change) * 10000),
+        symbol: t.name,
+        direction: pct > 0 ? "long" : "short",
+        score: Number(Math.abs(pct).toFixed(2)),
+        price: last,
         category: "主流"
       });
     } catch (e) {
@@ -55,9 +38,15 @@ async function run() {
     }
   }
 
+  // 依「異常程度」排序
+  items.sort((a, b) => b.score - a.score);
+
+  // 保底：只取前 5～20 名
+  const finalItems = items.slice(0, MODE === "fast" ? 10 : 20);
+
   const out = {
     updated: new Date().toLocaleString("zh-TW"),
-    items
+    items: finalItems
   };
 
   fs.writeFileSync(
