@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gate Anomaly Monitor</title>
+  <style>
+    body {
+      font-family: monospace;
+      background: #0d1117;
+      color: #c9d1d9;
+      padding: 20px;
+    }
+    h1 { color: #58a6ff; }
+    .time { color: #8b949e; margin-bottom: 20px; }
+    .item {
+      border-bottom: 1px solid #30363d;
+      padding: 10px 0;
+    }
+    .long { color: #3fb950; }
+    .short { color: #f85149; }
+  </style>
+</head>
+<body>
+  <h1>Gate 異常監控</h1>
+  <div class="time" id="updated">讀取中…</div>
+  <div id="list"></div>
+
+  <script>
+    fetch('./data_fast.json')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('updated').innerText =
+          '最後更新：' + data.updated;
+
+        const list = document.getElementById('list');
+
+        if (!data.items || data.items.length === 0) {
+          list.innerHTML = '<div class="item">目前沒有異常幣種</div>';
+          return;
+        }
+
+        data.items.forEach(i => {
+          const div = document.createElement('div');
+          div.className = 'item ' + i.direction;
+          div.innerHTML = `
+            <div><strong>${i.symbol}</strong></div>
+            <div class="${i.direction}">
+              方向：${i.direction.toUpperCase()}｜
+              分數：${i.score}｜
+              類型：${i.category}
+            </div>
+          `;
+          list.appendChild(div);
+        });
+      })
+      .catch(err => {
+        document.getElementById('updated').innerText =
+          '讀取失敗（JSON 尚未產生）';
+      });
+  </script>
+</body>
+</html>
