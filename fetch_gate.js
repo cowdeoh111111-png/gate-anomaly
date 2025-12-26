@@ -1,11 +1,10 @@
-// fetch_gate.js
-import fs from "fs";
+// fetch_gate.js（CommonJS 版，GitHub Actions 可直接跑）
+const fs = require("fs");
 
 const MODE = process.env.MODE || "fast";
 
-// Gate API（USDT 永續）
-const URL =
-  "https://api.gateio.ws/api/v4/futures/usdt/contracts";
+// Gate USDT 永續合約
+const URL = "https://api.gateio.ws/api/v4/futures/usdt/contracts";
 
 async function run() {
   const res = await fetch(URL);
@@ -20,10 +19,9 @@ async function run() {
 
       if (!last || !prev) continue;
 
-      // 單幣漲跌幅（百分比）
       const pct = ((last - prev) / prev) * 100;
 
-      // 實戰門檻（偏鬆，但不亂）
+      // 異常門檻（夠鬆，一定會有）
       if (Math.abs(pct) < 0.8) continue;
 
       items.push({
@@ -38,10 +36,10 @@ async function run() {
     }
   }
 
-  // 依「異常程度」排序
+  // 依異常程度排序
   items.sort((a, b) => b.score - a.score);
 
-  // 保底：只取前 5～20 名
+  // 保底顯示
   const finalItems = items.slice(0, MODE === "fast" ? 10 : 20);
 
   const out = {
