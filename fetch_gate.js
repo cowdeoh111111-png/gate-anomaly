@@ -1,56 +1,45 @@
-// fetch_gate.js（CommonJS 版，GitHub Actions 可直接跑）
 const fs = require("fs");
 
 const MODE = process.env.MODE || "fast";
 
-// Gate USDT 永續合約
-const URL = "https://api.gateio.ws/api/v4/futures/usdt/contracts";
+// Gate API（永續合約）
+const API =
+  "https://api.gateio.ws/api/v4/futures/usdt/tickers";
 
 async function run() {
-  const res = await fetch(URL);
+  const res = await fetch(API);
   const data = await res.json();
 
-  const items = [];
-
-  for (const t of data) {
-    try {
+  // 將所有幣轉成漲跌幅
+  const all = data
+    .map(t => {
       const last = Number(t.last);
       const prev = Number(t.prev_settle_price);
-
-      if (!last || !prev) continue;
+      if (!last || !prev) return null;
 
       const pct = ((last - prev) / prev) * 100;
 
-      // 異常門檻（夠鬆，一定會有）
-      if (Math.abs(pct) < 0.8) continue;
-
-      items.push({
-        symbol: t.name,
+      return {
+        symbol: t.contract,
         direction: pct > 0 ? "long" : "short",
         score: Number(Math.abs(pct).toFixed(2)),
         price: last,
-        category: "主流"
-      });
-    } catch (e) {
-      // ignore
-    }
-  }
-
-  // 依異常程度排序
-  items.sort((a, b) => b.score - a.score);
-
-  // 保底顯示
-  const finalItems = items.slice(0, MODE === "fast" ? 10 : 20);
+        category: "測試"
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 5); // 只取前 5 名
 
   const out = {
     updated: new Date().toLocaleString("zh-TW"),
-    items: finalItems
+    items: all
   };
 
-  fs.writeFileSync(
-    MODE === "fast" ? "data_fast.json" : "data_slow.json",
-    JSON.stringify(out, null, 2)
-  );
+  const file =
+    MODE === "fast" ? "data_fast.json" : "data_slow.json";
+
+  fs.writeFileSync(file, JSON.stringify(out, null, 2));
 }
 
 run();
