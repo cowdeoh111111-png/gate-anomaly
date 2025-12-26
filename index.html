@@ -5,52 +5,70 @@
 <title>Gate 異常監控</title>
 <style>
   body {
-    background:#0b0f14;
-    color:#e5e7eb;
-    font-family: monospace;
-    padding:20px;
+    background: #0b0f14;
+    color: #e6edf3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    padding: 32px;
   }
-  h1 { color:#60a5fa; }
+  h1 {
+    color: #58a6ff;
+  }
+  .time {
+    color: #8b949e;
+    margin-bottom: 20px;
+  }
   .row {
-    display:flex;
-    gap:20px;
-    padding:10px 0;
-    border-bottom:1px solid #1f2937;
+    display: grid;
+    grid-template-columns: 160px 80px 80px 100px 80px;
+    padding: 12px 0;
+    border-bottom: 1px solid #21262d;
+    align-items: center;
   }
-  .long { color:#22c55e; }
-  .short { color:#ef4444; }
+  .long {
+    color: #3fb950;
+    font-weight: 600;
+  }
+  .short {
+    color: #f85149;
+    font-weight: 600;
+  }
+  .score {
+    font-weight: 700;
+  }
 </style>
 </head>
 <body>
 
 <h1>Gate 異常監控</h1>
-<div id="updated"></div>
+<div class="time" id="time"></div>
 <div id="list"></div>
 
 <script>
 fetch("./data_fast.json")
   .then(r => r.json())
-  .then(d => {
-    document.getElementById("updated").innerText =
-      "最後更新：" + d.updated;
+  .then(data => {
+    document.getElementById("time").innerText =
+      "最後更新：" + data.updated;
 
     const list = document.getElementById("list");
 
-    if (!d.items.length) {
-      list.innerHTML = "<p>目前沒有異常幣種</p>";
+    if (!data.items.length) {
+      list.innerHTML = "<div>目前沒有異常幣種</div>";
       return;
     }
 
-    d.items.forEach(i => {
+    data.items.forEach(i => {
       const row = document.createElement("div");
       row.className = "row";
+
       row.innerHTML = `
         <div>${i.symbol}</div>
-        <div class="${i.direction}">
-          ${i.direction.toUpperCase()}
+        <div class="${i.direction === "LONG" ? "long" : "short"}">
+          ${i.direction}
         </div>
         <div>${i.change}%</div>
         <div>$${i.price}</div>
+        <div class="score">${i.score}</div>
       `;
       list.appendChild(row);
     });
