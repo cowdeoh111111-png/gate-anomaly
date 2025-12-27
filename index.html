@@ -1,137 +1,227 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gate 異常監控</title>
   <style>
     body {
-      background: #0b0f14;
-      color: #e5e7eb;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont;
-      padding: 24px;
+      font-family: Arial, sans-serif;
+      background-color: #181818;
+      color: #fff;
+      margin: 0;
+      padding: 0;
     }
-    h1 { color: #4da3ff; }
+    .container {
+      margin: 20px;
+    }
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+      color: #5c5c5c;
+    }
+    .status {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #ccc;
+    }
+    .card {
+      background-color: #333;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    .card p {
+      margin: 5px 0;
+    }
+    .action-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 5px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .action-button.disabled {
+      background-color: #dcdcdc;
+      cursor: not-allowed;
+    }
+    .mode-selector {
+      margin: 20px 0;
+    }
+    .mode-selector button {
+      background-color: #444;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .mode-selector button.active {
+      background-color: #4CAF50;
+    }
+    .table-container {
+      margin-top: 20px;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 16px;
     }
     th, td {
-      padding: 10px;
-      border-bottom: 1px solid #1f2937;
+      padding: 12px;
       text-align: left;
+      border-bottom: 1px solid #ddd;
     }
-    .long { color: #22c55e; }
-    .short { color: #ef4444; }
-    .neutral { color: #facc15; }
+    th {
+      background-color: #444;
+    }
+    tr:hover {
+      background-color: #575757;
+    }
+    .status-warning {
+      color: yellow;
+    }
+    .status-danger {
+      color: red;
+    }
+    .status-success {
+      color: green;
+    }
   </style>
 </head>
-
 <body>
-  <h1>Gate 異常監控</h1>
-  <div id="updated"></div>
-  <div id="market" style="margin-top:8px;font-weight:bold;"></div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>幣種</th>
-        <th>方向</th>
-        <th>變動</th>
-        <th>價格</th>
-        <th>強度</th>
-        <th>操作建議</th>
-      </tr>
-    </thead>
-    <tbody id="rows"></tbody>
-  </table>
+<div class="container">
+  <div class="title">Gate 異常監控</div>
+  <div class="status">最後更新：<span id="last-updated">Loading...</span></div>
 
-  <script>
-    // ⬇⬇⬇ 這裡就是我叫你貼的地方 ⬇⬇⬇
+  <!-- Mode Selector -->
+  <div class="mode-selector">
+    <button id="mode-conservative" class="active" onclick="changeMode('conservative')">保守</button>
+    <button id="mode-normal" onclick="changeMode('normal')">正常</button>
+    <button id="mode-aggressive" onclick="changeMode('aggressive')">激進</button>
+  </div>
 
-    let mode = 'normal';
+  <!-- Direction and Confidence -->
+  <div class="status">
+    目前方向：<span id="current-direction">Loading...</span> | 信心：<span id="confidence">Loading...</span>%
+  </div>
 
-    function getMarketBias(items) {
-      const btc = items.find(i => i.symbol === 'BTC_USDT');
-      const eth = items.find(i => i.symbol === 'ETH_USDT');
+  <!-- Warning Message -->
+  <div id="warning-message" class="status status-warning"></div>
 
-      if (!btc || !eth) return { bias: '盤整', hint: '資料不足' };
+  <!-- Table of Coins -->
+  <div class="table-container">
+    <table id="coin-table">
+      <thead>
+        <tr>
+          <th>幣種</th>
+          <th>方向</th>
+          <th>變動</th>
+          <th>價格</th>
+          <th>強度</th>
+          <th>操作建議</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be populated here -->
+      </tbody>
+    </table>
+  </div>
+</div>
 
-      const btcUp = btc.change > 1;
-      const btcDown = btc.change < -1;
-      const ethUp = eth.change > 1;
-      const ethDown = eth.change < -1;
+<script>
+  let currentMode = 'conservative';
 
-      if (btcUp && ethUp) return { bias: '偏多', hint: '可順多' };
-      if (btcDown && ethDown) return { bias: '偏空', hint: '只找空' };
+  // Function to fetch and display data
+  async function loadData() {
+    try {
+      const response = await fetch('data_fast.json'); // Assuming the data is in this file
+      const data = await response.json();
+      updateDisplay(data);
+    } catch (error) {
+      console.error("Error loading data:", error);
+    }
+  }
 
-      return { bias: '盤整', hint: '觀察為主' };
+  // Function to update the display with data
+  function updateDisplay(data) {
+    const lastUpdated = new Date(data.updated);
+    document.getElementById('last-updated').textContent = lastUpdated.toLocaleString();
+
+    const direction = data.direction || '未知';
+    const confidence = data.confidence || 0;
+
+    document.getElementById('current-direction').textContent = direction;
+    document.getElementById('confidence').textContent = confidence;
+
+    const warningMessage = document.getElementById('warning-message');
+    if (direction === '盤整') {
+      warningMessage.textContent = '目前方向不明確，以下僅供觀察，請謹慎操作！';
+    } else {
+      warningMessage.textContent = '';
     }
 
-    function analyze(item, marketBias) {
-      const change = item.change;
-      let direction = 'neutral';
+    const tableBody = document.getElementById('coin-table').querySelector('tbody');
+    tableBody.innerHTML = ''; // Clear the previous data
 
-      if (change > 2) direction = 'long';
-      if (change < -2) direction = 'short';
+    data.coins.forEach(coin => {
+      const row = document.createElement('tr');
+      const coinNameCell = document.createElement('td');
+      const directionCell = document.createElement('td');
+      const changeCell = document.createElement('td');
+      const priceCell = document.createElement('td');
+      const strengthCell = document.createElement('td');
+      const actionCell = document.createElement('td');
 
-      const strength = Math.min(100, Math.abs(change) * 2);
+      coinNameCell.textContent = coin.symbol;
+      directionCell.textContent = coin.direction;
+      changeCell.textContent = coin.change + '%';
+      priceCell.textContent = '$' + coin.price.toFixed(2);
+      strengthCell.textContent = coin.strength;
+      actionCell.textContent = '觀察'; // Placeholder for action button
 
-      let trap = false;
-      if (marketBias.bias === '偏空' && direction === 'long' && change > 8) {
-        trap = true;
-      }
-
-      let advice = '觀察';
-      let reason = '盤整區間';
-
-      if (trap) {
-        advice = '不建議';
-        reason = '逆主流拉升，疑似誘多';
-      } else if (marketBias.bias === '偏多' && direction === 'long') {
-        advice = strength >= 50 ? '可做' : '觀察';
-        reason = '順主流偏多';
-      } else if (marketBias.bias === '偏空' && direction === 'short') {
-        advice = strength >= 50 ? '可做' : '觀察';
-        reason = '順主流偏空';
+      if (coin.direction === 'long') {
+        actionCell.classList.add('status-success');
+      } else if (coin.direction === 'short') {
+        actionCell.classList.add('status-danger');
       } else {
-        reason = '方向不一致';
+        actionCell.classList.add('status-warning');
       }
 
-      return { direction, strength: strength.toFixed(0), advice, reason };
-    }
+      row.appendChild(coinNameCell);
+      row.appendChild(directionCell);
+      row.appendChild(changeCell);
+      row.appendChild(priceCell);
+      row.appendChild(strengthCell);
+      row.appendChild(actionCell);
+      tableBody.appendChild(row);
+    });
+  }
 
-    async function load() {
-      const res = await fetch('./data_fast.json?_=' + Date.now());
-      const data = await res.json();
+  // Function to change the mode
+  function changeMode(mode) {
+    currentMode = mode;
 
-      document.getElementById('updated').textContent =
-        '最後更新：' + (data.updated || '未知');
+    // Highlight the active mode
+    document.querySelectorAll('.mode-selector button').forEach(button => {
+      if (button.textContent.toLowerCase() === mode) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    });
 
-      const market = getMarketBias(data.items);
-      document.getElementById('market').textContent =
-        `目前方向：${market.bias}｜${market.hint}`;
+    // Update the mode in the display (optional)
+    document.getElementById('current-mode').textContent = mode;
+  }
 
-      const tbody = document.getElementById('rows');
-      tbody.innerHTML = '';
+  // Function to refresh data every 30 seconds
+  setInterval(loadData, 30000);
 
-      data.items.forEach(item => {
-        const a = analyze(item, market);
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>${item.symbol}</td>
-          <td class="${a.direction}">${a.direction}</td>
-          <td>${item.change.toFixed(2)}%</td>
-          <td>$${item.price}</td>
-          <td>${a.strength}</td>
-          <td title="${a.reason}">${a.advice}</td>
-        `;
-        tbody.appendChild(tr);
-      });
-    }
+  // Initial data load
+  loadData();
+</script>
 
-    load();
-    setInterval(load, 30000);
-  </script>
 </body>
 </html>
