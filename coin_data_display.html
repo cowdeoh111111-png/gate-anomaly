@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>資料顯示</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #333;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #555;
+    }
+    th {
+      background-color: #444;
+    }
+    .invalid-date {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h2>資料顯示區</h2>
+    <p id="updated-time" class="invalid-date">更新時間：Invalid Date</p>
+    <table id="coin-table">
+      <thead>
+        <tr>
+          <th>幣種</th>
+          <th>方向</th>
+          <th>變動</th>
+          <th>價格</th>
+          <th>分數</th>
+          <th>類別</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 資料將顯示在這裡 -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // 請將您的 JSON 資料放入這裡
+    const data = {
+      "updated": "2025/12/27 下午5:36:22",
+      "items": [
+        {
+          "symbol": "RVV_USDT",
+          "direction": "long",
+          "change": 42.81,
+          "price": 0.00473,
+          "score": 4281,
+          "category": "山寨"
+        },
+        {
+          "symbol": "FLOW_USDT",
+          "direction": "short",
+          "change": -38.09,
+          "price": 0.1071,
+          "score": 3809,
+          "category": "山寨"
+        },
+        {
+          "symbol": "ONT_USDT",
+          "direction": "long",
+          "change": 28.64,
+          "price": 0.06845,
+          "score": 2864,
+          "category": "山寨"
+        },
+        {
+          "symbol": "STBL_USDT",
+          "direction": "long",
+          "change": 19.55,
+          "price": 0.05107,
+          "score": 1955,
+          "category": "山寨"
+        }
+        // 更多資料...
+      ]
+    };
+
+    // 解析資料並顯示
+    function updateTable() {
+      // 更新時間顯示
+      const updatedTimeElement = document.getElementById("updated-time");
+      const updatedTime = new Date(data.updated);
+      updatedTimeElement.textContent = `更新時間：${updatedTime.toLocaleString()}`;
+
+      // 更新表格資料
+      const tableBody = document.getElementById("coin-table").getElementsByTagName('tbody')[0];
+      data.items.forEach(item => {
+        const row = tableBody.insertRow();
+
+        // 插入每一個單元格資料
+        const cell1 = row.insertCell(0);
+        cell1.textContent = item.symbol;
+
+        const cell2 = row.insertCell(1);
+        cell2.textContent = item.direction;
+
+        const cell3 = row.insertCell(2);
+        cell3.textContent = item.change;
+
+        const cell4 = row.insertCell(3);
+        cell4.textContent = item.price;
+
+        const cell5 = row.insertCell(4);
+        cell5.textContent = item.score;
+
+        const cell6 = row.insertCell(5);
+        cell6.textContent = item.category;
+      });
+    }
+
+    // 當頁面加載完畢，更新資料
+    window.onload = function() {
+      updateTable();
+    };
+  </script>
+
+</body>
+</html>
