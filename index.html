@@ -1,138 +1,198 @@
-<!doctype html>
-<html lang="zh-TW">
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8" />
 <title>Gate 異常監控</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <style>
 body {
-  margin:0;
-  padding:16px;
-  background:#0b0f14;
-  color:#e5e7eb;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0b0f14;
+  color: #e6e6e6;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
 }
 
 h1 {
-  color:#60a5fa;
-  margin-bottom:4px;
+  color: #5da9ff;
+  margin-bottom: 6px;
 }
 
-.time {
-  color:#9ca3af;
-  font-size:14px;
-  margin-bottom:16px;
+.sub {
+  color: #9aa4af;
+  font-size: 14px;
+  margin-bottom: 16px;
 }
 
-.block {
-  border-radius:12px;
-  padding:12px;
-  margin-bottom:20px;
-  background:#111827;
+.direction {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-.block.long { border-left:4px solid #22c55e; }
-.block.short { border-left:4px solid #ef4444; }
-
-.block-title {
-  font-size:18px;
-  margin-bottom:8px;
+.direction.long {
+  background: rgba(0, 200, 100, 0.15);
+  border-left: 4px solid #00c864;
 }
 
-.row {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:12px 0;
-  border-bottom:1px solid #1f2937;
+.direction.short {
+  background: rgba(255, 80, 80, 0.15);
+  border-left: 4px solid #ff5050;
 }
 
-.row:last-child { border-bottom:none; }
-
-.symbol {
-  font-size:18px;
-  font-weight:600;
+.direction.flat {
+  background: rgba(180, 180, 180, 0.1);
+  border-left: 4px solid #888;
 }
 
-.tag {
-  font-size:13px;
-  padding:4px 8px;
-  border-radius:8px;
-  background:#1f2937;
+.section {
+  margin-top: 24px;
 }
 
-.long .tag { color:#22c55e; }
-.short .tag { color:#ef4444; }
+.section h2 {
+  margin-bottom: 12px;
+}
 
-.meta {
-  text-align:right;
-  font-size:14px;
+.card {
+  background: #121821;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card.long {
+  border-left: 4px solid #00c864;
+}
+
+.card.short {
+  border-left: 4px solid #ff5050;
+}
+
+.left {
+  font-weight: 600;
+}
+
+.right {
+  display: flex;
+  gap: 14px;
+  font-size: 14px;
+}
+
+.long-text {
+  color: #00e676;
+}
+
+.short-text {
+  color: #ff5252;
 }
 
 .score {
-  font-size:18px;
-  font-weight:700;
-  margin-left:8px;
+  font-weight: 700;
 }
 </style>
 </head>
 
 <body>
+<div class="container">
 
 <h1>Gate 異常監控</h1>
-<div class="time" id="time"></div>
+<div id="updated" class="sub">載入中…</div>
 
-<div id="long"></div>
-<div id="short"></div>
+<div id="directionBox" class="direction flat">
+  判斷中…
+</div>
+
+<div class="section">
+  <h2>🚀 多頭異常</h2>
+  <div id="longList"></div>
+</div>
+
+<div class="section">
+  <h2>📉 空頭異常</h2>
+  <div id="shortList"></div>
+</div>
+
+</div>
 
 <script>
-fetch("data_fast.json?_=" + Date.now())
+const TOP_N = 5;        // C：只顯示前 N 名
+const MIN_SCORE = 60;  // C：分數過濾門檻
+
+fetch("./data_fast.json")
   .then(r => r.json())
-  .then(d => {
-    document.getElementById("time").innerText =
-      "最後更新：" + d.updated;
+  .then(data => {
+    // --- 台灣時間顯示（不解析 Date，直接用字串） ---
+    document.getElementById("updated").innerText =
+      "最後更新：" + data.updated;
 
-    const longBox = document.getElementById("long");
-    const shortBox = document.getElementById("short");
+    const items = data.items || [];
 
-    const longs = d.items.filter(i => i.direction === "long");
-    const shorts = d.items.filter(i => i.direction === "short");
+    // 分組 + 過濾
+    const longs = items
+      .filter(i => i.direction === "long" && i.score >= MIN_SCORE)
+      .sort((a,b) => b.score - a.score)
+      .slice(0, TOP_N);
 
-    if (longs.length) {
-      longBox.innerHTML = `
-        <div class="block long">
-          <div class="block-title">🚀 多頭異常</div>
-          ${longs.map(render).join("")}
-        </div>`;
+    const shorts = items
+      .filter(i => i.direction === "short" && i.score >= MIN_SCORE)
+      .sort((a,b) => b.score - a.score)
+      .slice(0, TOP_N);
+
+    // --- A：整體方向一句話 ---
+    const longScore = longs.reduce((s,i)=>s+i.score,0);
+    const shortScore = shorts.reduce((s,i)=>s+i.score,0);
+
+    const box = document.getElementById("directionBox");
+
+    if (longScore > shortScore * 1.2) {
+      box.className = "direction long";
+      box.innerText = "🔥 偏多盤（多頭異常佔優）";
+    } else if (shortScore > longScore * 1.2) {
+      box.className = "direction short";
+      box.innerText = "❄️ 偏空盤（空頭異常佔優）";
+    } else {
+      box.className = "direction flat";
+      box.innerText = "⚪ 盤整偏震盪，不建議積極出手";
     }
 
-    if (shorts.length) {
-      shortBox.innerHTML = `
-        <div class="block short">
-          <div class="block-title">📉 空頭異常</div>
-          ${shorts.map(render).join("")}
-        </div>`;
-    }
-
-    if (!longs.length && !shorts.length) {
-      longBox.innerHTML = `<div class="time">目前沒有可操作異常</div>`;
-    }
+    // --- B：卡片列表 ---
+    render(longs, "longList", "long");
+    render(shorts, "shortList", "short");
   });
 
-function render(i) {
-  return `
-    <div class="row">
-      <div>
-        <div class="symbol">${i.symbol}</div>
-        <div class="tag">短期投機${i.direction === "long" ? "多" : "空"}</div>
+function render(list, elId, dir) {
+  const el = document.getElementById(elId);
+  el.innerHTML = "";
+
+  if (list.length === 0) {
+    el.innerHTML = "<div class='sub'>目前沒有符合條件的異常</div>";
+    return;
+  }
+
+  list.forEach(i => {
+    const div = document.createElement("div");
+    div.className = `card ${dir}`;
+    div.innerHTML = `
+      <div class="left">${i.symbol}</div>
+      <div class="right">
+        <span class="${dir}-text">${dir.toUpperCase()}</span>
+        <span>${(i.change*100).toFixed(2)}%</span>
+        <span>$${i.price}</span>
+        <span class="score">${i.score}</span>
       </div>
-      <div class="meta">
-        <div>${i.change}%</div>
-        <div>$${i.price}</div>
-      </div>
-      <div class="score">${i.score}</div>
-    </div>
-  `;
+    `;
+    el.appendChild(div);
+  });
 }
 </script>
 
