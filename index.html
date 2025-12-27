@@ -1,107 +1,113 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8" />
-<title>Gate 異常監控</title>
-<style>
-  body {
-    background:#0b0f14;
-    color:#e5e7eb;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont;
-    padding:30px;
-  }
-  h1 {
-    color:#4ea1ff;
-    margin-bottom:5px;
-  }
-  .sub {
-    color:#9ca3af;
-    margin-bottom:20px;
-  }
-  .direction {
-    margin:15px 0;
-    font-size:18px;
-  }
-  .long { color:#22c55e; }
-  .short { color:#ef4444; }
-
-  .row {
-    display:flex;
-    justify-content:space-between;
-    padding:12px 8px;
-    border-bottom:1px solid #1f2937;
-    align-items:center;
-  }
-  .symbol { width:140px; }
-  .age { color:#9ca3af; font-size:13px; }
-</style>
+  <meta charset="UTF-8" />
+  <title>Gate 異常監控</title>
+  <style>
+    body {
+      background: #0b0f14;
+      color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 24px;
+    }
+    h1 {
+      color: #4da3ff;
+      margin-bottom: 8px;
+    }
+    .meta {
+      color: #9ca3af;
+      margin-bottom: 16px;
+    }
+    .bias {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    .warn {
+      color: #facc15;
+      margin-bottom: 12px;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 140px 80px 80px 100px 80px;
+      padding: 10px 0;
+      border-bottom: 1px solid #1f2937;
+      align-items: center;
+    }
+    .short { color: #f87171; }
+    .long { color: #4ade80; }
+    .dim { opacity: 0.45; }
+  </style>
 </head>
 <body>
 
 <h1>Gate 異常監控</h1>
-<div class="sub" id="updated">最後更新：--</div>
-
-<div class="direction" id="direction">方向計算中…</div>
+<div class="meta" id="updated"></div>
+<div class="bias" id="bias"></div>
+<div class="warn" id="warn"></div>
 
 <div id="list"></div>
 
 <script>
-async function load() {
-  const res = await fetch("./data_fast.json?_=" + Date.now());
-  const data = await res.json();
+fetch('./data_fast.json')
+  .then(res => res.json())
+  .then(data => {
+    const items = data.items || [];
 
-  /** 台灣時間 **/
-  const updated = new Date();
-  const twTime = updated.toLocaleString("zh-TW", { timeZone: "Asia/Taipei" });
-  document.getElementById("updated").innerText = "最後更新：" + twTime;
+    const longScore = items.filter(i => i.side === 'long')
+                           .reduce((s, i) => s + i.score, 0);
+    const shortScore = items.filter(i => i.side === 'short')
+                            .reduce((s, i) => s + i.score, 0);
 
-  const now = Date.now();
+    const total = longScore + shortScore;
+    const confidence = total === 0
+      ? 0
+      : Math.round(Math.abs(longScore - shortScore) / total * 100);
 
-  let longScore = 0;
-  let shortScore = 0;
+    const bias =
+      longScore > shortScore ? '偏多' :
+      shortScore > longScore ? '偏空' : '盤整';
 
-  data.items.forEach(i => {
-    if (i.side === "long") longScore += i.score;
-    if (i.side === "short") shortScore += i.score;
-  });
+    document.getElementById('updated').innerText =
+      `最後更新：${data.updated || '-'}`;
 
-  const total = longScore + shortScore || 1;
-  const bias = longScore > shortScore ? "long" : "short";
-  const confidence = Math.round(
-    (Math.abs(longScore - shortScore) / total) * 100
-  );
+    document.getElementById('bias').innerText =
+      `目前方向：${bias} ｜ 信心 ${confidence}%`;
 
-  const dirEl = document.getElementById("direction");
-  dirEl.innerHTML = `
-    目前方向：
-    <span class="${bias}">
-      ${bias === "long" ? "偏多" : "偏空"}
-    </span>
-    ｜信心 ${confidence}%
-  `;
+    const list = document.getElementById('list');
 
-  const list = document.getElementById("list");
-  list.innerHTML = "";
+    // ===== B 模式核心 =====
+    const showAll = confidence < 20;
 
-  data.items
-    .filter(i => i.side === bias) // ✅ 只顯示順勢
-    .forEach(i => {
-      const ageMin = Math.floor((now - i.first_seen) / 60000);
-      const row = document.createElement("div");
-      row.className = "row";
+    if (showAll) {
+      document.getElementById('warn').innerText =
+        '⚠ 目前無明確方向，以下僅供觀察，不建議進場';
+    }
+
+    const displayItems = showAll
+      ? items
+      : items.filter(i =>
+          (bias === '偏多' && i.side === 'long') ||
+          (bias === '偏空' && i.side === 'short')
+        );
+
+    displayItems.forEach(i => {
+      const row = document.createElement('div');
+      row.className = `row ${showAll ? 'dim' : ''}`;
+
       row.innerHTML = `
-        <div class="symbol">${i.symbol}</div>
+        <div>${i.symbol}</div>
         <div class="${i.side}">${i.side.toUpperCase()}</div>
         <div>${i.change}%</div>
         <div>$${i.price}</div>
-        <div class="age">${ageMin} 分鐘前</div>
+        <div>${i.score}</div>
       `;
       list.appendChild(row);
     });
-}
 
-load();
-setInterval(load, 30000);
+    if (displayItems.length === 0) {
+      list.innerHTML = '<div style="opacity:.5">目前無異常</div>';
+    }
+  });
 </script>
 
 </body>
