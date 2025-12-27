@@ -1,57 +1,15 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-  <meta charset="UTF-8" />
-  <title>Gate 異常監控</title>
-  <style>
-    body {
-      background:#0b0f14;
-      color:#e5e7eb;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont;
-      padding:24px;
-    }
-    h1 {
-      color:#60a5fa;
-      margin-bottom:8px;
-    }
-    .time {
-      color:#9ca3af;
-      margin-bottom:24px;
-    }
-    .row {
-      display:grid;
-      grid-template-columns: 140px 80px 80px 100px 80px;
-      padding:12px 0;
-      border-bottom:1px solid #1f2937;
-      align-items:center;
-    }
-    .long { color:#22c55e; }
-    .short { color:#ef4444; }
-    .score {
-      text-align:right;
-      font-weight:600;
-    }
-  </style>
-</head>
-<body>
-
-<h1>Gate 異常監控</h1>
-<div class="time" id="time">載入中…</div>
-
-<div id="list"></div>
-
 <script>
 async function load() {
   const res = await fetch('./data_fast.json');
   const data = await res.json();
 
-  // 👉 這裡是關鍵：UTC → 台灣時間
-  const t = new Date(data.updated);
-  document.getElementById("time").innerText =
-    "最後更新：" + t.toLocaleString("zh-TW", {
-      timeZone: "Asia/Taipei",
-      hour12: false
-    });
+  // ✅ 直接顯示後端給的時間（最穩）
+  const timeEl = document.getElementById("time");
+  if (data.updated) {
+    timeEl.innerText = "最後更新：" + data.updated;
+  } else {
+    timeEl.innerText = "最後更新：未知";
+  }
 
   const list = document.getElementById("list");
   list.innerHTML = "";
@@ -77,6 +35,3 @@ async function load() {
 
 load();
 </script>
-
-</body>
-</html>
