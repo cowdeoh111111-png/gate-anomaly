@@ -1,152 +1,161 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>Gate 異常監控</title>
 <style>
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont;
-    background: #0b0f14;
-    color: #e6e6e6;
-  }
-  .wrap {
-    padding: 28px 36px;
-  }
-  h1 {
-    margin: 0 0 8px 0;
-    color: #4ea1ff;
-    font-size: 28px;
-  }
-  .meta {
-    color: #9aa4b2;
-    margin-bottom: 12px;
-  }
-  .direction {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  .long { color: #22c55e; }
-  .short { color: #ef4444; }
-  .neutral { color: #facc15; }
+body {
+  margin: 0;
+  background: #0b0f14;
+  color: #e5e7eb;
+  font-family: system-ui;
+}
+.wrap {
+  padding: 28px 36px;
+}
+h1 {
+  color: #4ea1ff;
+  margin: 0 0 6px;
+}
+.meta {
+  color: #9aa4b2;
+  margin-bottom: 8px;
+}
+.market {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.long { color:#22c55e }
+.short { color:#ef4444 }
+.neutral { color:#facc15 }
 
-  .warn {
-    margin: 12px 0 18px;
-    padding: 10px 14px;
-    background: #3a2f05;
-    color: #facc15;
-    border-left: 4px solid #facc15;
-  }
+.warn {
+  background:#3a2f05;
+  color:#facc15;
+  padding:10px 14px;
+  border-left:4px solid #facc15;
+  margin:12px 0;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 8px;
-  }
-  th, td {
-    padding: 10px 8px;
-    border-bottom: 1px solid #1f2937;
-    text-align: right;
-    font-size: 14px;
-  }
-  th {
-    color: #9aa4b2;
-    font-weight: 500;
-  }
-  th:first-child, td:first-child {
-    text-align: left;
-  }
-  td.dir {
-    font-weight: 600;
-    text-transform: uppercase;
-  }
+table {
+  width:100%;
+  border-collapse:collapse;
+}
+th,td {
+  padding:10px 8px;
+  border-bottom:1px solid #1f2937;
+  text-align:right;
+  font-size:14px;
+}
+th:first-child,td:first-child { text-align:left }
+.badge {
+  padding:3px 8px;
+  border-radius:6px;
+  font-size:12px;
+}
+.good { background:#14532d;color:#22c55e }
+.mid { background:#3a2f05;color:#facc15 }
+.bad { background:#3f1d1d;color:#ef4444 }
 </style>
 </head>
 
 <body>
 <div class="wrap">
-  <h1>Gate 異常監控</h1>
-  <div class="meta" id="updated">最後更新：讀取中…</div>
-  <div class="direction" id="marketDir">目前方向：判斷中</div>
-  <div id="warnBox"></div>
+<h1>Gate 異常監控</h1>
+<div class="meta" id="updated">載入中…</div>
+<div class="market" id="marketDir"></div>
+<div id="warnBox"></div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>幣種</th>
-        <th>方向</th>
-        <th>變動</th>
-        <th>價格</th>
-        <th>強度</th>
-      </tr>
-    </thead>
-    <tbody id="rows"></tbody>
-  </table>
+<table>
+<thead>
+<tr>
+  <th>幣種</th>
+  <th>方向</th>
+  <th>變動</th>
+  <th>價格</th>
+  <th>強度</th>
+  <th>操作建議</th>
+</tr>
+</thead>
+<tbody id="rows"></tbody>
+</table>
 </div>
 
 <script>
 fetch('./data_fast.json')
-  .then(r => r.json())
-  .then(data => {
-    const items = data.items || [];
-    document.getElementById('updated').innerText =
-      '最後更新：' + (data.updated || '未知');
+.then(r=>r.json())
+.then(data=>{
+  document.getElementById('updated').innerText =
+    '最後更新：' + data.updated;
 
-    let score = 0;
-    let html = '';
+  let items = data.items || [];
+  let score = 0;
 
-    items.forEach(i => {
-      // ===== 補算方向 =====
-      if (i.change > 1) i.dir = 'long';
-      else if (i.change < -1) i.dir = 'short';
-      else i.dir = 'neutral';
+  items.forEach(i=>{
+    // ===== 方向 =====
+    if (i.change > 1) i.dir='long';
+    else if (i.change < -1) i.dir='short';
+    else i.dir='neutral';
 
-      // ===== 補算強度（實用版）=====
-      i.strength = Math.min(100, Math.round(Math.abs(i.change) * 2));
+    // ===== 強度 =====
+    i.strength = Math.min(100, Math.round(Math.abs(i.change)*2));
 
-      // ===== 計分 =====
-      if (i.dir === 'long') score += i.strength;
-      if (i.dir === 'short') score -= i.strength;
+    // ===== 進場等級 =====
+    if (i.strength >= 70 && Math.abs(i.change)>=2)
+      i.entry = '可做';
+    else if (i.strength >= 40)
+      i.entry = '小倉試單';
+    else
+      i.entry = '禁止';
 
-      html += `
-        <tr>
-          <td>${i.symbol}</td>
-          <td class="dir ${i.dir}">${i.dir}</td>
-          <td>${i.change.toFixed(2)}%</td>
-          <td>$${i.price}</td>
-          <td>${i.strength}</td>
-        </tr>
-      `;
-    });
+    // ===== 操作提示 =====
+    if (i.entry==='可做' && Math.abs(i.change)<6)
+      i.action = '追';
+    else if (i.entry!=='禁止')
+      i.action = '等回踩';
+    else
+      i.action = '不動';
 
-    document.getElementById('rows').innerHTML = html;
-
-    // ===== 整體方向判斷 =====
-    let dirText = '';
-    let warn = '';
-
-    if (score > 120) {
-      dirText = '<span class="long">偏多</span> ｜ 可找多方機會';
-    } else if (score < -120) {
-      dirText = '<span class="short">偏空</span> ｜ 可找空方機會';
-    } else {
-      dirText = '<span class="neutral">盤整</span> ｜ 不建議進場';
-      warn = `
-        <div class="warn">
-          ⚠️ 目前方向不明確，僅供觀察，不建議進場
-        </div>
-      `;
-    }
-
-    document.getElementById('marketDir').innerHTML =
-      '目前方向：' + dirText + ` ｜ 信心 ${Math.min(100, Math.abs(score))}%`;
-
-    document.getElementById('warnBox').innerHTML = warn;
-  })
-  .catch(err => {
-    document.getElementById('updated').innerText = '資料讀取失敗';
-    console.error(err);
+    if (i.dir==='long') score+=i.strength;
+    if (i.dir==='short') score-=i.strength;
   });
+
+  // ===== 只取前 12 名 =====
+  items = items
+    .filter(i=>i.entry!=='禁止')
+    .sort((a,b)=>b.strength-a.strength)
+    .slice(0,12);
+
+  // ===== 整體方向 =====
+  let dirHTML='';
+  let warn='';
+  if (score>150) dirHTML='<span class="long">偏多</span>｜可順多';
+  else if (score<-150) dirHTML='<span class="short">偏空</span>｜可順空';
+  else {
+    dirHTML='<span class="neutral">盤整</span>';
+    warn=`<div class="warn">⚠️ 方向不明確，不建議進場</div>`;
+  }
+  document.getElementById('marketDir').innerHTML =
+    `目前方向：${dirHTML} ｜ 信心 ${Math.min(100,Math.abs(score))}%`;
+  document.getElementById('warnBox').innerHTML = warn;
+
+  // ===== 表格 =====
+  document.getElementById('rows').innerHTML =
+    items.map(i=>`
+      <tr>
+        <td>${i.symbol}</td>
+        <td class="${i.dir}">${i.dir}</td>
+        <td>${i.change.toFixed(2)}%</td>
+        <td>$${i.price}</td>
+        <td>${i.strength}</td>
+        <td>
+          <span class="badge ${
+            i.entry==='可做'?'good':i.entry==='小倉試單'?'mid':'bad'
+          }">${i.entry}｜${i.action}</span>
+        </td>
+      </tr>
+    `).join('');
+});
 </script>
 </body>
 </html>
