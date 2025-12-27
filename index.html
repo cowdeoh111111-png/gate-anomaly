@@ -1,70 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<title>Gate 異常監控</title>
-<style>
-  body {
-    margin: 0;
-    background: #0b0f14;
-    color: #e5e7eb;
-    font-family: system-ui, -apple-system;
-  }
-  .wrap { padding: 24px; }
-  h1 { color: #60a5fa; margin-bottom: 8px; }
-  .sub { color: #9ca3af; margin-bottom: 12px; }
-
-  .modes button {
-    margin-right: 8px;
-    padding: 6px 14px;
-    border-radius: 6px;
-    border: 1px solid #374151;
-    background: #111827;
-    color: #e5e7eb;
-    cursor: pointer;
-  }
-  .modes button.active {
-    background: #2563eb;
-    border-color: #2563eb;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 16px;
-  }
-  th, td {
-    padding: 10px;
-    border-bottom: 1px solid #1f2933;
-    text-align: left;
-  }
-  th { color: #9ca3af; }
-
-  .long { color: #22c55e; }
-  .short { color: #ef4444; }
-  .neutral { color: #facc15; }
-
-  .tag {
-    padding: 2px 8px;
-    border-radius: 999px;
-    font-size: 12px;
-  }
-  .ok { background:#14532d; color:#86efac; }
-  .wait { background:#3f3f1f; color:#fde68a; }
-</style>
+  <meta charset="UTF-8" />
+  <title>Gate 異常監控</title>
+  <style>
+    body {
+      background: #0b0f14;
+      color: #e5e7eb;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont;
+      padding: 24px;
+    }
+    h1 { color: #4da3ff; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #1f2937;
+      text-align: left;
+    }
+    .long { color: #22c55e; }
+    .short { color: #ef4444; }
+    .neutral { color: #facc15; }
+  </style>
 </head>
 
 <body>
-<div class="wrap">
   <h1>Gate 異常監控</h1>
-  <div id="updated" class="sub">最後更新：--</div>
-
-  <div class="modes">
-    模式：
-    <button onclick="setMode('safe')">保守</button>
-    <button onclick="setMode('normal')" class="active">正常</button>
-    <button onclick="setMode('aggressive')">激進</button>
-  </div>
+  <div id="updated"></div>
+  <div id="market" style="margin-top:8px;font-weight:bold;"></div>
 
   <table>
     <thead>
@@ -79,61 +45,93 @@
     </thead>
     <tbody id="rows"></tbody>
   </table>
-</div>
 
-<script>
-let mode = 'normal';
+  <script>
+    // ⬇⬇⬇ 這裡就是我叫你貼的地方 ⬇⬇⬇
 
-function setMode(m) {
-  mode = m;
-  document.querySelectorAll('.modes button').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  load();
-}
+    let mode = 'normal';
 
-function analyze(item) {
-  const change = item.change;
-  let direction = 'neutral';
-  if (change > 2) direction = 'long';
-  if (change < -2) direction = 'short';
+    function getMarketBias(items) {
+      const btc = items.find(i => i.symbol === 'BTC_USDT');
+      const eth = items.find(i => i.symbol === 'ETH_USDT');
 
-  const strength = Math.min(100, Math.abs(change) * 2).toFixed(0);
+      if (!btc || !eth) return { bias: '盤整', hint: '資料不足' };
 
-  let advice = '觀察';
-  if (mode === 'safe' && strength >= 70) advice = '可小倉';
-  if (mode === 'normal' && strength >= 50) advice = '可做';
-  if (mode === 'aggressive' && strength >= 30) advice = '順勢嘗試';
+      const btcUp = btc.change > 1;
+      const btcDown = btc.change < -1;
+      const ethUp = eth.change > 1;
+      const ethDown = eth.change < -1;
 
-  return { direction, strength, advice };
-}
+      if (btcUp && ethUp) return { bias: '偏多', hint: '可順多' };
+      if (btcDown && ethDown) return { bias: '偏空', hint: '只找空' };
 
-async function load() {
-  const res = await fetch('./data_fast.json?_=' + Date.now());
-  const data = await res.json();
+      return { bias: '盤整', hint: '觀察為主' };
+    }
 
-  document.getElementById('updated').textContent =
-    '最後更新：' + (data.updated || '未知');
+    function analyze(item, marketBias) {
+      const change = item.change;
+      let direction = 'neutral';
 
-  const tbody = document.getElementById('rows');
-  tbody.innerHTML = '';
+      if (change > 2) direction = 'long';
+      if (change < -2) direction = 'short';
 
-  data.items.forEach(item => {
-    const a = analyze(item);
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td>${item.symbol}</td>
-      <td class="${a.direction}">${a.direction}</td>
-      <td>${item.change.toFixed(2)}%</td>
-      <td>$${item.price}</td>
-      <td>${a.strength}</td>
-      <td><span class="tag ${a.advice==='可做' || a.advice==='可小倉' ? 'ok':'wait'}">${a.advice}</span></td>
-    `;
-    tbody.appendChild(tr);
-  });
-}
+      const strength = Math.min(100, Math.abs(change) * 2);
 
-load();
-setInterval(load, 30000);
-</script>
+      let trap = false;
+      if (marketBias.bias === '偏空' && direction === 'long' && change > 8) {
+        trap = true;
+      }
+
+      let advice = '觀察';
+      let reason = '盤整區間';
+
+      if (trap) {
+        advice = '不建議';
+        reason = '逆主流拉升，疑似誘多';
+      } else if (marketBias.bias === '偏多' && direction === 'long') {
+        advice = strength >= 50 ? '可做' : '觀察';
+        reason = '順主流偏多';
+      } else if (marketBias.bias === '偏空' && direction === 'short') {
+        advice = strength >= 50 ? '可做' : '觀察';
+        reason = '順主流偏空';
+      } else {
+        reason = '方向不一致';
+      }
+
+      return { direction, strength: strength.toFixed(0), advice, reason };
+    }
+
+    async function load() {
+      const res = await fetch('./data_fast.json?_=' + Date.now());
+      const data = await res.json();
+
+      document.getElementById('updated').textContent =
+        '最後更新：' + (data.updated || '未知');
+
+      const market = getMarketBias(data.items);
+      document.getElementById('market').textContent =
+        `目前方向：${market.bias}｜${market.hint}`;
+
+      const tbody = document.getElementById('rows');
+      tbody.innerHTML = '';
+
+      data.items.forEach(item => {
+        const a = analyze(item, market);
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${item.symbol}</td>
+          <td class="${a.direction}">${a.direction}</td>
+          <td>${item.change.toFixed(2)}%</td>
+          <td>$${item.price}</td>
+          <td>${a.strength}</td>
+          <td title="${a.reason}">${a.advice}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    load();
+    setInterval(load, 30000);
+  </script>
 </body>
 </html>
