@@ -1,93 +1,70 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>Gate 異常監控</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <style>
-body {
-  margin: 0;
-  background: #0b0f14;
-  color: #e5e7eb;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont;
-}
-.container {
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-h1 {
-  color: #60a5fa;
-  margin-bottom: 8px;
-}
-small {
-  color: #9ca3af;
-}
-.mode {
-  margin: 12px 0;
-}
-.mode button {
-  background: #1f2937;
-  border: 1px solid #374151;
-  color: #e5e7eb;
-  padding: 6px 12px;
-  margin-right: 6px;
-  cursor: pointer;
-}
-.mode button.active {
-  background: #2563eb;
-}
-.status {
-  margin: 12px 0;
-  font-weight: bold;
-}
-.warn {
-  background: #3f2d00;
-  color: #facc15;
-  padding: 8px;
-  margin-bottom: 12px;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-th, td {
-  padding: 10px;
-  border-bottom: 1px solid #1f2937;
-}
-th {
-  text-align: left;
-  color: #9ca3af;
-}
-.long { color: #22c55e; }
-.short { color: #ef4444; }
-.neutral { color: #facc15; }
-.badge {
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 12px;
-}
-.ok { background: #065f46; }
-.try { background: #78350f; }
-.no { background: #374151; }
+  body {
+    margin: 0;
+    background: #0b0f14;
+    color: #e5e7eb;
+    font-family: system-ui, -apple-system;
+  }
+  .wrap { padding: 24px; }
+  h1 { color: #60a5fa; margin-bottom: 8px; }
+  .sub { color: #9ca3af; margin-bottom: 12px; }
+
+  .modes button {
+    margin-right: 8px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid #374151;
+    background: #111827;
+    color: #e5e7eb;
+    cursor: pointer;
+  }
+  .modes button.active {
+    background: #2563eb;
+    border-color: #2563eb;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+  }
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #1f2933;
+    text-align: left;
+  }
+  th { color: #9ca3af; }
+
+  .long { color: #22c55e; }
+  .short { color: #ef4444; }
+  .neutral { color: #facc15; }
+
+  .tag {
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+  }
+  .ok { background:#14532d; color:#86efac; }
+  .wait { background:#3f3f1f; color:#fde68a; }
 </style>
 </head>
 
 <body>
-<div class="container">
+<div class="wrap">
   <h1>Gate 異常監控</h1>
-  <small id="updateTime">讀取中...</small>
+  <div id="updated" class="sub">最後更新：--</div>
 
-  <div class="mode">
+  <div class="modes">
     模式：
-    <button onclick="setMode('strict')" class="active">保守</button>
-    <button onclick="setMode('normal')">正常</button>
+    <button onclick="setMode('safe')">保守</button>
+    <button onclick="setMode('normal')" class="active">正常</button>
     <button onclick="setMode('aggressive')">激進</button>
   </div>
-
-  <div id="direction" class="status"></div>
-  <div id="warning" class="warn" style="display:none;"></div>
 
   <table>
     <thead>
@@ -105,87 +82,56 @@ th {
 </div>
 
 <script>
-let MODE = 'strict';
-
-const MODE_RULES = {
-  strict:   { ok: 70, try: 45 },
-  normal:   { ok: 60, try: 35 },
-  aggressive:{ ok: 50, try: 25 }
-};
+let mode = 'normal';
 
 function setMode(m) {
-  MODE = m;
-  document.querySelectorAll('.mode button').forEach(b => b.classList.remove('active'));
+  mode = m;
+  document.querySelectorAll('.modes button').forEach(b => b.classList.remove('active'));
   event.target.classList.add('active');
-  render(window._data || []);
+  load();
 }
 
-function taiwanTime(ts) {
-  const d = new Date(ts);
-  return d.toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
+function analyze(item) {
+  const change = item.change;
+  let direction = 'neutral';
+  if (change > 2) direction = 'long';
+  if (change < -2) direction = 'short';
+
+  const strength = Math.min(100, Math.abs(change) * 2).toFixed(0);
+
+  let advice = '觀察';
+  if (mode === 'safe' && strength >= 70) advice = '可小倉';
+  if (mode === 'normal' && strength >= 50) advice = '可做';
+  if (mode === 'aggressive' && strength >= 30) advice = '順勢嘗試';
+
+  return { direction, strength, advice };
 }
 
 async function load() {
-  const res = await fetch('data_fast.json?_=' + Date.now());
-  const json = await res.json();
-  window._data = json.items || [];
-  document.getElementById('updateTime').innerText =
-    '最後更新：' + taiwanTime(json.updated);
-  render(window._data);
-}
+  const res = await fetch('./data_fast.json?_=' + Date.now());
+  const data = await res.json();
 
-function render(items) {
-  const rules = MODE_RULES[MODE];
-  const rows = document.getElementById('rows');
-  rows.innerHTML = '';
+  document.getElementById('updated').textContent =
+    '最後更新：' + (data.updated || '未知');
 
-  let bias = 0;
+  const tbody = document.getElementById('rows');
+  tbody.innerHTML = '';
 
-  const list = items.map(i => {
-    let dir = 'neutral';
-    if (i.change > 0.3) dir = 'long';
-    if (i.change < -0.3) dir = 'short';
-
-    let entry = '禁止';
-    if (i.strength >= rules.ok) entry = '可做';
-    else if (i.strength >= rules.try) entry = '小倉試單';
-
-    if (dir === 'long') bias++;
-    if (dir === 'short') bias--;
-
-    return { ...i, dir, entry };
-  }).filter(i => i.entry !== '禁止')
-    .sort((a,b) => b.strength - a.strength)
-    .slice(0, 15);
-
-  list.forEach(i => {
+  data.items.forEach(item => {
+    const a = analyze(item);
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td>${i.symbol}</td>
-      <td class="${i.dir}">${i.dir}</td>
-      <td>${i.change.toFixed(2)}%</td>
-      <td>$${i.price}</td>
-      <td>${i.strength}</td>
-      <td>
-        <span class="badge ${i.entry==='可做'?'ok':'try'}">${i.entry}</span>
-      </td>`;
-    rows.appendChild(tr);
+      <td>${item.symbol}</td>
+      <td class="${a.direction}">${a.direction}</td>
+      <td>${item.change.toFixed(2)}%</td>
+      <td>$${item.price}</td>
+      <td>${a.strength}</td>
+      <td><span class="tag ${a.advice==='可做' || a.advice==='可小倉' ? 'ok':'wait'}">${a.advice}</span></td>
+    `;
+    tbody.appendChild(tr);
   });
-
-  const dirText = bias > 2 ? '偏多' : bias < -2 ? '偏空' : '盤整';
-  document.getElementById('direction').innerText =
-    `目前方向：${dirText}｜模式：${MODE}`;
-
-  const warn = document.getElementById('warning');
-  if (dirText === '盤整') {
-    warn.style.display = 'block';
-    warn.innerText = '⚠ 方向不明確，僅供觀察，不建議重倉進場';
-  } else {
-    warn.style.display = 'none';
-  }
 }
 
-// 自動刷新（30 秒）
 load();
 setInterval(load, 30000);
 </script>
