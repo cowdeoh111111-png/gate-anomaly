@@ -1,68 +1,139 @@
 <!doctype html>
 <html lang="zh-TW">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
 <title>Gate 異常監控</title>
+
 <style>
 body {
+  margin:0;
+  padding:16px;
   background:#0b0f14;
   color:#e5e7eb;
-  font-family: monospace;
-  padding:20px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
 }
-h1 { color:#60a5fa; }
-.time { color:#9ca3af; margin-bottom:20px; }
-.section { margin-top:30px; }
+
+h1 {
+  color:#60a5fa;
+  margin-bottom:4px;
+}
+
+.time {
+  color:#9ca3af;
+  font-size:14px;
+  margin-bottom:16px;
+}
+
+.block {
+  border-radius:12px;
+  padding:12px;
+  margin-bottom:20px;
+  background:#111827;
+}
+
+.block.long { border-left:4px solid #22c55e; }
+.block.short { border-left:4px solid #ef4444; }
+
+.block-title {
+  font-size:18px;
+  margin-bottom:8px;
+}
+
 .row {
-  display:grid;
-  grid-template-columns: 140px 80px 80px 120px 80px;
-  padding:10px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 0;
   border-bottom:1px solid #1f2937;
 }
-.long { color:#22c55e; }
-.short { color:#ef4444; }
-.score { font-weight:bold; }
+
+.row:last-child { border-bottom:none; }
+
+.symbol {
+  font-size:18px;
+  font-weight:600;
+}
+
+.tag {
+  font-size:13px;
+  padding:4px 8px;
+  border-radius:8px;
+  background:#1f2937;
+}
+
+.long .tag { color:#22c55e; }
+.short .tag { color:#ef4444; }
+
+.meta {
+  text-align:right;
+  font-size:14px;
+}
+
+.score {
+  font-size:18px;
+  font-weight:700;
+  margin-left:8px;
+}
 </style>
 </head>
+
 <body>
 
 <h1>Gate 異常監控</h1>
 <div class="time" id="time"></div>
-<div id="app"></div>
+
+<div id="long"></div>
+<div id="short"></div>
 
 <script>
 fetch("data_fast.json?_=" + Date.now())
   .then(r => r.json())
   .then(d => {
-    document.getElementById("time").textContent =
+    document.getElementById("time").innerText =
       "最後更新：" + d.updated;
 
-    const groups = {};
-    d.items.forEach(i => {
-      if (!groups[i.category]) groups[i.category] = [];
-      groups[i.category].push(i);
-    });
+    const longBox = document.getElementById("long");
+    const shortBox = document.getElementById("short");
 
-    const app = document.getElementById("app");
+    const longs = d.items.filter(i => i.direction === "long");
+    const shorts = d.items.filter(i => i.direction === "short");
 
-    ["主流","山寨","瘋狗"].forEach(cat => {
-      if (!groups[cat]) return;
-      const sec = document.createElement("div");
-      sec.className = "section";
-      sec.innerHTML = `<h2>${cat}</h2>`;
-      groups[cat].forEach(i => {
-        sec.innerHTML += `
-          <div class="row">
-            <div>${i.symbol}</div>
-            <div class="${i.direction}">${i.direction}</div>
-            <div>${i.change}%</div>
-            <div>$${i.price}</div>
-            <div class="score">${i.score}</div>
-          </div>`;
-      });
-      app.appendChild(sec);
-    });
+    if (longs.length) {
+      longBox.innerHTML = `
+        <div class="block long">
+          <div class="block-title">🚀 多頭異常</div>
+          ${longs.map(render).join("")}
+        </div>`;
+    }
+
+    if (shorts.length) {
+      shortBox.innerHTML = `
+        <div class="block short">
+          <div class="block-title">📉 空頭異常</div>
+          ${shorts.map(render).join("")}
+        </div>`;
+    }
+
+    if (!longs.length && !shorts.length) {
+      longBox.innerHTML = `<div class="time">目前沒有可操作異常</div>`;
+    }
   });
+
+function render(i) {
+  return `
+    <div class="row">
+      <div>
+        <div class="symbol">${i.symbol}</div>
+        <div class="tag">短期投機${i.direction === "long" ? "多" : "空"}</div>
+      </div>
+      <div class="meta">
+        <div>${i.change}%</div>
+        <div>$${i.price}</div>
+      </div>
+      <div class="score">${i.score}</div>
+    </div>
+  `;
+}
 </script>
 
 </body>
