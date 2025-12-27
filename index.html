@@ -5,109 +5,217 @@
   <title>Gate 異常監控</title>
   <style>
     body {
+      margin: 0;
+      padding: 24px;
       background: #0b0f14;
       color: #e5e7eb;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      padding: 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
     }
+
     h1 {
       color: #4da3ff;
       margin-bottom: 8px;
     }
-    .meta {
+
+    .muted {
       color: #9ca3af;
-      margin-bottom: 16px;
+      font-size: 14px;
     }
-    .bias {
-      margin-bottom: 20px;
-      font-size: 16px;
+
+    .status {
+      margin: 16px 0;
+      font-size: 18px;
     }
+
+    .status span {
+      font-weight: bold;
+    }
+
+    .long { color: #22c55e; }
+    .short { color: #ef4444; }
+    .neutral { color: #facc15; }
+
     .warn {
+      margin: 12px 0;
+      padding: 10px;
+      background: rgba(250, 204, 21, 0.1);
       color: #facc15;
-      margin-bottom: 12px;
+      border-left: 4px solid #facc15;
     }
-    .row {
-      display: grid;
-      grid-template-columns: 140px 80px 80px 100px 80px;
-      padding: 10px 0;
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section h2 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #c7d2fe;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th, td {
+      padding: 10px;
       border-bottom: 1px solid #1f2937;
-      align-items: center;
+      text-align: left;
     }
-    .short { color: #f87171; }
-    .long { color: #4ade80; }
-    .dim { opacity: 0.45; }
+
+    th {
+      color: #9ca3af;
+      font-weight: normal;
+    }
+
+    .confidence {
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
 
-<h1>Gate 異常監控</h1>
-<div class="meta" id="updated"></div>
-<div class="bias" id="bias"></div>
-<div class="warn" id="warn"></div>
+  <h1>Gate 異常監控</h1>
+  <div class="muted" id="updateTime"></div>
 
-<div id="list"></div>
+  <!-- 市場狀態 -->
+  <div class="status">
+    目前方向：
+    <span id="marketDir" class="neutral">盤整</span>
+    ｜ 信心
+    <span id="marketConfidence">0%</span>
+  </div>
+
+  <div id="marketHint" class="warn"></div>
+
+  <!-- 觀察名單 -->
+  <div class="section">
+    <h2>📊 觀察名單（尚未確認）</h2>
+    <table id="watchTable">
+      <thead>
+        <tr>
+          <th>幣種</th>
+          <th>方向</th>
+          <th>變動</th>
+          <th>價格</th>
+          <th>強度</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- 可進場 -->
+  <div class="section">
+    <h2>🚀 可考慮進場（需自行確認）</h2>
+    <table id="entryTable">
+      <thead>
+        <tr>
+          <th>幣種</th>
+          <th>方向</th>
+          <th>信心</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
 
 <script>
-fetch('./data_fast.json')
-  .then(res => res.json())
-  .then(data => {
-    const items = data.items || [];
+/* =========================
+   模擬資料（之後可換 API）
+========================= */
 
-    const longScore = items.filter(i => i.side === 'long')
-                           .reduce((s, i) => s + i.score, 0);
-    const shortScore = items.filter(i => i.side === 'short')
-                            .reduce((s, i) => s + i.score, 0);
+const data = {
+  updated: new Date().toLocaleString("zh-TW"),
+  items: [
+    { symbol: "BTC_USDT", dir: "short", change: -1.1, price: 87223, strength: 52 },
+    { symbol: "ETH_USDT", dir: "short", change: -1.07, price: 2921, strength: 48 },
+    { symbol: "SOL_USDT", dir: "neutral", change: -0.2, price: 122, strength: 35 },
+    { symbol: "ARB_USDT", dir: "long", change: 0.6, price: 1.23, strength: 61 }
+  ]
+};
 
-    const total = longScore + shortScore;
-    const confidence = total === 0
-      ? 0
-      : Math.round(Math.abs(longScore - shortScore) / total * 100);
+/* =========================
+   市場判斷邏輯（B 版）
+========================= */
 
-    const bias =
-      longScore > shortScore ? '偏多' :
-      shortScore > longScore ? '偏空' : '盤整';
-
-    document.getElementById('updated').innerText =
-      `最後更新：${data.updated || '-'}`;
-
-    document.getElementById('bias').innerText =
-      `目前方向：${bias} ｜ 信心 ${confidence}%`;
-
-    const list = document.getElementById('list');
-
-    // ===== B 模式核心 =====
-    const showAll = confidence < 20;
-
-    if (showAll) {
-      document.getElementById('warn').innerText =
-        '⚠ 目前無明確方向，以下僅供觀察，不建議進場';
-    }
-
-    const displayItems = showAll
-      ? items
-      : items.filter(i =>
-          (bias === '偏多' && i.side === 'long') ||
-          (bias === '偏空' && i.side === 'short')
-        );
-
-    displayItems.forEach(i => {
-      const row = document.createElement('div');
-      row.className = `row ${showAll ? 'dim' : ''}`;
-
-      row.innerHTML = `
-        <div>${i.symbol}</div>
-        <div class="${i.side}">${i.side.toUpperCase()}</div>
-        <div>${i.change}%</div>
-        <div>$${i.price}</div>
-        <div>${i.score}</div>
-      `;
-      list.appendChild(row);
-    });
-
-    if (displayItems.length === 0) {
-      list.innerHTML = '<div style="opacity:.5">目前無異常</div>';
-    }
+function calcMarket(items) {
+  let long = 0, short = 0, sum = 0;
+  items.forEach(i => {
+    if (i.dir === "long") long++;
+    if (i.dir === "short") short++;
+    sum += i.strength;
   });
+
+  const avg = sum / items.length;
+  let dir = "盤整";
+
+  if (long >= 2 && long > short && avg >= 55) dir = "偏多";
+  if (short >= 2 && short > long && avg >= 55) dir = "偏空";
+
+  return { dir, confidence: Math.round(avg) };
+}
+
+/* =========================
+   畫面渲染
+========================= */
+
+document.getElementById("updateTime").innerText =
+  "最後更新：" + data.updated;
+
+const market = calcMarket(data.items);
+
+const dirEl = document.getElementById("marketDir");
+dirEl.innerText = market.dir;
+dirEl.className =
+  market.dir === "偏多" ? "long" :
+  market.dir === "偏空" ? "short" : "neutral";
+
+document.getElementById("marketConfidence").innerText =
+  market.confidence + "%";
+
+const hint = document.getElementById("marketHint");
+if (market.dir === "盤整") {
+  hint.innerText = "⚠️ 目前方向不明確，僅供觀察，不建議進場";
+} else {
+  hint.innerText = "✅ 市場有方向，但仍需自行確認結構";
+}
+
+/* 觀察名單 */
+const watchBody = document.querySelector("#watchTable tbody");
+data.items.forEach(i => {
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+    <td>${i.symbol}</td>
+    <td class="${i.dir}">${i.dir}</td>
+    <td>${i.change}%</td>
+    <td>$${i.price}</td>
+    <td class="confidence">${i.strength}</td>
+  `;
+  watchBody.appendChild(tr);
+});
+
+/* 可進場（信心 ≥ 70 才顯示） */
+const entryBody = document.querySelector("#entryTable tbody");
+const entries = data.items.filter(i => i.strength >= 70);
+
+if (entries.length === 0) {
+  const tr = document.createElement("tr");
+  tr.innerHTML = `<td colspan="3" class="muted">（目前無可進場標的）</td>`;
+  entryBody.appendChild(tr);
+} else {
+  entries.forEach(i => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${i.symbol}</td>
+      <td class="${i.dir}">${i.dir}</td>
+      <td class="confidence">${i.strength}%</td>
+    `;
+    entryBody.appendChild(tr);
+  });
+}
 </script>
 
 </body>
