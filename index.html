@@ -1,161 +1,193 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <title>Gate 異常監控</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <style>
 body {
   margin: 0;
   background: #0b0f14;
   color: #e5e7eb;
-  font-family: system-ui;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
 }
-.wrap {
-  padding: 28px 36px;
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 h1 {
-  color: #4ea1ff;
-  margin: 0 0 6px;
-}
-.meta {
-  color: #9aa4b2;
+  color: #60a5fa;
   margin-bottom: 8px;
 }
-.market {
-  font-size: 18px;
-  margin-bottom: 10px;
+small {
+  color: #9ca3af;
 }
-.long { color:#22c55e }
-.short { color:#ef4444 }
-.neutral { color:#facc15 }
-
+.mode {
+  margin: 12px 0;
+}
+.mode button {
+  background: #1f2937;
+  border: 1px solid #374151;
+  color: #e5e7eb;
+  padding: 6px 12px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+.mode button.active {
+  background: #2563eb;
+}
+.status {
+  margin: 12px 0;
+  font-weight: bold;
+}
 .warn {
-  background:#3a2f05;
-  color:#facc15;
-  padding:10px 14px;
-  border-left:4px solid #facc15;
-  margin:12px 0;
+  background: #3f2d00;
+  color: #facc15;
+  padding: 8px;
+  margin-bottom: 12px;
 }
-
 table {
-  width:100%;
-  border-collapse:collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
-th,td {
-  padding:10px 8px;
-  border-bottom:1px solid #1f2937;
-  text-align:right;
-  font-size:14px;
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #1f2937;
 }
-th:first-child,td:first-child { text-align:left }
+th {
+  text-align: left;
+  color: #9ca3af;
+}
+.long { color: #22c55e; }
+.short { color: #ef4444; }
+.neutral { color: #facc15; }
 .badge {
-  padding:3px 8px;
-  border-radius:6px;
-  font-size:12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
 }
-.good { background:#14532d;color:#22c55e }
-.mid { background:#3a2f05;color:#facc15 }
-.bad { background:#3f1d1d;color:#ef4444 }
+.ok { background: #065f46; }
+.try { background: #78350f; }
+.no { background: #374151; }
 </style>
 </head>
 
 <body>
-<div class="wrap">
-<h1>Gate 異常監控</h1>
-<div class="meta" id="updated">載入中…</div>
-<div class="market" id="marketDir"></div>
-<div id="warnBox"></div>
+<div class="container">
+  <h1>Gate 異常監控</h1>
+  <small id="updateTime">讀取中...</small>
 
-<table>
-<thead>
-<tr>
-  <th>幣種</th>
-  <th>方向</th>
-  <th>變動</th>
-  <th>價格</th>
-  <th>強度</th>
-  <th>操作建議</th>
-</tr>
-</thead>
-<tbody id="rows"></tbody>
-</table>
+  <div class="mode">
+    模式：
+    <button onclick="setMode('strict')" class="active">保守</button>
+    <button onclick="setMode('normal')">正常</button>
+    <button onclick="setMode('aggressive')">激進</button>
+  </div>
+
+  <div id="direction" class="status"></div>
+  <div id="warning" class="warn" style="display:none;"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>幣種</th>
+        <th>方向</th>
+        <th>變動</th>
+        <th>價格</th>
+        <th>強度</th>
+        <th>操作建議</th>
+      </tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
 </div>
 
 <script>
-fetch('./data_fast.json')
-.then(r=>r.json())
-.then(data=>{
-  document.getElementById('updated').innerText =
-    '最後更新：' + data.updated;
+let MODE = 'strict';
 
-  let items = data.items || [];
-  let score = 0;
+const MODE_RULES = {
+  strict:   { ok: 70, try: 45 },
+  normal:   { ok: 60, try: 35 },
+  aggressive:{ ok: 50, try: 25 }
+};
 
-  items.forEach(i=>{
-    // ===== 方向 =====
-    if (i.change > 1) i.dir='long';
-    else if (i.change < -1) i.dir='short';
-    else i.dir='neutral';
+function setMode(m) {
+  MODE = m;
+  document.querySelectorAll('.mode button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  render(window._data || []);
+}
 
-    // ===== 強度 =====
-    i.strength = Math.min(100, Math.round(Math.abs(i.change)*2));
+function taiwanTime(ts) {
+  const d = new Date(ts);
+  return d.toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
+}
 
-    // ===== 進場等級 =====
-    if (i.strength >= 70 && Math.abs(i.change)>=2)
-      i.entry = '可做';
-    else if (i.strength >= 40)
-      i.entry = '小倉試單';
-    else
-      i.entry = '禁止';
+async function load() {
+  const res = await fetch('data_fast.json?_=' + Date.now());
+  const json = await res.json();
+  window._data = json.items || [];
+  document.getElementById('updateTime').innerText =
+    '最後更新：' + taiwanTime(json.updated);
+  render(window._data);
+}
 
-    // ===== 操作提示 =====
-    if (i.entry==='可做' && Math.abs(i.change)<6)
-      i.action = '追';
-    else if (i.entry!=='禁止')
-      i.action = '等回踩';
-    else
-      i.action = '不動';
+function render(items) {
+  const rules = MODE_RULES[MODE];
+  const rows = document.getElementById('rows');
+  rows.innerHTML = '';
 
-    if (i.dir==='long') score+=i.strength;
-    if (i.dir==='short') score-=i.strength;
+  let bias = 0;
+
+  const list = items.map(i => {
+    let dir = 'neutral';
+    if (i.change > 0.3) dir = 'long';
+    if (i.change < -0.3) dir = 'short';
+
+    let entry = '禁止';
+    if (i.strength >= rules.ok) entry = '可做';
+    else if (i.strength >= rules.try) entry = '小倉試單';
+
+    if (dir === 'long') bias++;
+    if (dir === 'short') bias--;
+
+    return { ...i, dir, entry };
+  }).filter(i => i.entry !== '禁止')
+    .sort((a,b) => b.strength - a.strength)
+    .slice(0, 15);
+
+  list.forEach(i => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${i.symbol}</td>
+      <td class="${i.dir}">${i.dir}</td>
+      <td>${i.change.toFixed(2)}%</td>
+      <td>$${i.price}</td>
+      <td>${i.strength}</td>
+      <td>
+        <span class="badge ${i.entry==='可做'?'ok':'try'}">${i.entry}</span>
+      </td>`;
+    rows.appendChild(tr);
   });
 
-  // ===== 只取前 12 名 =====
-  items = items
-    .filter(i=>i.entry!=='禁止')
-    .sort((a,b)=>b.strength-a.strength)
-    .slice(0,12);
+  const dirText = bias > 2 ? '偏多' : bias < -2 ? '偏空' : '盤整';
+  document.getElementById('direction').innerText =
+    `目前方向：${dirText}｜模式：${MODE}`;
 
-  // ===== 整體方向 =====
-  let dirHTML='';
-  let warn='';
-  if (score>150) dirHTML='<span class="long">偏多</span>｜可順多';
-  else if (score<-150) dirHTML='<span class="short">偏空</span>｜可順空';
-  else {
-    dirHTML='<span class="neutral">盤整</span>';
-    warn=`<div class="warn">⚠️ 方向不明確，不建議進場</div>`;
+  const warn = document.getElementById('warning');
+  if (dirText === '盤整') {
+    warn.style.display = 'block';
+    warn.innerText = '⚠ 方向不明確，僅供觀察，不建議重倉進場';
+  } else {
+    warn.style.display = 'none';
   }
-  document.getElementById('marketDir').innerHTML =
-    `目前方向：${dirHTML} ｜ 信心 ${Math.min(100,Math.abs(score))}%`;
-  document.getElementById('warnBox').innerHTML = warn;
+}
 
-  // ===== 表格 =====
-  document.getElementById('rows').innerHTML =
-    items.map(i=>`
-      <tr>
-        <td>${i.symbol}</td>
-        <td class="${i.dir}">${i.dir}</td>
-        <td>${i.change.toFixed(2)}%</td>
-        <td>$${i.price}</td>
-        <td>${i.strength}</td>
-        <td>
-          <span class="badge ${
-            i.entry==='可做'?'good':i.entry==='小倉試單'?'mid':'bad'
-          }">${i.entry}｜${i.action}</span>
-        </td>
-      </tr>
-    `).join('');
-});
+// 自動刷新（30 秒）
+load();
+setInterval(load, 30000);
 </script>
 </body>
 </html>
