@@ -1,199 +1,107 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
 <meta charset="UTF-8" />
 <title>Gate 異常監控</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 <style>
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #0b0f14;
-  color: #e6e6e6;
-}
+  body {
+    background:#0b0f14;
+    color:#e5e7eb;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    padding:30px;
+  }
+  h1 {
+    color:#4ea1ff;
+    margin-bottom:5px;
+  }
+  .sub {
+    color:#9ca3af;
+    margin-bottom:20px;
+  }
+  .direction {
+    margin:15px 0;
+    font-size:18px;
+  }
+  .long { color:#22c55e; }
+  .short { color:#ef4444; }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
-
-h1 {
-  color: #5da9ff;
-  margin-bottom: 6px;
-}
-
-.sub {
-  color: #9aa4af;
-  font-size: 14px;
-  margin-bottom: 16px;
-}
-
-.direction {
-  padding: 12px 16px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.direction.long {
-  background: rgba(0, 200, 100, 0.15);
-  border-left: 4px solid #00c864;
-}
-
-.direction.short {
-  background: rgba(255, 80, 80, 0.15);
-  border-left: 4px solid #ff5050;
-}
-
-.direction.flat {
-  background: rgba(180, 180, 180, 0.1);
-  border-left: 4px solid #888;
-}
-
-.section {
-  margin-top: 24px;
-}
-
-.section h2 {
-  margin-bottom: 12px;
-}
-
-.card {
-  background: #121821;
-  border-radius: 10px;
-  padding: 14px 16px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card.long {
-  border-left: 4px solid #00c864;
-}
-
-.card.short {
-  border-left: 4px solid #ff5050;
-}
-
-.left {
-  font-weight: 600;
-}
-
-.right {
-  display: flex;
-  gap: 14px;
-  font-size: 14px;
-}
-
-.long-text {
-  color: #00e676;
-}
-
-.short-text {
-  color: #ff5252;
-}
-
-.score {
-  font-weight: 700;
-}
+  .row {
+    display:flex;
+    justify-content:space-between;
+    padding:12px 8px;
+    border-bottom:1px solid #1f2937;
+    align-items:center;
+  }
+  .symbol { width:140px; }
+  .age { color:#9ca3af; font-size:13px; }
 </style>
 </head>
-
 <body>
-<div class="container">
 
 <h1>Gate 異常監控</h1>
-<div id="updated" class="sub">載入中…</div>
+<div class="sub" id="updated">最後更新：--</div>
 
-<div id="directionBox" class="direction flat">
-  判斷中…
-</div>
+<div class="direction" id="direction">方向計算中…</div>
 
-<div class="section">
-  <h2>🚀 多頭異常</h2>
-  <div id="longList"></div>
-</div>
-
-<div class="section">
-  <h2>📉 空頭異常</h2>
-  <div id="shortList"></div>
-</div>
-
-</div>
+<div id="list"></div>
 
 <script>
-const TOP_N = 5;        // C：只顯示前 N 名
-const MIN_SCORE = 60;  // C：分數過濾門檻
+async function load() {
+  const res = await fetch("./data_fast.json?_=" + Date.now());
+  const data = await res.json();
 
-fetch("./data_fast.json")
-  .then(r => r.json())
-  .then(data => {
-    // --- 台灣時間顯示（不解析 Date，直接用字串） ---
-    document.getElementById("updated").innerText =
-      "最後更新：" + data.updated;
+  /** 台灣時間 **/
+  const updated = new Date();
+  const twTime = updated.toLocaleString("zh-TW", { timeZone: "Asia/Taipei" });
+  document.getElementById("updated").innerText = "最後更新：" + twTime;
 
-    const items = data.items || [];
+  const now = Date.now();
 
-    // 分組 + 過濾
-    const longs = items
-      .filter(i => i.direction === "long" && i.score >= MIN_SCORE)
-      .sort((a,b) => b.score - a.score)
-      .slice(0, TOP_N);
+  let longScore = 0;
+  let shortScore = 0;
 
-    const shorts = items
-      .filter(i => i.direction === "short" && i.score >= MIN_SCORE)
-      .sort((a,b) => b.score - a.score)
-      .slice(0, TOP_N);
-
-    // --- A：整體方向一句話 ---
-    const longScore = longs.reduce((s,i)=>s+i.score,0);
-    const shortScore = shorts.reduce((s,i)=>s+i.score,0);
-
-    const box = document.getElementById("directionBox");
-
-    if (longScore > shortScore * 1.2) {
-      box.className = "direction long";
-      box.innerText = "🔥 偏多盤（多頭異常佔優）";
-    } else if (shortScore > longScore * 1.2) {
-      box.className = "direction short";
-      box.innerText = "❄️ 偏空盤（空頭異常佔優）";
-    } else {
-      box.className = "direction flat";
-      box.innerText = "⚪ 盤整偏震盪，不建議積極出手";
-    }
-
-    // --- B：卡片列表 ---
-    render(longs, "longList", "long");
-    render(shorts, "shortList", "short");
+  data.items.forEach(i => {
+    if (i.side === "long") longScore += i.score;
+    if (i.side === "short") shortScore += i.score;
   });
 
-function render(list, elId, dir) {
-  const el = document.getElementById(elId);
-  el.innerHTML = "";
+  const total = longScore + shortScore || 1;
+  const bias = longScore > shortScore ? "long" : "short";
+  const confidence = Math.round(
+    (Math.abs(longScore - shortScore) / total) * 100
+  );
 
-  if (list.length === 0) {
-    el.innerHTML = "<div class='sub'>目前沒有符合條件的異常</div>";
-    return;
-  }
+  const dirEl = document.getElementById("direction");
+  dirEl.innerHTML = `
+    目前方向：
+    <span class="${bias}">
+      ${bias === "long" ? "偏多" : "偏空"}
+    </span>
+    ｜信心 ${confidence}%
+  `;
 
-  list.forEach(i => {
-    const div = document.createElement("div");
-    div.className = `card ${dir}`;
-    div.innerHTML = `
-      <div class="left">${i.symbol}</div>
-      <div class="right">
-        <span class="${dir}-text">${dir.toUpperCase()}</span>
-        <span>${(i.change*100).toFixed(2)}%</span>
-        <span>$${i.price}</span>
-        <span class="score">${i.score}</span>
-      </div>
-    `;
-    el.appendChild(div);
-  });
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+
+  data.items
+    .filter(i => i.side === bias) // ✅ 只顯示順勢
+    .forEach(i => {
+      const ageMin = Math.floor((now - i.first_seen) / 60000);
+      const row = document.createElement("div");
+      row.className = "row";
+      row.innerHTML = `
+        <div class="symbol">${i.symbol}</div>
+        <div class="${i.side}">${i.side.toUpperCase()}</div>
+        <div>${i.change}%</div>
+        <div>$${i.price}</div>
+        <div class="age">${ageMin} 分鐘前</div>
+      `;
+      list.appendChild(row);
+    });
 }
+
+load();
+setInterval(load, 30000);
 </script>
 
 </body>
