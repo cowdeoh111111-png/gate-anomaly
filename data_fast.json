@@ -1,108 +1,100 @@
 {
-  "updated": "2026/2/27 下午10:15:25",
+  "updated": "2026/2/27 下午10:44:25",
   "items": [
     {
       "symbol": "ETH_USDT",
       "direction": "short",
-      "change": -5.5,
-      "price": 1919.38,
-      "score": 550,
+      "change": -5.79,
+      "price": 1917.96,
+      "score": 579,
       "category": "主流"
     },
     {
       "symbol": "BTC_USDT",
       "direction": "short",
-      "change": -2.89,
-      "price": 65544.8,
-      "score": 289,
+      "change": -3.1,
+      "price": 65463,
+      "score": 310,
       "category": "主流"
     },
     {
       "symbol": "SAHARA_USDT",
       "direction": "long",
-      "change": 51.58,
-      "price": 0.02307,
-      "score": 5158,
+      "change": 49.05,
+      "price": 0.02267,
+      "score": 4905,
       "category": "山寨"
     },
     {
       "symbol": "ALICE_USDT",
       "direction": "long",
-      "change": 33.21,
-      "price": 0.1384,
-      "score": 3321,
+      "change": 38.81,
+      "price": 0.1452,
+      "score": 3881,
       "category": "山寨"
     },
     {
       "symbol": "DENT_USDT",
       "direction": "short",
-      "change": -28.54,
-      "price": 0.0002624,
-      "score": 2854,
-      "category": "山寨"
-    },
-    {
-      "symbol": "PIPPIN_USDT",
-      "direction": "short",
-      "change": -25.67,
-      "price": 0.62324,
-      "score": 2567,
+      "change": -28.2,
+      "price": 0.0002623,
+      "score": 2820,
       "category": "山寨"
     },
     {
       "symbol": "UAI_USDT",
       "direction": "short",
-      "change": -23.6,
-      "price": 0.18824,
-      "score": 2360,
+      "change": -25.02,
+      "price": 0.18455,
+      "score": 2502,
       "category": "山寨"
     },
     {
       "symbol": "CLO_USDT",
       "direction": "short",
-      "change": -23.58,
-      "price": 0.07127,
-      "score": 2358,
+      "change": -24.01,
+      "price": 0.07097,
+      "score": 2401,
       "category": "山寨"
     },
     {
-      "symbol": "IDOL_USDT",
-      "direction": "long",
-      "change": 20.15,
-      "price": 0.019769,
-      "score": 2015,
-      "category": "山寨"
-    },
-    {
-      "symbol": "B_USDT",
-      "direction": "long",
-      "change": 19.56,
-      "price": 0.1681,
-      "score": 1956,
-      "category": "山寨"
-    },
-    {
-      "symbol": "LUNC_USDT",
-      "direction": "long",
-      "change": 19.06,
-      "price": 0.00004328,
-      "score": 1906,
-      "category": "山寨"
-    },
-    {
-      "symbol": "GWEI_USDT",
-      "direction": "long",
-      "change": 18.38,
-      "price": 0.042658,
-      "score": 1838,
+      "symbol": "PIPPIN_USDT",
+      "direction": "short",
+      "change": -23.13,
+      "price": 0.636223,
+      "score": 2313,
       "category": "山寨"
     },
     {
       "symbol": "POWER_USDT",
       "direction": "short",
-      "change": -17.13,
-      "price": 1.4555,
-      "score": 1713,
+      "change": -19.46,
+      "price": 1.4482,
+      "score": 1946,
+      "category": "山寨"
+    },
+    {
+      "symbol": "B_USDT",
+      "direction": "long",
+      "change": 18.91,
+      "price": 0.1673,
+      "score": 1891,
+      "category": "山寨"
+    },
+    {
+      "symbol": "IDOL_USDT",
+      "direction": "long",
+      "change": 18.34,
+      "price": 0.019592,
+      "score": 1834,
+      "category": "山寨"
+    },
+    {
+      "symbol": "LUNC_USDT",
+      "direction": "long",
+      "change": 17.09,
+      "price": 0.0000429,
+      "score": 1709,
       "category": "山寨"
     },
     {
@@ -114,107 +106,147 @@
       "category": "山寨"
     },
     {
-      "symbol": "FOLKS_USDT",
-      "direction": "long",
-      "change": 16.38,
-      "price": 1.442,
-      "score": 1638,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RATS_USDT",
-      "direction": "short",
-      "change": -16.3,
-      "price": 0.00003795,
-      "score": 1630,
-      "category": "山寨"
-    },
-    {
-      "symbol": "1_USDT",
-      "direction": "short",
-      "change": -16.24,
-      "price": 0.000624,
-      "score": 1624,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SKYAI_USDT",
-      "direction": "long",
-      "change": 15.58,
-      "price": 0.05119,
-      "score": 1558,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MIRA_USDT",
-      "direction": "short",
-      "change": -15.1,
-      "price": 0.0933,
-      "score": 1510,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SIREN_USDT",
-      "direction": "long",
-      "change": 14.98,
-      "price": 0.38176,
-      "score": 1498,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ZAMA_USDT",
-      "direction": "short",
-      "change": -14.8,
-      "price": 0.02148,
-      "score": 1480,
-      "category": "山寨"
-    },
-    {
-      "symbol": "OPN_USDT",
-      "direction": "short",
-      "change": -14.76,
-      "price": 0.4627,
-      "score": 1476,
-      "category": "山寨"
-    },
-    {
-      "symbol": "GUN_USDT",
-      "direction": "short",
-      "change": -14.2,
-      "price": 0.02676,
-      "score": 1420,
-      "category": "山寨"
-    },
-    {
-      "symbol": "币安人生_USDT",
-      "direction": "long",
-      "change": 14,
-      "price": 0.0741,
-      "score": 1400,
-      "category": "山寨"
-    },
-    {
       "symbol": "BAS_USDT",
       "direction": "short",
-      "change": -13.78,
-      "price": 0.005066,
-      "score": 1378,
+      "change": -16.12,
+      "price": 0.004947,
+      "score": 1612,
+      "category": "山寨"
+    },
+    {
+      "symbol": "GWEI_USDT",
+      "direction": "long",
+      "change": 15.71,
+      "price": 0.042114,
+      "score": 1571,
+      "category": "山寨"
+    },
+    {
+      "symbol": "WET_USDT",
+      "direction": "long",
+      "change": 15.45,
+      "price": 0.1195,
+      "score": 1545,
       "category": "山寨"
     },
     {
       "symbol": "PENGUIN_USDT",
       "direction": "short",
-      "change": -13.64,
-      "price": 0.00532,
-      "score": 1364,
+      "change": -15.26,
+      "price": 0.00533,
+      "score": 1526,
       "category": "山寨"
     },
     {
-      "symbol": "ZKJ_USDT",
+      "symbol": "CAMP_USDT",
       "direction": "long",
-      "change": 12.66,
-      "price": 0.0258,
-      "score": 1266,
+      "change": 14.83,
+      "price": 0.0024,
+      "score": 1483,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ZAMA_USDT",
+      "direction": "short",
+      "change": -14.67,
+      "price": 0.02175,
+      "score": 1467,
+      "category": "山寨"
+    },
+    {
+      "symbol": "FOLKS_USDT",
+      "direction": "long",
+      "change": 14.5,
+      "price": 1.429,
+      "score": 1450,
+      "category": "山寨"
+    },
+    {
+      "symbol": "RATS_USDT",
+      "direction": "short",
+      "change": -14.48,
+      "price": 0.00003826,
+      "score": 1448,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MYX_USDT",
+      "direction": "short",
+      "change": -14.44,
+      "price": 0.4084,
+      "score": 1444,
+      "category": "山寨"
+    },
+    {
+      "symbol": "GUN_USDT",
+      "direction": "short",
+      "change": -14.21,
+      "price": 0.02675,
+      "score": 1421,
+      "category": "山寨"
+    },
+    {
+      "symbol": "OPN_USDT",
+      "direction": "short",
+      "change": -13.55,
+      "price": 0.4633,
+      "score": 1355,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SIREN_USDT",
+      "direction": "long",
+      "change": 13.48,
+      "price": 0.37445,
+      "score": 1348,
+      "category": "山寨"
+    },
+    {
+      "symbol": "币安人生_USDT",
+      "direction": "long",
+      "change": 13.29,
+      "price": 0.075,
+      "score": 1329,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ATH_USDT",
+      "direction": "long",
+      "change": 13.04,
+      "price": 0.00572,
+      "score": 1304,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SKYAI_USDT",
+      "direction": "long",
+      "change": 12.93,
+      "price": 0.05031,
+      "score": 1293,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ENSO_USDT",
+      "direction": "short",
+      "change": -12.8,
+      "price": 1.4049,
+      "score": 1280,
+      "category": "山寨"
+    },
+    {
+      "symbol": "GUA_USDT",
+      "direction": "short",
+      "change": -12.72,
+      "price": 0.21355,
+      "score": 1272,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MIRA_USDT",
+      "direction": "short",
+      "change": -12.61,
+      "price": 0.0922,
+      "score": 1261,
       "category": "山寨"
     },
     {
@@ -226,51 +258,35 @@
       "category": "山寨"
     },
     {
-      "symbol": "GUA_USDT",
+      "symbol": "1_USDT",
       "direction": "short",
-      "change": -12.33,
-      "price": 0.21004,
-      "score": 1233,
+      "change": -12.43,
+      "price": 0.000648,
+      "score": 1243,
       "category": "山寨"
     },
     {
-      "symbol": "ATH_USDT",
+      "symbol": "ROBO_USDT",
       "direction": "long",
-      "change": 12.25,
-      "price": 0.00568,
-      "score": 1225,
+      "change": 12.27,
+      "price": 0.0387,
+      "score": 1227,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SPACE_USDT",
+      "direction": "short",
+      "change": -12.15,
+      "price": 0.00822,
+      "score": 1215,
       "category": "山寨"
     },
     {
       "symbol": "STEEM_USDT",
       "direction": "short",
-      "change": -11.93,
-      "price": 0.06026,
-      "score": 1193,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MYX_USDT",
-      "direction": "short",
-      "change": -11.64,
-      "price": 0.4219,
-      "score": 1164,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CAMP_USDT",
-      "direction": "long",
-      "change": 11.43,
-      "price": 0.00234,
-      "score": 1143,
-      "category": "山寨"
-    },
-    {
-      "symbol": "FOGO_USDT",
-      "direction": "short",
-      "change": -11.25,
-      "price": 0.02659,
-      "score": 1125,
+      "change": -11.31,
+      "price": 0.05999,
+      "score": 1131,
       "category": "山寨"
     },
     {
@@ -282,211 +298,187 @@
       "category": "山寨"
     },
     {
-      "symbol": "MEMES_USDT",
-      "direction": "short",
-      "change": -11.05,
-      "price": 0.000934,
-      "score": 1105,
-      "category": "山寨"
-    },
-    {
       "symbol": "DUSK_USDT",
       "direction": "short",
-      "change": -11.03,
-      "price": 0.08414,
-      "score": 1103,
+      "change": -11.2,
+      "price": 0.08353,
+      "score": 1120,
       "category": "山寨"
     },
     {
-      "symbol": "COLLECT_USDT",
+      "symbol": "MEMES_USDT",
       "direction": "short",
-      "change": -10.89,
-      "price": 0.03757,
-      "score": 1089,
+      "change": -10.98,
+      "price": 0.000924,
+      "score": 1098,
       "category": "山寨"
     },
     {
-      "symbol": "KITE_USDT",
+      "symbol": "FOGO_USDT",
       "direction": "short",
-      "change": -10.62,
-      "price": 0.23103,
-      "score": 1062,
-      "category": "山寨"
-    },
-    {
-      "symbol": "WET_USDT",
-      "direction": "long",
-      "change": 10.53,
-      "price": 0.11581,
-      "score": 1053,
+      "change": -10.88,
+      "price": 0.02654,
+      "score": 1088,
       "category": "山寨"
     },
     {
       "symbol": "VVV_USDT",
       "direction": "long",
-      "change": 10.35,
-      "price": 4.437,
-      "score": 1035,
+      "change": 10.88,
+      "price": 4.485,
+      "score": 1088,
       "category": "山寨"
     },
     {
-      "symbol": "我踏马来了_USDT",
+      "symbol": "KITE_USDT",
+      "direction": "short",
+      "change": -10.78,
+      "price": 0.23015,
+      "score": 1078,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ZKJ_USDT",
       "direction": "long",
-      "change": 10.3,
-      "price": 0.012785,
-      "score": 1030,
+      "change": 10.39,
+      "price": 0.0255,
+      "score": 1039,
       "category": "山寨"
     },
     {
       "symbol": "USTC_USDT",
       "direction": "long",
-      "change": 10.27,
-      "price": 0.005306,
-      "score": 1027,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SPACE_USDT",
-      "direction": "short",
-      "change": -10.25,
-      "price": 0.00831,
-      "score": 1025,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ENSO_USDT",
-      "direction": "short",
-      "change": -10.22,
-      "price": 1.4264,
-      "score": 1022,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AGT_USDT",
-      "direction": "long",
-      "change": 9.81,
-      "price": 0.005204,
-      "score": 981,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AZTEC_USDT",
-      "direction": "short",
-      "change": -9.72,
-      "price": 0.02108,
-      "score": 972,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BEAT_USDT",
-      "direction": "short",
-      "change": -9.59,
-      "price": 0.1941,
-      "score": 959,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ESP_USDT",
-      "direction": "short",
-      "change": -9.56,
-      "price": 0.12517,
-      "score": 956,
+      "change": 10.28,
+      "price": 0.005301,
+      "score": 1028,
       "category": "山寨"
     },
     {
       "symbol": "A2Z_USDT",
       "direction": "short",
-      "change": -9.5,
-      "price": 0.000772,
-      "score": 950,
+      "change": -10.25,
+      "price": 0.000762,
+      "score": 1025,
       "category": "山寨"
     },
     {
-      "symbol": "AIXBT_USDT",
-      "direction": "long",
-      "change": 9.17,
-      "price": 0.02179,
-      "score": 917,
-      "category": "山寨"
-    },
-    {
-      "symbol": "LUNA_USDT",
-      "direction": "long",
-      "change": 9.12,
-      "price": 0.0682,
-      "score": 912,
-      "category": "山寨"
-    },
-    {
-      "symbol": "XNY_USDT",
+      "symbol": "AZTEC_USDT",
       "direction": "short",
-      "change": -9.1,
-      "price": 0.004664,
-      "score": 910,
+      "change": -10.08,
+      "price": 0.02097,
+      "score": 1008,
       "category": "山寨"
     },
     {
-      "symbol": "GRASS_USDT",
+      "symbol": "ESP_USDT",
       "direction": "short",
-      "change": -9.09,
-      "price": 0.2101,
-      "score": 909,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MAVIA_USDT",
-      "direction": "short",
-      "change": -8.77,
-      "price": 0.0333,
-      "score": 877,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ACU_USDT",
-      "direction": "long",
-      "change": 8.74,
-      "price": 0.11797,
-      "score": 874,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ROBO_USDT",
-      "direction": "long",
-      "change": 8.42,
-      "price": 0.03875,
-      "score": 842,
+      "change": -10.03,
+      "price": 0.12447,
+      "score": 1003,
       "category": "山寨"
     },
     {
       "symbol": "RNBW_USDT",
       "direction": "short",
-      "change": -8.39,
-      "price": 0.01988,
-      "score": 839,
+      "change": -9.77,
+      "price": 0.01977,
+      "score": 977,
+      "category": "山寨"
+    },
+    {
+      "symbol": "我踏马来了_USDT",
+      "direction": "long",
+      "change": 9.43,
+      "price": 0.012798,
+      "score": 943,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BEAT_USDT",
+      "direction": "short",
+      "change": -9.42,
+      "price": 0.1951,
+      "score": 942,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ACU_USDT",
+      "direction": "long",
+      "change": 8.9,
+      "price": 0.11781,
+      "score": 890,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TAKE_USDT",
+      "direction": "short",
+      "change": -8.79,
+      "price": 0.01754,
+      "score": 879,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MAVIA_USDT",
+      "direction": "short",
+      "change": -8.64,
+      "price": 0.0328,
+      "score": 864,
       "category": "山寨"
     },
     {
       "symbol": "ZEC_USDT",
       "direction": "short",
-      "change": -8.25,
-      "price": 217.93,
-      "score": 825,
+      "change": -8.52,
+      "price": 217.58,
+      "score": 852,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AGT_USDT",
+      "direction": "long",
+      "change": 8.47,
+      "price": 0.005173,
+      "score": 847,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MAGMA_USDT",
+      "direction": "short",
+      "change": -8.44,
+      "price": 0.0962,
+      "score": 844,
+      "category": "山寨"
+    },
+    {
+      "symbol": "人生K线_USDT",
+      "direction": "long",
+      "change": 8.4,
+      "price": 0.000529,
+      "score": 840,
+      "category": "山寨"
+    },
+    {
+      "symbol": "COLLECT_USDT",
+      "direction": "short",
+      "change": -8.37,
+      "price": 0.03744,
+      "score": 837,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AGLD_USDT",
+      "direction": "short",
+      "change": -8.23,
+      "price": 0.2508,
+      "score": 823,
       "category": "山寨"
     },
     {
       "symbol": "KOMA_USDT",
       "direction": "short",
-      "change": -8.24,
-      "price": 0.00724,
-      "score": 824,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CUDIS_USDT",
-      "direction": "short",
-      "change": -8.21,
-      "price": 0.00962,
-      "score": 821,
+      "change": -8.23,
+      "price": 0.00725,
+      "score": 823,
       "category": "山寨"
     },
     {
@@ -498,331 +490,443 @@
       "category": "山寨"
     },
     {
-      "symbol": "BR_USDT",
+      "symbol": "KGEN_USDT",
       "direction": "short",
-      "change": -8.03,
-      "price": 0.05243,
-      "score": 803,
+      "change": -8.07,
+      "price": 0.17435,
+      "score": 807,
       "category": "山寨"
     },
     {
       "symbol": "小股东_USDT",
       "direction": "short",
-      "change": -7.95,
-      "price": 0.000162,
-      "score": 795,
+      "change": -8.05,
+      "price": 0.00016,
+      "score": 805,
       "category": "山寨"
     },
     {
-      "symbol": "SIGN_USDT",
-      "direction": "short",
-      "change": -7.92,
-      "price": 0.02162,
+      "symbol": "LUNA_USDT",
+      "direction": "long",
+      "change": 7.92,
+      "price": 0.0681,
       "score": 792,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TAKE_USDT",
-      "direction": "short",
-      "change": -7.88,
-      "price": 0.01776,
-      "score": 788,
       "category": "山寨"
     },
     {
       "symbol": "BTR_USDT",
       "direction": "short",
-      "change": -7.72,
-      "price": 0.18027,
-      "score": 772,
-      "category": "山寨"
-    },
-    {
-      "symbol": "DAM_USDT",
-      "direction": "long",
-      "change": 7.61,
-      "price": 0.02476,
-      "score": 761,
-      "category": "山寨"
-    },
-    {
-      "symbol": "人生K线_USDT",
-      "direction": "long",
-      "change": 7.46,
-      "price": 0.000533,
-      "score": 746,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SXP_USDT",
-      "direction": "short",
-      "change": -7.34,
-      "price": 0.0202,
-      "score": 734,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CYS_USDT",
-      "direction": "short",
-      "change": -7.29,
-      "price": 0.3357,
-      "score": 729,
-      "category": "山寨"
-    },
-    {
-      "symbol": "OWL_USDT",
-      "direction": "short",
-      "change": -7.27,
-      "price": 0.01059,
-      "score": 727,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SPX_USDT",
-      "direction": "short",
-      "change": -7.15,
-      "price": 0.2946,
-      "score": 715,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BIRB_USDT",
-      "direction": "short",
-      "change": -7.12,
-      "price": 0.16439,
-      "score": 712,
-      "category": "山寨"
-    },
-    {
-      "symbol": "C98_USDT",
-      "direction": "long",
-      "change": 7.08,
-      "price": 0.02509,
-      "score": 708,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AGLD_USDT",
-      "direction": "short",
-      "change": -7.05,
-      "price": 0.2533,
-      "score": 705,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AERO_USDT",
-      "direction": "short",
-      "change": -6.96,
-      "price": 0.3341,
-      "score": 696,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ELSA_USDT",
-      "direction": "short",
-      "change": -6.86,
-      "price": 0.08243,
-      "score": 686,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ZRX_USDT",
-      "direction": "short",
-      "change": -6.84,
-      "price": 0.1008,
-      "score": 684,
-      "category": "山寨"
-    },
-    {
-      "symbol": "NOM_USDT",
-      "direction": "short",
-      "change": -6.75,
-      "price": 0.00373,
-      "score": 675,
-      "category": "山寨"
-    },
-    {
-      "symbol": "GAIB_USDT",
-      "direction": "long",
-      "change": 6.72,
-      "price": 0.03064,
-      "score": 672,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BTGOON_USDT",
-      "direction": "short",
-      "change": -6.64,
-      "price": 9.7,
-      "score": 664,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MAGMA_USDT",
-      "direction": "short",
-      "change": -6.64,
-      "price": 0.09728,
-      "score": 664,
-      "category": "山寨"
-    },
-    {
-      "symbol": "FARTCOIN_USDT",
-      "direction": "short",
-      "change": -6.63,
-      "price": 0.1562,
-      "score": 663,
-      "category": "山寨"
-    },
-    {
-      "symbol": "FIGHT_USDT",
-      "direction": "short",
-      "change": -6.55,
-      "price": 0.006339,
-      "score": 655,
-      "category": "山寨"
-    },
-    {
-      "symbol": "XAG_USDT",
-      "direction": "long",
-      "change": 6.54,
-      "price": 93.9,
-      "score": 654,
-      "category": "山寨"
-    },
-    {
-      "symbol": "HNT_USDT",
-      "direction": "short",
-      "change": -6.52,
-      "price": 1.318,
-      "score": 652,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CHEEMS_USDT",
-      "direction": "short",
-      "change": -6.46,
-      "price": 4.084e-7,
-      "score": 646,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SENT_USDT",
-      "direction": "short",
-      "change": -6.46,
-      "price": 0.02258,
-      "score": 646,
-      "category": "山寨"
-    },
-    {
-      "symbol": "KGEN_USDT",
-      "direction": "short",
-      "change": -6.42,
-      "price": 0.17628,
-      "score": 642,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SLVON_USDT",
-      "direction": "long",
-      "change": 6.33,
-      "price": 84.95,
-      "score": 633,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SOMI_USDT",
-      "direction": "short",
-      "change": -6.29,
-      "price": 0.2071,
-      "score": 629,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RPL_USDT",
-      "direction": "short",
-      "change": -6.28,
-      "price": 1.82,
-      "score": 628,
-      "category": "山寨"
-    },
-    {
-      "symbol": "LQTY_USDT",
-      "direction": "long",
-      "change": 6.25,
-      "price": 0.2872,
-      "score": 625,
-      "category": "山寨"
-    },
-    {
-      "symbol": "JCT_USDT",
-      "direction": "short",
-      "change": -6.22,
-      "price": 0.001553,
-      "score": 622,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BAT_USDT",
-      "direction": "short",
-      "change": -6.17,
-      "price": 0.10597,
-      "score": 617,
-      "category": "山寨"
-    },
-    {
-      "symbol": "DOLO_USDT",
-      "direction": "short",
-      "change": -6.17,
-      "price": 0.03466,
-      "score": 617,
+      "change": -7.91,
+      "price": 0.18109,
+      "score": 791,
       "category": "山寨"
     },
     {
       "symbol": "IRYS_USDT",
       "direction": "short",
-      "change": -6.11,
-      "price": 0.01951,
-      "score": 611,
+      "change": -7.88,
+      "price": 0.01917,
+      "score": 788,
       "category": "山寨"
     },
     {
-      "symbol": "UB_USDT",
-      "direction": "short",
-      "change": -6.08,
-      "price": 0.037546,
-      "score": 608,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BGSC_USDT",
+      "symbol": "DAM_USDT",
       "direction": "long",
-      "change": 5.9,
-      "price": 0.000934,
-      "score": 590,
+      "change": 7.68,
+      "price": 0.02483,
+      "score": 768,
       "category": "山寨"
     },
     {
-      "symbol": "STO_USDT",
+      "symbol": "ELSA_USDT",
       "direction": "short",
-      "change": -5.85,
-      "price": 0.06112,
-      "score": 585,
+      "change": -7.6,
+      "price": 0.08226,
+      "score": 760,
+      "category": "山寨"
+    },
+    {
+      "symbol": "GRASS_USDT",
+      "direction": "short",
+      "change": -7.52,
+      "price": 0.2103,
+      "score": 752,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BR_USDT",
+      "direction": "short",
+      "change": -7.51,
+      "price": 0.05206,
+      "score": 751,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SPX_USDT",
+      "direction": "short",
+      "change": -7.45,
+      "price": 0.2944,
+      "score": 745,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CYS_USDT",
+      "direction": "short",
+      "change": -7.42,
+      "price": 0.3354,
+      "score": 742,
+      "category": "山寨"
+    },
+    {
+      "symbol": "FARTCOIN_USDT",
+      "direction": "short",
+      "change": -7.4,
+      "price": 0.1551,
+      "score": 740,
+      "category": "山寨"
+    },
+    {
+      "symbol": "OWL_USDT",
+      "direction": "short",
+      "change": -7.36,
+      "price": 0.01057,
+      "score": 736,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BIRB_USDT",
+      "direction": "short",
+      "change": -7.36,
+      "price": 0.16533,
+      "score": 736,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ZRX_USDT",
+      "direction": "short",
+      "change": -7.29,
+      "price": 0.1004,
+      "score": 729,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SENT_USDT",
+      "direction": "short",
+      "change": -7.26,
+      "price": 0.02247,
+      "score": 726,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BTGOON_USDT",
+      "direction": "short",
+      "change": -7.22,
+      "price": 9.76,
+      "score": 722,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AERO_USDT",
+      "direction": "short",
+      "change": -7.19,
+      "price": 0.3329,
+      "score": 719,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SONIC_USDT",
+      "direction": "short",
+      "change": -7.1,
+      "price": 0.0458,
+      "score": 710,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SXP_USDT",
+      "direction": "short",
+      "change": -6.91,
+      "price": 0.0202,
+      "score": 691,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CHEEMS_USDT",
+      "direction": "short",
+      "change": -6.87,
+      "price": 4.083e-7,
+      "score": 687,
+      "category": "山寨"
+    },
+    {
+      "symbol": "GAIB_USDT",
+      "direction": "long",
+      "change": 6.78,
+      "price": 0.03069,
+      "score": 678,
+      "category": "山寨"
+    },
+    {
+      "symbol": "DOLO_USDT",
+      "direction": "short",
+      "change": -6.76,
+      "price": 0.03436,
+      "score": 676,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CUDIS_USDT",
+      "direction": "short",
+      "change": -6.6,
+      "price": 0.00962,
+      "score": 660,
+      "category": "山寨"
+    },
+    {
+      "symbol": "XAG_USDT",
+      "direction": "long",
+      "change": 6.59,
+      "price": 93.81,
+      "score": 659,
+      "category": "山寨"
+    },
+    {
+      "symbol": "EDEN_USDT",
+      "direction": "short",
+      "change": -6.57,
+      "price": 0.0327,
+      "score": 657,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BAT_USDT",
+      "direction": "short",
+      "change": -6.53,
+      "price": 0.10585,
+      "score": 653,
+      "category": "山寨"
+    },
+    {
+      "symbol": "NOM_USDT",
+      "direction": "short",
+      "change": -6.52,
+      "price": 0.00373,
+      "score": 652,
+      "category": "山寨"
+    },
+    {
+      "symbol": "RPL_USDT",
+      "direction": "short",
+      "change": -6.52,
+      "price": 1.82,
+      "score": 652,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SLVON_USDT",
+      "direction": "long",
+      "change": 6.51,
+      "price": 85.08,
+      "score": 651,
+      "category": "山寨"
+    },
+    {
+      "symbol": "XNY_USDT",
+      "direction": "short",
+      "change": -6.49,
+      "price": 0.004786,
+      "score": 649,
+      "category": "山寨"
+    },
+    {
+      "symbol": "HNT_USDT",
+      "direction": "short",
+      "change": -6.47,
+      "price": 1.315,
+      "score": 647,
+      "category": "山寨"
+    },
+    {
+      "symbol": "JCT_USDT",
+      "direction": "short",
+      "change": -6.41,
+      "price": 0.001547,
+      "score": 641,
+      "category": "山寨"
+    },
+    {
+      "symbol": "INX_USDT",
+      "direction": "short",
+      "change": -6.4,
+      "price": 0.01126,
+      "score": 640,
       "category": "山寨"
     },
     {
       "symbol": "ARIA_USDT",
       "direction": "short",
-      "change": -5.8,
-      "price": 0.0759,
-      "score": 580,
+      "change": -6.37,
+      "price": 0.07574,
+      "score": 637,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TRADOOR_USDT",
+      "direction": "short",
+      "change": -6.35,
+      "price": 1.313,
+      "score": 635,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SOMI_USDT",
+      "direction": "short",
+      "change": -6.23,
+      "price": 0.2076,
+      "score": 623,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TIA_USDT",
+      "direction": "short",
+      "change": -6.23,
+      "price": 0.316,
+      "score": 623,
+      "category": "山寨"
+    },
+    {
+      "symbol": "LYN_USDT",
+      "direction": "short",
+      "change": -6.22,
+      "price": 0.3104,
+      "score": 622,
+      "category": "山寨"
+    },
+    {
+      "symbol": "FHE_USDT",
+      "direction": "short",
+      "change": -6.22,
+      "price": 0.02836,
+      "score": 622,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BLESS_USDT",
+      "direction": "short",
+      "change": -6.2,
+      "price": 0.00439,
+      "score": 620,
       "category": "山寨"
     },
     {
       "symbol": "SSV_USDT",
       "direction": "short",
-      "change": -5.75,
-      "price": 2.789,
-      "score": 575,
+      "change": -6.15,
+      "price": 2.776,
+      "score": 615,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AIXBT_USDT",
+      "direction": "long",
+      "change": 6.12,
+      "price": 0.02115,
+      "score": 612,
+      "category": "山寨"
+    },
+    {
+      "symbol": "LQTY_USDT",
+      "direction": "long",
+      "change": 6.03,
+      "price": 0.2883,
+      "score": 603,
+      "category": "山寨"
+    },
+    {
+      "symbol": "RAVE_USDT",
+      "direction": "short",
+      "change": -5.98,
+      "price": 0.3425,
+      "score": 598,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BOB_USDT",
+      "direction": "short",
+      "change": -5.96,
+      "price": 0.00552,
+      "score": 596,
+      "category": "山寨"
+    },
+    {
+      "symbol": "DN_USDT",
+      "direction": "short",
+      "change": -5.95,
+      "price": 0.1439,
+      "score": 595,
+      "category": "山寨"
+    },
+    {
+      "symbol": "LIT_USDT",
+      "direction": "short",
+      "change": -5.93,
+      "price": 1.349,
+      "score": 593,
+      "category": "山寨"
+    },
+    {
+      "symbol": "Q_USDT",
+      "direction": "long",
+      "change": 5.91,
+      "price": 0.023052,
+      "score": 591,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TLM_USDT",
+      "direction": "long",
+      "change": 5.91,
+      "price": 0.001702,
+      "score": 591,
+      "category": "山寨"
+    },
+    {
+      "symbol": "DEEP_USDT",
+      "direction": "short",
+      "change": -5.81,
+      "price": 0.02465,
+      "score": 581,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PUNDIX_USDT",
+      "direction": "short",
+      "change": -5.8,
+      "price": 0.156,
+      "score": 580,
+      "category": "山寨"
+    },
+    {
+      "symbol": "UB_USDT",
+      "direction": "short",
+      "change": -5.78,
+      "price": 0.037536,
+      "score": 578,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PYTH_USDT",
+      "direction": "short",
+      "change": -5.76,
+      "price": 0.04879,
+      "score": 576,
+      "category": "山寨"
+    },
+    {
+      "symbol": "IP_USDT",
+      "direction": "short",
+      "change": -5.73,
+      "price": 0.938,
+      "score": 573,
       "category": "山寨"
     },
     {
@@ -834,107 +938,83 @@
       "category": "山寨"
     },
     {
-      "symbol": "TIA_USDT",
+      "symbol": "JASMY_USDT",
       "direction": "short",
-      "change": -5.64,
-      "price": 0.318,
-      "score": 564,
+      "change": -5.66,
+      "price": 0.005546,
+      "score": 566,
       "category": "山寨"
     },
     {
-      "symbol": "BOB_USDT",
-      "direction": "short",
-      "change": -5.6,
-      "price": 0.00556,
-      "score": 560,
-      "category": "山寨"
-    },
-    {
-      "symbol": "LIT_USDT",
-      "direction": "short",
-      "change": -5.59,
-      "price": 1.35,
-      "score": 559,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RESOLV_USDT",
-      "direction": "short",
-      "change": -5.56,
-      "price": 0.0595,
+      "symbol": "BGSC_USDT",
+      "direction": "long",
+      "change": 5.56,
+      "price": 0.00093,
       "score": 556,
       "category": "山寨"
     },
     {
-      "symbol": "DOG_USDT",
+      "symbol": "RON_USDT",
       "direction": "short",
-      "change": -5.54,
-      "price": 0.000852,
-      "score": 554,
-      "category": "山寨"
-    },
-    {
-      "symbol": "FLOW_USDT",
-      "direction": "long",
-      "change": 5.52,
-      "price": 0.0382,
+      "change": -5.52,
+      "price": 0.0975,
       "score": 552,
       "category": "山寨"
     },
     {
-      "symbol": "PUNDIX_USDT",
+      "symbol": "FIGHT_USDT",
       "direction": "short",
-      "change": -5.5,
-      "price": 0.1565,
-      "score": 550,
+      "change": -5.52,
+      "price": 0.006389,
+      "score": 552,
       "category": "山寨"
     },
     {
-      "symbol": "SONIC_USDT",
-      "direction": "short",
-      "change": -5.5,
-      "price": 0.0464,
-      "score": 550,
+      "symbol": "VIX_USDT",
+      "direction": "long",
+      "change": 5.45,
+      "price": 20.506,
+      "score": 545,
       "category": "山寨"
     },
     {
-      "symbol": "FHE_USDT",
+      "symbol": "WOO_USDT",
       "direction": "short",
-      "change": -5.49,
-      "price": 0.0286,
-      "score": 549,
+      "change": -5.44,
+      "price": 0.01582,
+      "score": 544,
       "category": "山寨"
     },
     {
       "symbol": "SOL_USDT",
       "direction": "short",
-      "change": -5.48,
-      "price": 81.29,
-      "score": 548,
+      "change": -5.43,
+      "price": 81.46,
+      "score": 543,
       "category": "山寨"
     },
     {
       "symbol": "BRETT_USDT",
       "direction": "short",
       "change": -5.39,
-      "price": 0.00684,
+      "price": 0.00685,
       "score": 539,
       "category": "山寨"
     },
     {
-      "symbol": "EDEN_USDT",
+      "symbol": "LDO_USDT",
       "direction": "short",
-      "change": -5.38,
-      "price": 0.0334,
-      "score": 538,
+      "change": -5.39,
+      "price": 0.2968,
+      "score": 539,
       "category": "山寨"
     },
     {
-      "symbol": "VIX_USDT",
-      "direction": "long",
-      "change": 5.35,
-      "price": 20.485,
-      "score": 535,
+      "symbol": "BREV_USDT",
+      "direction": "short",
+      "change": -5.33,
+      "price": 0.1351,
+      "score": 533,
       "category": "山寨"
     },
     {
@@ -946,370 +1026,410 @@
       "category": "山寨"
     },
     {
-      "symbol": "INX_USDT",
-      "direction": "short",
-      "change": -5.32,
-      "price": 0.01139,
-      "score": 532,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TURTLE_USDT",
-      "direction": "short",
-      "change": -5.31,
-      "price": 0.03992,
-      "score": 531,
-      "category": "山寨"
-    },
-    {
-      "symbol": "GPS_USDT",
+      "symbol": "IMU_USDT",
       "direction": "short",
       "change": -5.3,
-      "price": 0.00894,
+      "price": 0.003253,
       "score": 530,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RAVE_USDT",
-      "direction": "short",
-      "change": -5.26,
-      "price": 0.3407,
-      "score": 526,
-      "category": "山寨"
-    },
-    {
-      "symbol": "JASMY_USDT",
-      "direction": "short",
-      "change": -5.23,
-      "price": 0.005581,
-      "score": 523,
-      "category": "山寨"
-    },
-    {
-      "symbol": "YFI_USDT",
-      "direction": "short",
-      "change": -5.17,
-      "price": 2603.2,
-      "score": 517,
-      "category": "山寨"
-    },
-    {
-      "symbol": "US_USDT",
-      "direction": "short",
-      "change": -5.16,
-      "price": 0.003365,
-      "score": 516,
-      "category": "山寨"
-    },
-    {
-      "symbol": "WOO_USDT",
-      "direction": "short",
-      "change": -5.14,
-      "price": 0.01586,
-      "score": 514,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BLESS_USDT",
-      "direction": "short",
-      "change": -5.14,
-      "price": 0.00443,
-      "score": 514,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BDXN_USDT",
-      "direction": "short",
-      "change": -5.09,
-      "price": 0.00877,
-      "score": 509,
       "category": "山寨"
     },
     {
       "symbol": "STRK_USDT",
       "direction": "short",
-      "change": -5.08,
-      "price": 0.04053,
-      "score": 508,
+      "change": -5.26,
+      "price": 0.04049,
+      "score": 526,
       "category": "山寨"
     },
     {
-      "symbol": "CGPT_USDT",
-      "direction": "long",
-      "change": 5.06,
-      "price": 0.02034,
-      "score": 506,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AIOT_USDT",
-      "direction": "long",
-      "change": 5.04,
-      "price": 0.0221,
-      "score": 504,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AKE_USDT",
+      "symbol": "YFI_USDT",
       "direction": "short",
-      "change": -5.01,
-      "price": 0.0002805,
-      "score": 501,
+      "change": -5.24,
+      "price": 2601.5,
+      "score": 524,
       "category": "山寨"
     },
     {
-      "symbol": "BREV_USDT",
+      "symbol": "BDXN_USDT",
       "direction": "short",
-      "change": -4.99,
-      "price": 0.1351,
-      "score": 499,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ICP_USDT",
-      "direction": "long",
-      "change": 4.91,
-      "price": 2.501,
-      "score": 491,
-      "category": "山寨"
-    },
-    {
-      "symbol": "老子_USDT",
-      "direction": "short",
-      "change": -4.87,
-      "price": 0.00043,
-      "score": 487,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RON_USDT",
-      "direction": "short",
-      "change": -4.86,
-      "price": 0.0979,
-      "score": 486,
-      "category": "山寨"
-    },
-    {
-      "symbol": "KAS_USDT",
-      "direction": "short",
-      "change": -4.86,
-      "price": 0.02973,
-      "score": 486,
-      "category": "山寨"
-    },
-    {
-      "symbol": "DEEP_USDT",
-      "direction": "short",
-      "change": -4.84,
-      "price": 0.02476,
-      "score": 484,
-      "category": "山寨"
-    },
-    {
-      "symbol": "PYTH_USDT",
-      "direction": "short",
-      "change": -4.81,
-      "price": 0.04907,
-      "score": 481,
+      "change": -5.19,
+      "price": 0.00877,
+      "score": 519,
       "category": "山寨"
     },
     {
       "symbol": "LINK_USDT",
       "direction": "short",
-      "change": -4.8,
-      "price": 8.661,
-      "score": 480,
-      "category": "山寨"
-    },
-    {
-      "symbol": "HEI_USDT",
-      "direction": "short",
-      "change": -4.76,
-      "price": 0.078,
-      "score": 476,
-      "category": "山寨"
-    },
-    {
-      "symbol": "LYN_USDT",
-      "direction": "short",
-      "change": -4.74,
-      "price": 0.3135,
-      "score": 474,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TAI_USDT",
-      "direction": "long",
-      "change": 4.72,
-      "price": 0.01464,
-      "score": 472,
-      "category": "山寨"
-    },
-    {
-      "symbol": "DGB_USDT",
-      "direction": "short",
-      "change": -4.68,
-      "price": 0.004198,
-      "score": 468,
-      "category": "山寨"
-    },
-    {
-      "symbol": "KAITO_USDT",
-      "direction": "long",
-      "change": 4.64,
-      "price": 0.3383,
-      "score": 464,
-      "category": "山寨"
-    },
-    {
-      "symbol": "DN_USDT",
-      "direction": "short",
-      "change": -4.63,
-      "price": 0.1463,
-      "score": 463,
-      "category": "山寨"
-    },
-    {
-      "symbol": "LDO_USDT",
-      "direction": "short",
-      "change": -4.61,
-      "price": 0.298,
-      "score": 461,
-      "category": "山寨"
-    },
-    {
-      "symbol": "2Z_USDT",
-      "direction": "short",
-      "change": -4.6,
-      "price": 0.07406,
-      "score": 460,
-      "category": "山寨"
-    },
-    {
-      "symbol": "JELLYJELLY_USDT",
-      "direction": "long",
-      "change": 4.52,
-      "price": 0.065347,
-      "score": 452,
-      "category": "山寨"
-    },
-    {
-      "symbol": "Q_USDT",
-      "direction": "long",
-      "change": 4.51,
-      "price": 0.022841,
-      "score": 451,
-      "category": "山寨"
-    },
-    {
-      "symbol": "DEGEN_USDT",
-      "direction": "long",
-      "change": 4.47,
-      "price": 0.000701,
-      "score": 447,
+      "change": -5.18,
+      "price": 8.656,
+      "score": 518,
       "category": "山寨"
     },
     {
       "symbol": "BANK_USDT",
       "direction": "short",
-      "change": -4.47,
-      "price": 0.03763,
-      "score": 447,
+      "change": -5.17,
+      "price": 0.0376,
+      "score": 517,
       "category": "山寨"
     },
     {
-      "symbol": "SPK_USDT",
+      "symbol": "SIGN_USDT",
       "direction": "short",
-      "change": -4.46,
-      "price": 0.02014,
-      "score": 446,
+      "change": -5.15,
+      "price": 0.02227,
+      "score": 515,
       "category": "山寨"
     },
     {
-      "symbol": "TURBO_USDT",
-      "direction": "short",
-      "change": -4.46,
-      "price": 0.0009671,
-      "score": 446,
-      "category": "山寨"
-    },
-    {
-      "symbol": "STBL_USDT",
+      "symbol": "C98_USDT",
       "direction": "long",
-      "change": 4.44,
-      "price": 0.04402,
-      "score": 444,
+      "change": 5.14,
+      "price": 0.02475,
+      "score": 514,
       "category": "山寨"
     },
     {
-      "symbol": "HOLO_USDT",
-      "direction": "long",
-      "change": 4.41,
-      "price": 0.05991,
-      "score": 441,
-      "category": "山寨"
-    },
-    {
-      "symbol": "PENDLE_USDT",
+      "symbol": "HEI_USDT",
       "direction": "short",
-      "change": -4.39,
-      "price": 1.24,
-      "score": 439,
+      "change": -5.13,
+      "price": 0.0777,
+      "score": 513,
       "category": "山寨"
     },
     {
-      "symbol": "HYPE_USDT",
+      "symbol": "RESOLV_USDT",
       "direction": "short",
-      "change": -4.36,
-      "price": 27.091,
-      "score": 436,
+      "change": -5.08,
+      "price": 0.0598,
+      "score": 508,
       "category": "山寨"
     },
     {
-      "symbol": "EUL_USDT",
-      "direction": "long",
-      "change": 4.35,
-      "price": 1.031,
-      "score": 435,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SOLV_USDT",
+      "symbol": "US_USDT",
       "direction": "short",
-      "change": -4.32,
-      "price": 0.00399,
-      "score": 432,
+      "change": -5.03,
+      "price": 0.003401,
+      "score": 503,
       "category": "山寨"
     },
     {
-      "symbol": "ZBT_USDT",
-      "direction": "long",
-      "change": 4.32,
-      "price": 0.0773,
-      "score": 432,
+      "symbol": "CHILLGUY_USDT",
+      "direction": "short",
+      "change": -4.99,
+      "price": 0.00972,
+      "score": 499,
+      "category": "山寨"
+    },
+    {
+      "symbol": "GPS_USDT",
+      "direction": "short",
+      "change": -4.97,
+      "price": 0.00898,
+      "score": 497,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AXS_USDT",
+      "direction": "short",
+      "change": -4.97,
+      "price": 1.282,
+      "score": 497,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BNT_USDT",
+      "direction": "short",
+      "change": -4.93,
+      "price": 0.2757,
+      "score": 493,
+      "category": "山寨"
+    },
+    {
+      "symbol": "EPIC_USDT",
+      "direction": "short",
+      "change": -4.92,
+      "price": 0.259,
+      "score": 492,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TAO_USDT",
+      "direction": "short",
+      "change": -4.92,
+      "price": 173.9,
+      "score": 492,
       "category": "山寨"
     },
     {
       "symbol": "COW_USDT",
       "direction": "short",
-      "change": -4.32,
-      "price": 0.2104,
-      "score": 432,
+      "change": -4.91,
+      "price": 0.2091,
+      "score": 491,
+      "category": "山寨"
+    },
+    {
+      "symbol": "EIGEN_USDT",
+      "direction": "short",
+      "change": -4.85,
+      "price": 0.1843,
+      "score": 485,
+      "category": "山寨"
+    },
+    {
+      "symbol": "2Z_USDT",
+      "direction": "short",
+      "change": -4.82,
+      "price": 0.07412,
+      "score": 482,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CGPT_USDT",
+      "direction": "long",
+      "change": 4.8,
+      "price": 0.02032,
+      "score": 480,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PENDLE_USDT",
+      "direction": "short",
+      "change": -4.77,
+      "price": 1.237,
+      "score": 477,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TURBO_USDT",
+      "direction": "short",
+      "change": -4.77,
+      "price": 0.0009639,
+      "score": 477,
+      "category": "山寨"
+    },
+    {
+      "symbol": "UMA_USDT",
+      "direction": "short",
+      "change": -4.76,
+      "price": 0.4323,
+      "score": 476,
+      "category": "山寨"
+    },
+    {
+      "symbol": "VELVET_USDT",
+      "direction": "short",
+      "change": -4.76,
+      "price": 0.08366,
+      "score": 476,
+      "category": "山寨"
+    },
+    {
+      "symbol": "DOG_USDT",
+      "direction": "short",
+      "change": -4.75,
+      "price": 0.000863,
+      "score": 475,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BB_USDT",
+      "direction": "short",
+      "change": -4.75,
+      "price": 0.02509,
+      "score": 475,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SAFE_USDT",
+      "direction": "short",
+      "change": -4.74,
+      "price": 0.1005,
+      "score": 474,
+      "category": "山寨"
+    },
+    {
+      "symbol": "RECALL_USDT",
+      "direction": "short",
+      "change": -4.73,
+      "price": 0.0503,
+      "score": 473,
       "category": "山寨"
     },
     {
       "symbol": "AVAX_USDT",
       "direction": "short",
-      "change": -4.31,
-      "price": 8.88,
-      "score": 431,
+      "change": -4.73,
+      "price": 8.87,
+      "score": 473,
       "category": "山寨"
     },
     {
-      "symbol": "CRCLX_USDT",
+      "symbol": "老子_USDT",
+      "direction": "short",
+      "change": -4.7,
+      "price": 0.000426,
+      "score": 470,
+      "category": "山寨"
+    },
+    {
+      "symbol": "HYPE_USDT",
+      "direction": "short",
+      "change": -4.67,
+      "price": 27.026,
+      "score": 467,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TURTLE_USDT",
+      "direction": "short",
+      "change": -4.66,
+      "price": 0.03994,
+      "score": 466,
+      "category": "山寨"
+    },
+    {
+      "symbol": "RIF_USDT",
+      "direction": "short",
+      "change": -4.61,
+      "price": 0.03103,
+      "score": 461,
+      "category": "山寨"
+    },
+    {
+      "symbol": "WLFI_USDT",
+      "direction": "short",
+      "change": -4.58,
+      "price": 0.1103,
+      "score": 458,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ZBT_USDT",
+      "direction": "long",
+      "change": 4.56,
+      "price": 0.078,
+      "score": 456,
+      "category": "山寨"
+    },
+    {
+      "symbol": "VELO_USDT",
+      "direction": "short",
+      "change": -4.55,
+      "price": 0.00321,
+      "score": 455,
+      "category": "山寨"
+    },
+    {
+      "symbol": "RLC_USDT",
+      "direction": "short",
+      "change": -4.47,
+      "price": 0.378,
+      "score": 447,
+      "category": "山寨"
+    },
+    {
+      "symbol": "KMNO_USDT",
+      "direction": "short",
+      "change": -4.46,
+      "price": 0.02098,
+      "score": 446,
+      "category": "山寨"
+    },
+    {
+      "symbol": "EUL_USDT",
+      "direction": "long",
+      "change": 4.45,
+      "price": 1.033,
+      "score": 445,
+      "category": "山寨"
+    },
+    {
+      "symbol": "1INCH_USDT",
+      "direction": "short",
+      "change": -4.44,
+      "price": 0.0905,
+      "score": 444,
+      "category": "山寨"
+    },
+    {
+      "symbol": "KAS_USDT",
+      "direction": "short",
+      "change": -4.43,
+      "price": 0.03,
+      "score": 443,
+      "category": "山寨"
+    },
+    {
+      "symbol": "FLOW_USDT",
+      "direction": "long",
+      "change": 4.41,
+      "price": 0.0379,
+      "score": 441,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ACH_USDT",
+      "direction": "short",
+      "change": -4.4,
+      "price": 0.00673,
+      "score": 440,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BIGTIME_USDT",
+      "direction": "short",
+      "change": -4.38,
+      "price": 0.01396,
+      "score": 438,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TRUTH_USDT",
+      "direction": "short",
+      "change": -4.36,
+      "price": 0.009614,
+      "score": 436,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SYRUP_USDT",
+      "direction": "short",
+      "change": -4.36,
+      "price": 0.22727,
+      "score": 436,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MERL_USDT",
+      "direction": "short",
+      "change": -4.34,
+      "price": 0.04207,
+      "score": 434,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SPK_USDT",
+      "direction": "short",
+      "change": -4.33,
+      "price": 0.02011,
+      "score": 433,
+      "category": "山寨"
+    },
+    {
+      "symbol": "UNI_USDT",
+      "direction": "short",
+      "change": -4.32,
+      "price": 3.718,
+      "score": 432,
+      "category": "山寨"
+    },
+    {
+      "symbol": "EDU_USDT",
       "direction": "short",
       "change": -4.3,
-      "price": 82.94,
+      "price": 0.10794,
       "score": 430,
       "category": "山寨"
     },
@@ -1322,139 +1442,131 @@
       "category": "山寨"
     },
     {
-      "symbol": "NVDAX_USDT",
-      "direction": "short",
-      "change": -4.29,
-      "price": 177.78,
-      "score": 429,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TAO_USDT",
+      "symbol": "SUI_USDT",
       "direction": "short",
       "change": -4.28,
-      "price": 174.6,
+      "price": 0.8939,
       "score": 428,
       "category": "山寨"
     },
     {
-      "symbol": "BIGTIME_USDT",
+      "symbol": "DGB_USDT",
+      "direction": "short",
+      "change": -4.27,
+      "price": 0.004216,
+      "score": 427,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ONE_USDT",
       "direction": "short",
       "change": -4.25,
-      "price": 0.01396,
+      "price": 0.002318,
       "score": 425,
       "category": "山寨"
     },
     {
-      "symbol": "BNT_USDT",
+      "symbol": "SNX_USDT",
       "direction": "short",
-      "change": -4.24,
-      "price": 0.2781,
-      "score": 424,
+      "change": -4.25,
+      "price": 0.3266,
+      "score": 425,
       "category": "山寨"
     },
     {
-      "symbol": "0G_USDT",
+      "symbol": "BROCCOLI_USDT",
       "direction": "short",
-      "change": -4.24,
-      "price": 0.6296,
-      "score": 424,
+      "change": -4.25,
+      "price": 0.01238,
+      "score": 425,
       "category": "山寨"
     },
     {
-      "symbol": "IMU_USDT",
+      "symbol": "XION_USDT",
       "direction": "short",
-      "change": -4.23,
-      "price": 0.003303,
-      "score": 423,
+      "change": -4.25,
+      "price": 0.1171,
+      "score": 425,
       "category": "山寨"
     },
     {
-      "symbol": "YB_USDT",
+      "symbol": "PLAY_USDT",
       "direction": "long",
-      "change": 4.23,
-      "price": 0.1797,
-      "score": 423,
-      "category": "山寨"
-    },
-    {
-      "symbol": "HFT_USDT",
-      "direction": "short",
-      "change": -4.23,
-      "price": 0.01428,
-      "score": 423,
-      "category": "山寨"
-    },
-    {
-      "symbol": "1INCH_USDT",
-      "direction": "short",
-      "change": -4.22,
-      "price": 0.0907,
-      "score": 422,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CHILLGUY_USDT",
-      "direction": "short",
-      "change": -4.22,
-      "price": 0.00975,
-      "score": 422,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SYRUP_USDT",
-      "direction": "short",
-      "change": -4.21,
-      "price": 0.22867,
-      "score": 421,
-      "category": "山寨"
-    },
-    {
-      "symbol": "HOODX_USDT",
-      "direction": "short",
-      "change": -4.18,
-      "price": 75.47,
-      "score": 418,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CHZ_USDT",
-      "direction": "long",
-      "change": 4.16,
-      "price": 0.03333,
-      "score": 416,
+      "change": 4.24,
+      "price": 0.0187,
+      "score": 424,
       "category": "山寨"
     },
     {
       "symbol": "ETHFI_USDT",
       "direction": "short",
-      "change": -4.15,
-      "price": 0.4895,
-      "score": 415,
+      "change": -4.23,
+      "price": 0.4896,
+      "score": 423,
       "category": "山寨"
     },
     {
-      "symbol": "PIEVERSE_USDT",
-      "direction": "short",
-      "change": -4.15,
-      "price": 0.48498,
-      "score": 415,
+      "symbol": "TAI_USDT",
+      "direction": "long",
+      "change": 4.21,
+      "price": 0.01459,
+      "score": 421,
       "category": "山寨"
     },
     {
-      "symbol": "EIGEN_USDT",
+      "symbol": "ICP_USDT",
+      "direction": "long",
+      "change": 4.21,
+      "price": 2.498,
+      "score": 421,
+      "category": "山寨"
+    },
+    {
+      "symbol": "OGN_USDT",
       "direction": "short",
-      "change": -4.14,
-      "price": 0.1854,
+      "change": -4.2,
+      "price": 0.01962,
+      "score": 420,
+      "category": "山寨"
+    },
+    {
+      "symbol": "HOODX_USDT",
+      "direction": "short",
+      "change": -4.2,
+      "price": 75.41,
+      "score": 420,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CAT_USDT",
+      "direction": "short",
+      "change": -4.19,
+      "price": 0.000001646,
+      "score": 419,
+      "category": "山寨"
+    },
+    {
+      "symbol": "0G_USDT",
+      "direction": "short",
+      "change": -4.18,
+      "price": 0.6263,
+      "score": 418,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ONDO_USDT",
+      "direction": "short",
+      "change": -4.17,
+      "price": 0.255,
+      "score": 417,
+      "category": "山寨"
+    },
+    {
+      "symbol": "HOLO_USDT",
+      "direction": "long",
+      "change": 4.14,
+      "price": 0.05991,
       "score": 414,
-      "category": "山寨"
-    },
-    {
-      "symbol": "PROM_USDT",
-      "direction": "short",
-      "change": -4.13,
-      "price": 1.16,
-      "score": 413,
       "category": "山寨"
     },
     {
@@ -1466,547 +1578,587 @@
       "category": "山寨"
     },
     {
-      "symbol": "BCH_USDT",
+      "symbol": "ANKR_USDT",
       "direction": "short",
-      "change": -4.09,
-      "price": 460,
-      "score": 409,
+      "change": -4.12,
+      "price": 0.00419,
+      "score": 412,
       "category": "山寨"
     },
     {
-      "symbol": "ARPA_USDT",
+      "symbol": "COS_USDT",
       "direction": "short",
-      "change": -4.08,
-      "price": 0.00964,
-      "score": 408,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ALLO_USDT",
-      "direction": "short",
-      "change": -4.04,
-      "price": 0.1069,
-      "score": 404,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SNX_USDT",
-      "direction": "short",
-      "change": -4.04,
-      "price": 0.3275,
-      "score": 404,
-      "category": "山寨"
-    },
-    {
-      "symbol": "STG_USDT",
-      "direction": "long",
-      "change": 4.02,
-      "price": 0.1424,
-      "score": 402,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TLM_USDT",
-      "direction": "long",
-      "change": 4,
-      "price": 0.001663,
-      "score": 400,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RECALL_USDT",
-      "direction": "short",
-      "change": -4,
-      "price": 0.0504,
-      "score": 400,
-      "category": "山寨"
-    },
-    {
-      "symbol": "VELODROME_USDT",
-      "direction": "short",
-      "change": -4,
-      "price": 0.01559,
-      "score": 400,
-      "category": "山寨"
-    },
-    {
-      "symbol": "UMA_USDT",
-      "direction": "short",
-      "change": -3.99,
-      "price": 0.4357,
-      "score": 399,
-      "category": "山寨"
-    },
-    {
-      "symbol": "WLFI_USDT",
-      "direction": "short",
-      "change": -3.98,
-      "price": 0.111,
-      "score": 398,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AXS_USDT",
-      "direction": "short",
-      "change": -3.93,
-      "price": 1.294,
-      "score": 393,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RAY_USDT",
-      "direction": "short",
-      "change": -3.92,
-      "price": 0.5862,
-      "score": 392,
-      "category": "山寨"
-    },
-    {
-      "symbol": "NIGHT_USDT",
-      "direction": "short",
-      "change": -3.91,
-      "price": 0.05755,
-      "score": 391,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MANTA_USDT",
-      "direction": "short",
-      "change": -3.88,
-      "price": 0.062,
-      "score": 388,
-      "category": "山寨"
-    },
-    {
-      "symbol": "C_USDT",
-      "direction": "long",
-      "change": 3.86,
-      "price": 0.05217,
-      "score": 386,
-      "category": "山寨"
-    },
-    {
-      "symbol": "VET_USDT",
-      "direction": "short",
-      "change": -3.84,
-      "price": 0.00727,
-      "score": 384,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ACH_USDT",
-      "direction": "short",
-      "change": -3.84,
-      "price": 0.00677,
-      "score": 384,
-      "category": "山寨"
-    },
-    {
-      "symbol": "KMNO_USDT",
-      "direction": "short",
-      "change": -3.84,
-      "price": 0.02101,
-      "score": 384,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CAT_USDT",
-      "direction": "short",
-      "change": -3.84,
-      "price": 0.000001652,
-      "score": 384,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RIF_USDT",
-      "direction": "short",
-      "change": -3.84,
-      "price": 0.03128,
-      "score": 384,
-      "category": "山寨"
-    },
-    {
-      "symbol": "FF_USDT",
-      "direction": "short",
-      "change": -3.83,
-      "price": 0.07854,
-      "score": 383,
-      "category": "山寨"
-    },
-    {
-      "symbol": "DEXE_USDT",
-      "direction": "long",
-      "change": 3.8,
-      "price": 3.417,
-      "score": 380,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SWARMS_USDT",
-      "direction": "long",
-      "change": 3.77,
-      "price": 0.00744,
-      "score": 377,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MBOX_USDT",
-      "direction": "long",
-      "change": 3.77,
-      "price": 0.01928,
-      "score": 377,
-      "category": "山寨"
-    },
-    {
-      "symbol": "OL_USDT",
-      "direction": "long",
-      "change": 3.76,
-      "price": 0.01187,
-      "score": 376,
-      "category": "山寨"
-    },
-    {
-      "symbol": "EDU_USDT",
-      "direction": "short",
-      "change": -3.75,
-      "price": 0.10861,
-      "score": 375,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CROSS_USDT",
-      "direction": "long",
-      "change": 3.75,
-      "price": 0.10282,
-      "score": 375,
-      "category": "山寨"
-    },
-    {
-      "symbol": "PLAY_USDT",
-      "direction": "long",
-      "change": 3.73,
-      "price": 0.01865,
-      "score": 373,
-      "category": "山寨"
-    },
-    {
-      "symbol": "XPT_USDT",
-      "direction": "long",
-      "change": 3.73,
-      "price": 2364.54,
-      "score": 373,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SAPIEN_USDT",
-      "direction": "long",
-      "change": 3.73,
-      "price": 0.0917,
-      "score": 373,
-      "category": "山寨"
-    },
-    {
-      "symbol": "EPIC_USDT",
-      "direction": "short",
-      "change": -3.72,
-      "price": 0.2613,
-      "score": 372,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BB_USDT",
-      "direction": "short",
-      "change": -3.72,
-      "price": 0.02537,
-      "score": 372,
-      "category": "山寨"
-    },
-    {
-      "symbol": "XION_USDT",
-      "direction": "short",
-      "change": -3.68,
-      "price": 0.1177,
-      "score": 368,
-      "category": "山寨"
-    },
-    {
-      "symbol": "DOOD_USDT",
-      "direction": "short",
-      "change": -3.68,
-      "price": 0.003273,
-      "score": 368,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BROCCOLI_USDT",
-      "direction": "short",
-      "change": -3.64,
-      "price": 0.01244,
-      "score": 364,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CTC_USDT",
-      "direction": "short",
-      "change": -3.64,
-      "price": 0.1617,
-      "score": 364,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ICNT_USDT",
-      "direction": "short",
-      "change": -3.64,
-      "price": 0.3838,
-      "score": 364,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ADA_USDT",
-      "direction": "short",
-      "change": -3.63,
-      "price": 0.2759,
-      "score": 363,
-      "category": "山寨"
-    },
-    {
-      "symbol": "COAI_USDT",
-      "direction": "short",
-      "change": -3.62,
-      "price": 0.3011,
-      "score": 362,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ONDO_USDT",
-      "direction": "short",
-      "change": -3.62,
-      "price": 0.2554,
-      "score": 362,
-      "category": "山寨"
-    },
-    {
-      "symbol": "IOTA_USDT",
-      "direction": "short",
-      "change": -3.62,
-      "price": 0.0666,
-      "score": 362,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SUI_USDT",
-      "direction": "short",
-      "change": -3.58,
-      "price": 0.8965,
-      "score": 358,
-      "category": "山寨"
-    },
-    {
-      "symbol": "VELVET_USDT",
-      "direction": "short",
-      "change": -3.57,
-      "price": 0.08447,
-      "score": 357,
-      "category": "山寨"
-    },
-    {
-      "symbol": "FRAX_USDT",
-      "direction": "short",
-      "change": -3.55,
-      "price": 0.6167,
-      "score": 355,
-      "category": "山寨"
-    },
-    {
-      "symbol": "PIXEL_USDT",
-      "direction": "short",
-      "change": -3.54,
-      "price": 0.00491,
-      "score": 354,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RDDTON_USDT",
-      "direction": "short",
-      "change": -3.54,
-      "price": 145.58,
-      "score": 354,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SAFE_USDT",
-      "direction": "short",
-      "change": -3.52,
-      "price": 0.1015,
-      "score": 352,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MOG_USDT",
-      "direction": "short",
-      "change": -3.51,
-      "price": 1.596e-7,
-      "score": 351,
-      "category": "山寨"
-    },
-    {
-      "symbol": "LINEA_USDT",
-      "direction": "short",
-      "change": -3.5,
-      "price": 0.00303,
-      "score": 350,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ZORA_USDT",
-      "direction": "short",
-      "change": -3.5,
-      "price": 0.0185,
-      "score": 350,
-      "category": "山寨"
-    },
-    {
-      "symbol": "DEGO_USDT",
-      "direction": "short",
-      "change": -3.48,
-      "price": 0.3047,
-      "score": 348,
-      "category": "山寨"
-    },
-    {
-      "symbol": "VINE_USDT",
-      "direction": "short",
-      "change": -3.48,
-      "price": 0.01638,
-      "score": 348,
-      "category": "山寨"
-    },
-    {
-      "symbol": "HUMA_USDT",
-      "direction": "long",
-      "change": 3.48,
-      "price": 0.01161,
-      "score": 348,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MERL_USDT",
-      "direction": "short",
-      "change": -3.47,
-      "price": 0.04223,
-      "score": 347,
-      "category": "山寨"
-    },
-    {
-      "symbol": "INJ_USDT",
-      "direction": "short",
-      "change": -3.47,
-      "price": 3.061,
-      "score": 347,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BSV_USDT",
-      "direction": "short",
-      "change": -3.47,
-      "price": 15.58,
-      "score": 347,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CFX_USDT",
-      "direction": "short",
-      "change": -3.46,
-      "price": 0.04806,
-      "score": 346,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ONE_USDT",
-      "direction": "short",
-      "change": -3.46,
-      "price": 0.002341,
-      "score": 346,
-      "category": "山寨"
-    },
-    {
-      "symbol": "LAB_USDT",
-      "direction": "long",
-      "change": 3.46,
-      "price": 0.1587,
-      "score": 346,
+      "change": -4.12,
+      "price": 0.000955,
+      "score": 412,
       "category": "山寨"
     },
     {
       "symbol": "KERNEL_USDT",
       "direction": "short",
-      "change": -3.44,
-      "price": 0.0843,
-      "score": 344,
+      "change": -4.11,
+      "price": 0.0839,
+      "score": 411,
       "category": "山寨"
     },
     {
-      "symbol": "CARV_USDT",
-      "direction": "long",
-      "change": 3.44,
-      "price": 0.0632,
-      "score": 344,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ANKR_USDT",
+      "symbol": "INJ_USDT",
       "direction": "short",
-      "change": -3.43,
-      "price": 0.00422,
-      "score": 343,
+      "change": -4.09,
+      "price": 3.049,
+      "score": 409,
       "category": "山寨"
     },
     {
-      "symbol": "VELO_USDT",
+      "symbol": "RAY_USDT",
       "direction": "short",
-      "change": -3.42,
-      "price": 0.003223,
-      "score": 342,
-      "category": "山寨"
-    },
-    {
-      "symbol": "OGN_USDT",
-      "direction": "short",
-      "change": -3.42,
-      "price": 0.01978,
-      "score": 342,
-      "category": "山寨"
-    },
-    {
-      "symbol": "APE_USDT",
-      "direction": "short",
-      "change": -3.42,
-      "price": 0.1017,
-      "score": 342,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SXT_USDT",
-      "direction": "short",
-      "change": -3.37,
-      "price": 0.0201,
-      "score": 337,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AAPLX_USDT",
-      "direction": "short",
-      "change": -3.37,
-      "price": 263.89,
-      "score": 337,
+      "change": -4.09,
+      "price": 0.586,
+      "score": 409,
       "category": "山寨"
     },
     {
       "symbol": "ARC_USDT",
       "direction": "short",
+      "change": -4.08,
+      "price": 0.03076,
+      "score": 408,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CHR_USDT",
+      "direction": "long",
+      "change": 4.07,
+      "price": 0.01815,
+      "score": 407,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BCH_USDT",
+      "direction": "short",
+      "change": -4.03,
+      "price": 459.74,
+      "score": 403,
+      "category": "山寨"
+    },
+    {
+      "symbol": "COAI_USDT",
+      "direction": "short",
+      "change": -4.03,
+      "price": 0.3004,
+      "score": 403,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CHZ_USDT",
+      "direction": "long",
+      "change": 4.02,
+      "price": 0.03339,
+      "score": 402,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MANTA_USDT",
+      "direction": "short",
+      "change": -4.02,
+      "price": 0.062,
+      "score": 402,
+      "category": "山寨"
+    },
+    {
+      "symbol": "USELESS_USDT",
+      "direction": "short",
+      "change": -4.01,
+      "price": 0.0383,
+      "score": 401,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CRCLX_USDT",
+      "direction": "short",
+      "change": -3.99,
+      "price": 83.2,
+      "score": 399,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ENA_USDT",
+      "direction": "short",
+      "change": -3.98,
+      "price": 0.1013,
+      "score": 398,
+      "category": "山寨"
+    },
+    {
+      "symbol": "VET_USDT",
+      "direction": "short",
+      "change": -3.97,
+      "price": 0.00726,
+      "score": 397,
+      "category": "山寨"
+    },
+    {
+      "symbol": "FF_USDT",
+      "direction": "short",
+      "change": -3.95,
+      "price": 0.07854,
+      "score": 395,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BONK_USDT",
+      "direction": "short",
+      "change": -3.94,
+      "price": 0.000005871,
+      "score": 394,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ADA_USDT",
+      "direction": "short",
+      "change": -3.9,
+      "price": 0.2757,
+      "score": 390,
+      "category": "山寨"
+    },
+    {
+      "symbol": "HFT_USDT",
+      "direction": "short",
+      "change": -3.89,
+      "price": 0.01432,
+      "score": 389,
+      "category": "山寨"
+    },
+    {
+      "symbol": "NVDAX_USDT",
+      "direction": "short",
+      "change": -3.89,
+      "price": 178.04,
+      "score": 389,
+      "category": "山寨"
+    },
+    {
+      "symbol": "DOOD_USDT",
+      "direction": "short",
+      "change": -3.88,
+      "price": 0.003266,
+      "score": 388,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PROM_USDT",
+      "direction": "short",
+      "change": -3.87,
+      "price": 1.166,
+      "score": 387,
+      "category": "山寨"
+    },
+    {
+      "symbol": "VINE_USDT",
+      "direction": "short",
+      "change": -3.87,
+      "price": 0.01638,
+      "score": 387,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PIEVERSE_USDT",
+      "direction": "short",
+      "change": -3.85,
+      "price": 0.48254,
+      "score": 385,
+      "category": "山寨"
+    },
+    {
+      "symbol": "FET_USDT",
+      "direction": "short",
+      "change": -3.84,
+      "price": 0.1552,
+      "score": 384,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SUSHI_USDT",
+      "direction": "short",
+      "change": -3.84,
+      "price": 0.2001,
+      "score": 384,
+      "category": "山寨"
+    },
+    {
+      "symbol": "HUMA_USDT",
+      "direction": "long",
+      "change": 3.83,
+      "price": 0.01165,
+      "score": 383,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PEOPLE_USDT",
+      "direction": "short",
+      "change": -3.83,
+      "price": 0.006428,
+      "score": 383,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CFX_USDT",
+      "direction": "short",
+      "change": -3.83,
+      "price": 0.04794,
+      "score": 383,
+      "category": "山寨"
+    },
+    {
+      "symbol": "XPT_USDT",
+      "direction": "long",
+      "change": 3.83,
+      "price": 2364.48,
+      "score": 383,
+      "category": "山寨"
+    },
+    {
+      "symbol": "LINEA_USDT",
+      "direction": "short",
+      "change": -3.82,
+      "price": 0.00302,
+      "score": 382,
+      "category": "山寨"
+    },
+    {
+      "symbol": "VELODROME_USDT",
+      "direction": "short",
+      "change": -3.82,
+      "price": 0.0156,
+      "score": 382,
+      "category": "山寨"
+    },
+    {
+      "symbol": "FLUX_USDT",
+      "direction": "short",
+      "change": -3.81,
+      "price": 0.0606,
+      "score": 381,
+      "category": "山寨"
+    },
+    {
+      "symbol": "STG_USDT",
+      "direction": "long",
+      "change": 3.8,
+      "price": 0.1422,
+      "score": 380,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MEW_USDT",
+      "direction": "short",
+      "change": -3.79,
+      "price": 0.000584,
+      "score": 379,
+      "category": "山寨"
+    },
+    {
+      "symbol": "IO_USDT",
+      "direction": "short",
+      "change": -3.78,
+      "price": 0.1094,
+      "score": 378,
+      "category": "山寨"
+    },
+    {
+      "symbol": "JELLYJELLY_USDT",
+      "direction": "long",
+      "change": 3.77,
+      "price": 0.065263,
+      "score": 377,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ENS_USDT",
+      "direction": "short",
+      "change": -3.77,
+      "price": 5.98,
+      "score": 377,
+      "category": "山寨"
+    },
+    {
+      "symbol": "IOTA_USDT",
+      "direction": "short",
+      "change": -3.76,
+      "price": 0.0666,
+      "score": 376,
+      "category": "山寨"
+    },
+    {
+      "symbol": "RVN_USDT",
+      "direction": "short",
+      "change": -3.74,
+      "price": 0.005711,
+      "score": 374,
+      "category": "山寨"
+    },
+    {
+      "symbol": "DEGEN_USDT",
+      "direction": "long",
+      "change": 3.73,
+      "price": 0.000696,
+      "score": 373,
+      "category": "山寨"
+    },
+    {
+      "symbol": "DASH_USDT",
+      "direction": "short",
+      "change": -3.72,
+      "price": 32.91,
+      "score": 372,
+      "category": "山寨"
+    },
+    {
+      "symbol": "APE_USDT",
+      "direction": "short",
+      "change": -3.7,
+      "price": 0.1015,
+      "score": 370,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ICNT_USDT",
+      "direction": "short",
+      "change": -3.69,
+      "price": 0.3833,
+      "score": 369,
+      "category": "山寨"
+    },
+    {
+      "symbol": "FRAX_USDT",
+      "direction": "short",
+      "change": -3.69,
+      "price": 0.6156,
+      "score": 369,
+      "category": "山寨"
+    },
+    {
+      "symbol": "RDDTON_USDT",
+      "direction": "short",
+      "change": -3.68,
+      "price": 145.28,
+      "score": 368,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SHIB_USDT",
+      "direction": "short",
+      "change": -3.64,
+      "price": 0.000005751,
+      "score": 364,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MOG_USDT",
+      "direction": "short",
+      "change": -3.62,
+      "price": 1.598e-7,
+      "score": 362,
+      "category": "山寨"
+    },
+    {
+      "symbol": "WAVES_USDT",
+      "direction": "short",
+      "change": -3.62,
+      "price": 0.4734,
+      "score": 362,
+      "category": "山寨"
+    },
+    {
+      "symbol": "D_USDT",
+      "direction": "short",
+      "change": -3.62,
+      "price": 0.00692,
+      "score": 362,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ZORA_USDT",
+      "direction": "short",
+      "change": -3.61,
+      "price": 0.01844,
+      "score": 361,
+      "category": "山寨"
+    },
+    {
+      "symbol": "NIGHT_USDT",
+      "direction": "short",
+      "change": -3.61,
+      "price": 0.05774,
+      "score": 361,
+      "category": "山寨"
+    },
+    {
+      "symbol": "DEGO_USDT",
+      "direction": "short",
+      "change": -3.61,
+      "price": 0.304,
+      "score": 361,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SOLV_USDT",
+      "direction": "short",
+      "change": -3.59,
+      "price": 0.00403,
+      "score": 359,
+      "category": "山寨"
+    },
+    {
+      "symbol": "YB_USDT",
+      "direction": "long",
+      "change": 3.57,
+      "price": 0.1855,
+      "score": 357,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ZRO_USDT",
+      "direction": "long",
+      "change": 3.52,
+      "price": 1.619,
+      "score": 352,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TRIA_USDT",
+      "direction": "short",
+      "change": -3.52,
+      "price": 0.01998,
+      "score": 352,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SNT_USDT",
+      "direction": "short",
+      "change": -3.5,
+      "price": 0.01047,
+      "score": 350,
+      "category": "山寨"
+    },
+    {
+      "symbol": "XRP_USDT",
+      "direction": "short",
+      "change": -3.5,
+      "price": 1.3524,
+      "score": 350,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CTC_USDT",
+      "direction": "short",
+      "change": -3.49,
+      "price": 0.1605,
+      "score": 349,
+      "category": "山寨"
+    },
+    {
+      "symbol": "COMP_USDT",
+      "direction": "short",
+      "change": -3.48,
+      "price": 18.31,
+      "score": 348,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ZKP_USDT",
+      "direction": "short",
+      "change": -3.47,
+      "price": 0.08098,
+      "score": 347,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BANANA_USDT",
+      "direction": "short",
+      "change": -3.47,
+      "price": 4.17,
+      "score": 347,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ACE_USDT",
+      "direction": "long",
+      "change": 3.46,
+      "price": 0.1557,
+      "score": 346,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AVA_USDT",
+      "direction": "short",
+      "change": -3.44,
+      "price": 0.199,
+      "score": 344,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PROMPT_USDT",
+      "direction": "short",
+      "change": -3.43,
+      "price": 0.0451,
+      "score": 343,
+      "category": "山寨"
+    },
+    {
+      "symbol": "LITE_USDT",
+      "direction": "long",
+      "change": 3.41,
+      "price": 699.51,
+      "score": 341,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MRVL_USDT",
+      "direction": "long",
+      "change": 3.4,
+      "price": 81.51,
+      "score": 340,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BANANAS31_USDT",
+      "direction": "short",
+      "change": -3.39,
+      "price": 0.004652,
+      "score": 339,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CRV_USDT",
+      "direction": "short",
+      "change": -3.37,
+      "price": 0.2405,
+      "score": 337,
+      "category": "山寨"
+    },
+    {
+      "symbol": "WLD_USDT",
+      "direction": "short",
       "change": -3.36,
-      "price": 0.03108,
+      "price": 0.3859,
       "score": 336,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PIXEL_USDT",
+      "direction": "short",
+      "change": -3.35,
+      "price": 0.0049,
+      "score": 335,
+      "category": "山寨"
+    },
+    {
+      "symbol": "KAIA_USDT",
+      "direction": "short",
+      "change": -3.34,
+      "price": 0.05467,
+      "score": 334,
       "category": "山寨"
     },
     {
@@ -2018,203 +2170,283 @@
       "category": "山寨"
     },
     {
-      "symbol": "ENA_USDT",
+      "symbol": "SPELL_USDT",
       "direction": "short",
-      "change": -3.33,
-      "price": 0.1016,
+      "change": -3.34,
+      "price": 0.0001766,
+      "score": 334,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SWARMS_USDT",
+      "direction": "long",
+      "change": 3.33,
+      "price": 0.00744,
       "score": 333,
       "category": "山寨"
     },
     {
-      "symbol": "UNI_USDT",
-      "direction": "short",
-      "change": -3.33,
-      "price": 3.721,
-      "score": 333,
-      "category": "山寨"
-    },
-    {
-      "symbol": "LITE_USDT",
+      "symbol": "COHR_USDT",
       "direction": "long",
       "change": 3.32,
-      "price": 699.93,
+      "price": 259.12,
       "score": 332,
+      "category": "山寨"
+    },
+    {
+      "symbol": "HEMI_USDT",
+      "direction": "short",
+      "change": -3.32,
+      "price": 0.00873,
+      "score": 332,
+      "category": "山寨"
+    },
+    {
+      "symbol": "HIPPO_USDT",
+      "direction": "short",
+      "change": -3.3,
+      "price": 0.000557,
+      "score": 330,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PNUT_USDT",
+      "direction": "short",
+      "change": -3.29,
+      "price": 0.04445,
+      "score": 329,
+      "category": "山寨"
+    },
+    {
+      "symbol": "NEAR_USDT",
+      "direction": "short",
+      "change": -3.29,
+      "price": 1.087,
+      "score": 329,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BSV_USDT",
+      "direction": "short",
+      "change": -3.28,
+      "price": 15.62,
+      "score": 328,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SAPIEN_USDT",
+      "direction": "long",
+      "change": 3.25,
+      "price": 0.092,
+      "score": 325,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ETC_USDT",
+      "direction": "short",
+      "change": -3.24,
+      "price": 8.563,
+      "score": 324,
       "category": "山寨"
     },
     {
       "symbol": "LIGHT_USDT",
       "direction": "short",
-      "change": -3.29,
-      "price": 0.1913,
-      "score": 329,
+      "change": -3.24,
+      "price": 0.1912,
+      "score": 324,
       "category": "山寨"
     },
     {
-      "symbol": "TRUTH_USDT",
-      "direction": "short",
-      "change": -3.29,
-      "price": 0.00963,
-      "score": 329,
+      "symbol": "KAITO_USDT",
+      "direction": "long",
+      "change": 3.24,
+      "price": 0.3345,
+      "score": 324,
       "category": "山寨"
     },
     {
-      "symbol": "DASH_USDT",
+      "symbol": "SKY_USDT",
       "direction": "short",
-      "change": -3.28,
-      "price": 33.05,
-      "score": 328,
+      "change": -3.23,
+      "price": 0.06673,
+      "score": 323,
       "category": "山寨"
     },
     {
-      "symbol": "XRP_USDT",
+      "symbol": "XVS_USDT",
       "direction": "short",
-      "change": -3.27,
-      "price": 1.3504,
-      "score": 327,
+      "change": -3.22,
+      "price": 2.947,
+      "score": 322,
       "category": "山寨"
     },
     {
-      "symbol": "SOPH_USDT",
+      "symbol": "MBOX_USDT",
+      "direction": "long",
+      "change": 3.22,
+      "price": 0.01926,
+      "score": 322,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ASTR_USDT",
       "direction": "short",
-      "change": -3.26,
-      "price": 0.00889,
-      "score": 326,
+      "change": -3.22,
+      "price": 0.00722,
+      "score": 322,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MINA_USDT",
+      "direction": "short",
+      "change": -3.22,
+      "price": 0.0571,
+      "score": 322,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CLANKER_USDT",
+      "direction": "short",
+      "change": -3.22,
+      "price": 28.56,
+      "score": 322,
       "category": "山寨"
     },
     {
       "symbol": "XBR_USDT",
       "direction": "long",
-      "change": 3.26,
-      "price": 73.57,
-      "score": 326,
-      "category": "山寨"
-    },
-    {
-      "symbol": "USELESS_USDT",
-      "direction": "short",
-      "change": -3.26,
-      "price": 0.0386,
-      "score": 326,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BERA_USDT",
-      "direction": "short",
-      "change": -3.25,
-      "price": 0.595,
-      "score": 325,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AVA_USDT",
-      "direction": "short",
-      "change": -3.21,
-      "price": 0.1992,
+      "change": 3.21,
+      "price": 73.54,
       "score": 321,
       "category": "山寨"
     },
     {
-      "symbol": "COS_USDT",
+      "symbol": "IOST_USDT",
       "direction": "short",
-      "change": -3.21,
-      "price": 0.000964,
-      "score": 321,
+      "change": -3.2,
+      "price": 0.001181,
+      "score": 320,
       "category": "山寨"
     },
     {
-      "symbol": "ZRO_USDT",
-      "direction": "long",
-      "change": 3.19,
-      "price": 1.615,
-      "score": 319,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AVAAI_USDT",
-      "direction": "long",
-      "change": 3.17,
-      "price": 0.0078,
-      "score": 317,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BONK_USDT",
+      "symbol": "ZEREBRO_USDT",
       "direction": "short",
-      "change": -3.17,
-      "price": 0.000005889,
-      "score": 317,
+      "change": -3.2,
+      "price": 0.00695,
+      "score": 320,
       "category": "山寨"
     },
     {
-      "symbol": "FET_USDT",
+      "symbol": "ZK_USDT",
       "direction": "short",
-      "change": -3.17,
-      "price": 0.1558,
-      "score": 317,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TRIA_USDT",
-      "direction": "short",
-      "change": -3.15,
-      "price": 0.020071,
-      "score": 315,
+      "change": -3.2,
+      "price": 0.01908,
+      "score": 320,
       "category": "山寨"
     },
     {
       "symbol": "HANA_USDT",
       "direction": "short",
+      "change": -3.19,
+      "price": 0.03493,
+      "score": 319,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SYS_USDT",
+      "direction": "short",
+      "change": -3.18,
+      "price": 0.01065,
+      "score": 318,
+      "category": "山寨"
+    },
+    {
+      "symbol": "OKB_USDT",
+      "direction": "short",
+      "change": -3.16,
+      "price": 75.66,
+      "score": 316,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AAPLX_USDT",
+      "direction": "short",
       "change": -3.14,
-      "price": 0.03513,
+      "price": 264,
       "score": 314,
       "category": "山寨"
     },
     {
-      "symbol": "HYPER_USDT",
-      "direction": "long",
-      "change": 3.14,
-      "price": 0.0952,
-      "score": 314,
+      "symbol": "PENGU_USDT",
+      "direction": "short",
+      "change": -3.12,
+      "price": 0.006715,
+      "score": 312,
       "category": "山寨"
     },
     {
-      "symbol": "XAN_USDT",
-      "direction": "long",
-      "change": 3.13,
-      "price": 0.00692,
-      "score": 313,
+      "symbol": "RSR_USDT",
+      "direction": "short",
+      "change": -3.12,
+      "price": 0.001458,
+      "score": 312,
       "category": "山寨"
     },
     {
-      "symbol": "CATI_USDT",
+      "symbol": "G_USDT",
+      "direction": "short",
+      "change": -3.12,
+      "price": 0.00341,
+      "score": 312,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SCRT_USDT",
       "direction": "short",
       "change": -3.11,
-      "price": 0.03713,
+      "price": 0.0778,
       "score": 311,
       "category": "山寨"
     },
     {
-      "symbol": "XPIN_USDT",
+      "symbol": "XMR_USDT",
       "direction": "short",
-      "change": -3.11,
-      "price": 0.0014909,
-      "score": 311,
+      "change": -3.1,
+      "price": 335.13,
+      "score": 310,
       "category": "山寨"
     },
     {
-      "symbol": "IO_USDT",
+      "symbol": "CC_USDT",
       "direction": "short",
       "change": -3.09,
-      "price": 0.1098,
+      "price": 0.1681,
       "score": 309,
       "category": "山寨"
     },
     {
-      "symbol": "ENS_USDT",
+      "symbol": "RIVER_USDT",
       "direction": "short",
-      "change": -3.07,
-      "price": 5.996,
-      "score": 307,
+      "change": -3.09,
+      "price": 10.978,
+      "score": 309,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AKT_USDT",
+      "direction": "short",
+      "change": -3.08,
+      "price": 0.2992,
+      "score": 308,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ILV_USDT",
+      "direction": "short",
+      "change": -3.08,
+      "price": 3.525,
+      "score": 308,
       "category": "山寨"
     },
     {
@@ -2226,275 +2458,347 @@
       "category": "山寨"
     },
     {
-      "symbol": "RLC_USDT",
+      "symbol": "BABY_USDT",
+      "direction": "short",
+      "change": -3.07,
+      "price": 0.01201,
+      "score": 307,
+      "category": "山寨"
+    },
+    {
+      "symbol": "IR_USDT",
+      "direction": "long",
+      "change": 3.07,
+      "price": 0.0738,
+      "score": 307,
+      "category": "山寨"
+    },
+    {
+      "symbol": "NEO_USDT",
       "direction": "short",
       "change": -3.06,
-      "price": 0.3839,
+      "price": 2.689,
       "score": 306,
       "category": "山寨"
     },
     {
-      "symbol": "NEAR_USDT",
+      "symbol": "TSTBSC_USDT",
       "direction": "short",
-      "change": -3.05,
-      "price": 1.082,
-      "score": 305,
+      "change": -3.06,
+      "price": 0.00951,
+      "score": 306,
       "category": "山寨"
     },
     {
-      "symbol": "IP_USDT",
-      "direction": "short",
-      "change": -3.05,
-      "price": 0.953,
-      "score": 305,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SHIB_USDT",
+      "symbol": "LPT_USDT",
       "direction": "short",
       "change": -3.04,
-      "price": 0.000005768,
+      "price": 2.266,
       "score": 304,
       "category": "山寨"
     },
     {
-      "symbol": "ACE_USDT",
+      "symbol": "AKE_USDT",
+      "direction": "short",
+      "change": -3.04,
+      "price": 0.0002805,
+      "score": 304,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ALGO_USDT",
+      "direction": "short",
+      "change": -3.03,
+      "price": 0.08591,
+      "score": 303,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CATI_USDT",
+      "direction": "short",
+      "change": -3.03,
+      "price": 0.03711,
+      "score": 303,
+      "category": "山寨"
+    },
+    {
+      "symbol": "DEXE_USDT",
       "direction": "long",
       "change": 3.01,
-      "price": 0.1539,
+      "price": 3.391,
       "score": 301,
       "category": "山寨"
     },
     {
-      "symbol": "MRVL_USDT",
-      "direction": "long",
-      "change": 2.99,
-      "price": 81.38,
-      "score": 299,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MEW_USDT",
+      "symbol": "ROSE_USDT",
       "direction": "short",
-      "change": -2.97,
-      "price": 0.000588,
-      "score": 297,
+      "change": -3.01,
+      "price": 0.01223,
+      "score": 301,
       "category": "山寨"
     },
     {
-      "symbol": "PENGU_USDT",
+      "symbol": "AIO_USDT",
       "direction": "short",
-      "change": -2.95,
-      "price": 0.006714,
-      "score": 295,
+      "change": -3.01,
+      "price": 0.07452,
+      "score": 301,
       "category": "山寨"
     },
     {
-      "symbol": "B2_USDT",
+      "symbol": "RDNT_USDT",
       "direction": "short",
-      "change": -2.95,
-      "price": 0.7227,
-      "score": 295,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RVN_USDT",
-      "direction": "short",
-      "change": -2.93,
-      "price": 0.005759,
-      "score": 293,
-      "category": "山寨"
-    },
-    {
-      "symbol": "XVS_USDT",
-      "direction": "short",
-      "change": -2.92,
-      "price": 2.96,
-      "score": 292,
-      "category": "山寨"
-    },
-    {
-      "symbol": "GMX_USDT",
-      "direction": "short",
-      "change": -2.91,
-      "price": 6.647,
-      "score": 291,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CHR_USDT",
-      "direction": "long",
-      "change": 2.91,
-      "price": 0.01804,
-      "score": 291,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BANANAS31_USDT",
-      "direction": "short",
-      "change": -2.91,
-      "price": 0.004675,
-      "score": 291,
-      "category": "山寨"
-    },
-    {
-      "symbol": "WLD_USDT",
-      "direction": "short",
-      "change": -2.91,
-      "price": 0.387,
-      "score": 291,
-      "category": "山寨"
-    },
-    {
-      "symbol": "XDC_USDT",
-      "direction": "short",
-      "change": -2.89,
-      "price": 0.03355,
-      "score": 289,
-      "category": "山寨"
-    },
-    {
-      "symbol": "FUTUON_USDT",
-      "direction": "short",
-      "change": -2.86,
-      "price": 148.31,
-      "score": 286,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CC_USDT",
-      "direction": "short",
-      "change": -2.85,
-      "price": 0.16865,
-      "score": 285,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SUSHI_USDT",
-      "direction": "short",
-      "change": -2.81,
-      "price": 0.2008,
-      "score": 281,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SKY_USDT",
-      "direction": "short",
-      "change": -2.8,
-      "price": 0.06695,
-      "score": 280,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MON_USDT",
-      "direction": "short",
-      "change": -2.79,
-      "price": 0.02054,
-      "score": 279,
-      "category": "山寨"
-    },
-    {
-      "symbol": "THE_USDT",
-      "direction": "short",
-      "change": -2.79,
-      "price": 0.2543,
-      "score": 279,
+      "change": -3,
+      "price": 0.00517,
+      "score": 300,
       "category": "山寨"
     },
     {
       "symbol": "XLM_USDT",
       "direction": "short",
-      "change": -2.78,
-      "price": 0.15746,
-      "score": 278,
+      "change": -2.99,
+      "price": 0.15767,
+      "score": 299,
       "category": "山寨"
     },
     {
-      "symbol": "ETC_USDT",
-      "direction": "short",
-      "change": -2.77,
-      "price": 8.596,
-      "score": 277,
-      "category": "山寨"
-    },
-    {
-      "symbol": "OKB_USDT",
-      "direction": "short",
-      "change": -2.77,
-      "price": 75.95,
-      "score": 277,
-      "category": "山寨"
-    },
-    {
-      "symbol": "LLY_USDT",
+      "symbol": "CROSS_USDT",
       "direction": "long",
-      "change": 2.76,
-      "price": 1049.48,
-      "score": 276,
+      "change": 2.98,
+      "price": 0.1023,
+      "score": 298,
       "category": "山寨"
     },
     {
-      "symbol": "ESPORTS_USDT",
-      "direction": "short",
-      "change": -2.76,
-      "price": 0.30452,
-      "score": 276,
-      "category": "山寨"
-    },
-    {
-      "symbol": "XPL_USDT",
-      "direction": "short",
-      "change": -2.75,
-      "price": 0.0918,
-      "score": 275,
-      "category": "山寨"
-    },
-    {
-      "symbol": "H_USDT",
-      "direction": "short",
-      "change": -2.74,
-      "price": 0.11769,
-      "score": 274,
-      "category": "山寨"
-    },
-    {
-      "symbol": "COHR_USDT",
+      "symbol": "OL_USDT",
       "direction": "long",
-      "change": 2.72,
-      "price": 257.95,
-      "score": 272,
+      "change": 2.97,
+      "price": 0.01179,
+      "score": 297,
       "category": "山寨"
     },
     {
-      "symbol": "MINA_USDT",
+      "symbol": "B2_USDT",
       "direction": "short",
-      "change": -2.72,
-      "price": 0.0573,
-      "score": 272,
+      "change": -2.96,
+      "price": 0.7218,
+      "score": 296,
+      "category": "山寨"
+    },
+    {
+      "symbol": "LAB_USDT",
+      "direction": "long",
+      "change": 2.96,
+      "price": 0.15896,
+      "score": 296,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MBABYDOGE_USDT",
+      "direction": "short",
+      "change": -2.95,
+      "price": 0.0003845,
+      "score": 295,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SOPH_USDT",
+      "direction": "short",
+      "change": -2.94,
+      "price": 0.00892,
+      "score": 294,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BERA_USDT",
+      "direction": "short",
+      "change": -2.94,
+      "price": 0.594,
+      "score": 294,
+      "category": "山寨"
+    },
+    {
+      "symbol": "APT_USDT",
+      "direction": "short",
+      "change": -2.92,
+      "price": 0.932,
+      "score": 292,
       "category": "山寨"
     },
     {
       "symbol": "THETA_USDT",
       "direction": "short",
-      "change": -2.71,
-      "price": 0.1867,
-      "score": 271,
+      "change": -2.91,
+      "price": 0.1871,
+      "score": 291,
       "category": "山寨"
     },
     {
-      "symbol": "PEOPLE_USDT",
+      "symbol": "THE_USDT",
       "direction": "short",
-      "change": -2.71,
-      "price": 0.006467,
-      "score": 271,
+      "change": -2.91,
+      "price": 0.2534,
+      "score": 291,
       "category": "山寨"
     },
     {
-      "symbol": "IOST_USDT",
+      "symbol": "GRT_USDT",
       "direction": "short",
-      "change": -2.71,
-      "price": 0.001184,
-      "score": 271,
+      "change": -2.89,
+      "price": 0.02583,
+      "score": 289,
+      "category": "山寨"
+    },
+    {
+      "symbol": "FLOKI_USDT",
+      "direction": "short",
+      "change": -2.89,
+      "price": 0.00002827,
+      "score": 289,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MOODENG_USDT",
+      "direction": "short",
+      "change": -2.88,
+      "price": 0.04957,
+      "score": 288,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TRUMP_USDT",
+      "direction": "short",
+      "change": -2.88,
+      "price": 3.37,
+      "score": 288,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AAVE_USDT",
+      "direction": "short",
+      "change": -2.88,
+      "price": 111.81,
+      "score": 288,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SXT_USDT",
+      "direction": "short",
+      "change": -2.88,
+      "price": 0.0202,
+      "score": 288,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ZETA_USDT",
+      "direction": "short",
+      "change": -2.87,
+      "price": 0.0507,
+      "score": 287,
+      "category": "山寨"
+    },
+    {
+      "symbol": "FUTUON_USDT",
+      "direction": "short",
+      "change": -2.87,
+      "price": 148.13,
+      "score": 287,
+      "category": "山寨"
+    },
+    {
+      "symbol": "XPL_USDT",
+      "direction": "short",
+      "change": -2.87,
+      "price": 0.0913,
+      "score": 287,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BOME_USDT",
+      "direction": "short",
+      "change": -2.86,
+      "price": 0.0003769,
+      "score": 286,
+      "category": "山寨"
+    },
+    {
+      "symbol": "WAL_USDT",
+      "direction": "short",
+      "change": -2.86,
+      "price": 0.0748,
+      "score": 286,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CORE_USDT",
+      "direction": "short",
+      "change": -2.84,
+      "price": 0.0788,
+      "score": 284,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SAND_USDT",
+      "direction": "short",
+      "change": -2.83,
+      "price": 0.0823,
+      "score": 283,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ARPA_USDT",
+      "direction": "short",
+      "change": -2.82,
+      "price": 0.00965,
+      "score": 282,
+      "category": "山寨"
+    },
+    {
+      "symbol": "XPIN_USDT",
+      "direction": "short",
+      "change": -2.82,
+      "price": 0.0014909,
+      "score": 282,
+      "category": "山寨"
+    },
+    {
+      "symbol": "GMX_USDT",
+      "direction": "short",
+      "change": -2.8,
+      "price": 6.657,
+      "score": 280,
+      "category": "山寨"
+    },
+    {
+      "symbol": "DYDX_USDT",
+      "direction": "short",
+      "change": -2.77,
+      "price": 0.0946,
+      "score": 277,
+      "category": "山寨"
+    },
+    {
+      "symbol": "黑马_USDT",
+      "direction": "short",
+      "change": -2.77,
+      "price": 0.000456,
+      "score": 277,
+      "category": "山寨"
+    },
+    {
+      "symbol": "IOTX_USDT",
+      "direction": "long",
+      "change": 2.77,
+      "price": 0.00482,
+      "score": 277,
+      "category": "山寨"
+    },
+    {
+      "symbol": "REZ_USDT",
+      "direction": "short",
+      "change": -2.73,
+      "price": 0.00285,
+      "score": 273,
       "category": "山寨"
     },
     {
@@ -2506,10 +2810,66 @@
       "category": "山寨"
     },
     {
-      "symbol": "CRV_USDT",
+      "symbol": "PHA_USDT",
+      "direction": "short",
+      "change": -2.69,
+      "price": 0.02312,
+      "score": 269,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ETHW_USDT",
+      "direction": "short",
+      "change": -2.69,
+      "price": 0.3033,
+      "score": 269,
+      "category": "山寨"
+    },
+    {
+      "symbol": "RLS_USDT",
+      "direction": "short",
+      "change": -2.68,
+      "price": 0.00509,
+      "score": 268,
+      "category": "山寨"
+    },
+    {
+      "symbol": "HBAR_USDT",
+      "direction": "short",
+      "change": -2.67,
+      "price": 0.09967,
+      "score": 267,
+      "category": "山寨"
+    },
+    {
+      "symbol": "FIL_USDT",
+      "direction": "short",
+      "change": -2.67,
+      "price": 0.986,
+      "score": 267,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MORPHO_USDT",
       "direction": "short",
       "change": -2.66,
-      "price": 0.2414,
+      "price": 1.8057,
+      "score": 266,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TOWNS_USDT",
+      "direction": "short",
+      "change": -2.66,
+      "price": 0.00329,
+      "score": 266,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CRO_USDT",
+      "direction": "short",
+      "change": -2.66,
+      "price": 0.07507,
       "score": 266,
       "category": "山寨"
     },
@@ -2522,331 +2882,283 @@
       "category": "山寨"
     },
     {
-      "symbol": "LA_USDT",
-      "direction": "short",
-      "change": -2.65,
-      "price": 0.231,
-      "score": 265,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TOWNS_USDT",
-      "direction": "short",
-      "change": -2.65,
-      "price": 0.0033,
-      "score": 265,
-      "category": "山寨"
-    },
-    {
-      "symbol": "FUN_USDT",
+      "symbol": "LLY_USDT",
       "direction": "long",
       "change": 2.64,
-      "price": 0.04739,
+      "price": 1049.05,
       "score": 264,
       "category": "山寨"
     },
     {
-      "symbol": "D_USDT",
+      "symbol": "VANRY_USDT",
       "direction": "short",
       "change": -2.64,
-      "price": 0.00701,
+      "price": 0.00516,
       "score": 264,
       "category": "山寨"
     },
     {
-      "symbol": "APT_USDT",
+      "symbol": "XTZ_USDT",
       "direction": "short",
-      "change": -2.6,
-      "price": 0.935,
-      "score": 260,
+      "change": -2.64,
+      "price": 0.3797,
+      "score": 264,
       "category": "山寨"
     },
     {
-      "symbol": "BLUR_USDT",
-      "direction": "short",
-      "change": -2.6,
-      "price": 0.01989,
-      "score": 260,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CORE_USDT",
+      "symbol": "HAEDAL_USDT",
       "direction": "short",
       "change": -2.59,
-      "price": 0.079,
+      "price": 0.0256,
       "score": 259,
       "category": "山寨"
     },
     {
-      "symbol": "BABA_USDT",
-      "direction": "short",
-      "change": -2.58,
-      "price": 144.13,
-      "score": 258,
+      "symbol": "ACN_USDT",
+      "direction": "long",
+      "change": 2.59,
+      "price": 208.57,
+      "score": 259,
       "category": "山寨"
     },
     {
-      "symbol": "CRO_USDT",
+      "symbol": "FIDA_USDT",
       "direction": "short",
-      "change": -2.57,
-      "price": 0.07511,
-      "score": 257,
+      "change": -2.56,
+      "price": 0.01521,
+      "score": 256,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MASK_USDT",
+      "direction": "short",
+      "change": -2.56,
+      "price": 0.418,
+      "score": 256,
+      "category": "山寨"
+    },
+    {
+      "symbol": "LTC_USDT",
+      "direction": "short",
+      "change": -2.55,
+      "price": 53.93,
+      "score": 255,
+      "category": "山寨"
+    },
+    {
+      "symbol": "STBL_USDT",
+      "direction": "long",
+      "change": 2.54,
+      "price": 0.04403,
+      "score": 254,
+      "category": "山寨"
+    },
+    {
+      "symbol": "LA_USDT",
+      "direction": "short",
+      "change": -2.54,
+      "price": 0.2304,
+      "score": 254,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ESPORTS_USDT",
+      "direction": "short",
+      "change": -2.53,
+      "price": 0.30523,
+      "score": 253,
       "category": "山寨"
     },
     {
       "symbol": "MSTRX_USDT",
       "direction": "short",
-      "change": -2.57,
-      "price": 129.65,
-      "score": 257,
+      "change": -2.53,
+      "price": 129.58,
+      "score": 253,
       "category": "山寨"
     },
     {
-      "symbol": "BANANA_USDT",
+      "symbol": "HIGH_USDT",
       "direction": "short",
-      "change": -2.55,
-      "price": 4.21,
-      "score": 255,
+      "change": -2.51,
+      "price": 0.1396,
+      "score": 251,
       "category": "山寨"
     },
     {
-      "symbol": "TRUMP_USDT",
+      "symbol": "BABA_USDT",
       "direction": "short",
-      "change": -2.55,
-      "price": 3.367,
-      "score": 255,
+      "change": -2.5,
+      "price": 144.11,
+      "score": 250,
       "category": "山寨"
     },
     {
-      "symbol": "ZK_USDT",
-      "direction": "short",
-      "change": -2.55,
-      "price": 0.01913,
-      "score": 255,
-      "category": "山寨"
-    },
-    {
-      "symbol": "IOTX_USDT",
+      "symbol": "ERA_USDT",
       "direction": "long",
-      "change": 2.55,
-      "price": 0.00483,
-      "score": 255,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RSR_USDT",
-      "direction": "short",
-      "change": -2.54,
-      "price": 0.001459,
-      "score": 254,
-      "category": "山寨"
-    },
-    {
-      "symbol": "GT_USDT",
-      "direction": "short",
-      "change": -2.54,
-      "price": 6.902,
-      "score": 254,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ALGO_USDT",
-      "direction": "short",
-      "change": -2.52,
-      "price": 0.08602,
-      "score": 252,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ZETA_USDT",
-      "direction": "short",
-      "change": -2.49,
-      "price": 0.0509,
+      "change": 2.49,
+      "price": 0.1481,
       "score": 249,
       "category": "山寨"
     },
     {
-      "symbol": "MBABYDOGE_USDT",
-      "direction": "short",
-      "change": -2.49,
-      "price": 0.0003838,
-      "score": 249,
-      "category": "山寨"
-    },
-    {
-      "symbol": "DYDX_USDT",
+      "symbol": "LSK_USDT",
       "direction": "short",
       "change": -2.47,
-      "price": 0.0948,
+      "price": 0.1263,
       "score": 247,
       "category": "山寨"
     },
     {
-      "symbol": "FIL_USDT",
+      "symbol": "BLUR_USDT",
+      "direction": "short",
+      "change": -2.47,
+      "price": 0.01978,
+      "score": 247,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MON_USDT",
+      "direction": "short",
+      "change": -2.47,
+      "price": 0.02054,
+      "score": 247,
+      "category": "山寨"
+    },
+    {
+      "symbol": "S_USDT",
       "direction": "short",
       "change": -2.46,
-      "price": 0.99,
+      "price": 0.0396,
       "score": 246,
       "category": "山寨"
     },
     {
-      "symbol": "GRT_USDT",
+      "symbol": "METIS_USDT",
       "direction": "short",
       "change": -2.45,
-      "price": 0.02591,
+      "price": 3.18,
       "score": 245,
       "category": "山寨"
     },
     {
-      "symbol": "ILV_USDT",
-      "direction": "short",
-      "change": -2.45,
-      "price": 3.542,
+      "symbol": "CARV_USDT",
+      "direction": "long",
+      "change": 2.45,
+      "price": 0.0626,
       "score": 245,
       "category": "山寨"
     },
     {
-      "symbol": "PNUT_USDT",
+      "symbol": "4_USDT",
       "direction": "short",
       "change": -2.44,
-      "price": 0.04472,
+      "price": 0.00801,
       "score": 244,
       "category": "山寨"
     },
     {
-      "symbol": "TRADOOR_USDT",
+      "symbol": "SEI_USDT",
       "direction": "short",
-      "change": -2.41,
-      "price": 1.378,
-      "score": 241,
+      "change": -2.43,
+      "price": 0.0683,
+      "score": 243,
       "category": "山寨"
     },
     {
-      "symbol": "SNT_USDT",
+      "symbol": "DOGS_USDT",
       "direction": "short",
-      "change": -2.4,
-      "price": 0.01059,
-      "score": 240,
+      "change": -2.43,
+      "price": 0.0000269,
+      "score": 243,
       "category": "山寨"
     },
     {
-      "symbol": "BOME_USDT",
+      "symbol": "TOSHI_USDT",
       "direction": "short",
-      "change": -2.4,
-      "price": 0.0003788,
-      "score": 240,
+      "change": -2.43,
+      "price": 0.0002044,
+      "score": 243,
       "category": "山寨"
     },
     {
-      "symbol": "SCRT_USDT",
+      "symbol": "CETUS_USDT",
       "direction": "short",
-      "change": -2.37,
-      "price": 0.0784,
-      "score": 237,
+      "change": -2.42,
+      "price": 0.01571,
+      "score": 242,
       "category": "山寨"
     },
     {
-      "symbol": "SAND_USDT",
-      "direction": "short",
-      "change": -2.36,
-      "price": 0.0827,
-      "score": 236,
+      "symbol": "HYPER_USDT",
+      "direction": "long",
+      "change": 2.38,
+      "price": 0.0947,
+      "score": 238,
       "category": "山寨"
     },
     {
       "symbol": "SCR_USDT",
       "direction": "short",
       "change": -2.36,
-      "price": 0.0413,
+      "price": 0.0414,
       "score": 236,
       "category": "山寨"
     },
     {
-      "symbol": "COINX_USDT",
-      "direction": "short",
-      "change": -2.36,
-      "price": 175.57,
-      "score": 236,
-      "category": "山寨"
-    },
-    {
-      "symbol": "HBAR_USDT",
-      "direction": "short",
-      "change": -2.35,
-      "price": 0.09963,
-      "score": 235,
-      "category": "山寨"
-    },
-    {
-      "symbol": "WAL_USDT",
-      "direction": "short",
-      "change": -2.35,
-      "price": 0.0749,
-      "score": 235,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ERA_USDT",
-      "direction": "long",
-      "change": 2.35,
-      "price": 0.1478,
-      "score": 235,
-      "category": "山寨"
-    },
-    {
-      "symbol": "XTZ_USDT",
+      "symbol": "GT_USDT",
       "direction": "short",
       "change": -2.34,
-      "price": 0.3806,
+      "price": 6.9,
       "score": 234,
       "category": "山寨"
     },
     {
-      "symbol": "XMR_USDT",
+      "symbol": "TRB_USDT",
+      "direction": "short",
+      "change": -2.33,
+      "price": 14.24,
+      "score": 233,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BNB_USDT",
+      "direction": "short",
+      "change": -2.32,
+      "price": 610.6,
+      "score": 232,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ARK_USDT",
       "direction": "short",
       "change": -2.31,
-      "price": 335.73,
+      "price": 0.1774,
       "score": 231,
       "category": "山寨"
     },
     {
-      "symbol": "TREE_USDT",
-      "direction": "short",
-      "change": -2.31,
-      "price": 0.072,
-      "score": 231,
-      "category": "山寨"
-    },
-    {
-      "symbol": "4_USDT",
-      "direction": "short",
-      "change": -2.31,
-      "price": 0.00804,
-      "score": 231,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ORCLX_USDT",
+      "symbol": "SHELL_USDT",
       "direction": "short",
       "change": -2.3,
-      "price": 145.01,
+      "price": 0.0298,
       "score": 230,
       "category": "山寨"
     },
     {
-      "symbol": "ZKP_USDT",
-      "direction": "short",
-      "change": -2.28,
-      "price": 0.08141,
-      "score": 228,
+      "symbol": "FUN_USDT",
+      "direction": "long",
+      "change": 2.3,
+      "price": 0.0476,
+      "score": 230,
       "category": "山寨"
     },
     {
-      "symbol": "LPT_USDT",
+      "symbol": "AT_USDT",
       "direction": "short",
-      "change": -2.27,
-      "price": 2.277,
-      "score": 227,
+      "change": -2.28,
+      "price": 0.1584,
+      "score": 228,
       "category": "山寨"
     },
     {
@@ -2858,82 +3170,42 @@
       "category": "山寨"
     },
     {
-      "symbol": "TA_USDT",
+      "symbol": "AERGO_USDT",
       "direction": "short",
-      "change": -2.27,
-      "price": 0.03794,
-      "score": 227,
+      "change": -2.26,
+      "price": 0.0553,
+      "score": 226,
       "category": "山寨"
     },
     {
-      "symbol": "G_USDT",
-      "direction": "short",
-      "change": -2.27,
-      "price": 0.00344,
-      "score": 227,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TRB_USDT",
-      "direction": "short",
-      "change": -2.27,
-      "price": 14.23,
-      "score": 227,
-      "category": "山寨"
-    },
-    {
-      "symbol": "HIPPO_USDT",
-      "direction": "short",
-      "change": -2.27,
-      "price": 0.000559,
-      "score": 227,
-      "category": "山寨"
-    },
-    {
-      "symbol": "VANRY_USDT",
-      "direction": "short",
-      "change": -2.27,
-      "price": 0.00516,
-      "score": 227,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SPELL_USDT",
+      "symbol": "COINX_USDT",
       "direction": "short",
       "change": -2.25,
-      "price": 0.0001785,
+      "price": 175.78,
       "score": 225,
       "category": "山寨"
     },
     {
-      "symbol": "ZEREBRO_USDT",
+      "symbol": "W_USDT",
       "direction": "short",
       "change": -2.24,
-      "price": 0.00699,
+      "price": 0.01874,
       "score": 224,
       "category": "山寨"
     },
     {
-      "symbol": "CLANKER_USDT",
+      "symbol": "ZBCN_USDT",
       "direction": "short",
-      "change": -2.23,
-      "price": 28.89,
-      "score": 223,
+      "change": -2.24,
+      "price": 0.0019862,
+      "score": 224,
       "category": "山寨"
     },
     {
-      "symbol": "FLUX_USDT",
+      "symbol": "XDC_USDT",
       "direction": "short",
       "change": -2.23,
-      "price": 0.0615,
-      "score": 223,
-      "category": "山寨"
-    },
-    {
-      "symbol": "LRC_USDT",
-      "direction": "short",
-      "change": -2.23,
-      "price": 0.03198,
+      "price": 0.03379,
       "score": 223,
       "category": "山寨"
     },
@@ -2946,50 +3218,58 @@
       "category": "山寨"
     },
     {
-      "symbol": "BEL_USDT",
+      "symbol": "ORDER_USDT",
       "direction": "short",
-      "change": -2.22,
-      "price": 0.097,
+      "change": -2.23,
+      "price": 0.05382,
+      "score": 223,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MAV_USDT",
+      "direction": "short",
+      "change": -2.23,
+      "price": 0.014,
+      "score": 223,
+      "category": "山寨"
+    },
+    {
+      "symbol": "UNH_USDT",
+      "direction": "long",
+      "change": 2.22,
+      "price": 292.51,
       "score": 222,
       "category": "山寨"
     },
     {
-      "symbol": "MET_USDT",
-      "direction": "short",
-      "change": -2.21,
-      "price": 0.1811,
-      "score": 221,
+      "symbol": "XAUT_USDT",
+      "direction": "long",
+      "change": 2.22,
+      "price": 5270.1,
+      "score": 222,
       "category": "山寨"
     },
     {
-      "symbol": "APR_USDT",
-      "direction": "short",
-      "change": -2.21,
-      "price": 0.09121,
-      "score": 221,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AAVE_USDT",
-      "direction": "short",
-      "change": -2.21,
-      "price": 111.89,
-      "score": 221,
-      "category": "山寨"
-    },
-    {
-      "symbol": "KAIA_USDT",
-      "direction": "short",
-      "change": -2.21,
-      "price": 0.0549,
-      "score": 221,
-      "category": "山寨"
-    },
-    {
-      "symbol": "NEO_USDT",
+      "symbol": "AR_USDT",
       "direction": "short",
       "change": -2.2,
-      "price": 2.707,
+      "price": 1.598,
+      "score": 220,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ARKM_USDT",
+      "direction": "short",
+      "change": -2.2,
+      "price": 0.1069,
+      "score": 220,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CTSI_USDT",
+      "direction": "short",
+      "change": -2.2,
+      "price": 0.02399,
       "score": 220,
       "category": "山寨"
     },
@@ -3002,42 +3282,74 @@
       "category": "山寨"
     },
     {
-      "symbol": "MORPHO_USDT",
+      "symbol": "KSM_USDT",
       "direction": "short",
-      "change": -2.19,
-      "price": 1.8169,
-      "score": 219,
+      "change": -2.2,
+      "price": 4.979,
+      "score": 220,
       "category": "山寨"
     },
     {
       "symbol": "RUNE_USDT",
       "direction": "short",
+      "change": -2.2,
+      "price": 0.3952,
+      "score": 220,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ONG_USDT",
+      "direction": "short",
+      "change": -2.2,
+      "price": 0.0622,
+      "score": 220,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CELR_USDT",
+      "direction": "short",
+      "change": -2.19,
+      "price": 0.002416,
+      "score": 219,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MELANIA_USDT",
+      "direction": "short",
       "change": -2.18,
-      "price": 0.3953,
+      "price": 0.1076,
       "score": 218,
       "category": "山寨"
     },
     {
-      "symbol": "PROMPT_USDT",
+      "symbol": "MET_USDT",
       "direction": "short",
       "change": -2.17,
-      "price": 0.045,
+      "price": 0.1806,
       "score": 217,
       "category": "山寨"
     },
     {
-      "symbol": "LTC_USDT",
+      "symbol": "POL_USDT",
       "direction": "short",
       "change": -2.17,
-      "price": 54.05,
+      "price": 0.108,
       "score": 217,
       "category": "山寨"
     },
     {
-      "symbol": "ICX_USDT",
+      "symbol": "ORCLX_USDT",
       "direction": "short",
       "change": -2.16,
-      "price": 0.03616,
+      "price": 144.95,
+      "score": 216,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PG_USDT",
+      "direction": "long",
+      "change": 2.16,
+      "price": 167.13,
       "score": 216,
       "category": "山寨"
     },
@@ -3045,72 +3357,88 @@
       "symbol": "QTUM_USDT",
       "direction": "short",
       "change": -2.16,
-      "price": 0.905,
+      "price": 0.904,
       "score": 216,
       "category": "山寨"
     },
     {
-      "symbol": "ASTR_USDT",
-      "direction": "short",
-      "change": -2.16,
-      "price": 0.00725,
-      "score": 216,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TOSHI_USDT",
+      "symbol": "BAND_USDT",
       "direction": "short",
       "change": -2.15,
-      "price": 0.000205,
-      "score": 215,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AT_USDT",
-      "direction": "short",
-      "change": -2.15,
-      "price": 0.1592,
-      "score": 215,
-      "category": "山寨"
-    },
-    {
-      "symbol": "METIS_USDT",
-      "direction": "short",
-      "change": -2.15,
-      "price": 3.19,
+      "price": 0.2046,
       "score": 215,
       "category": "山寨"
     },
     {
       "symbol": "JTO_USDT",
       "direction": "short",
-      "change": -2.14,
-      "price": 0.274,
-      "score": 214,
+      "change": -2.15,
+      "price": 0.273,
+      "score": 215,
       "category": "山寨"
     },
     {
-      "symbol": "DOGS_USDT",
+      "symbol": "CKB_USDT",
       "direction": "short",
       "change": -2.14,
-      "price": 0.00002698,
+      "price": 0.001508,
       "score": 214,
       "category": "山寨"
     },
     {
-      "symbol": "AMD_USDT",
-      "direction": "short",
-      "change": -2.14,
-      "price": 199.57,
-      "score": 214,
-      "category": "山寨"
-    },
-    {
-      "symbol": "黑马_USDT",
+      "symbol": "FORM_USDT",
       "direction": "short",
       "change": -2.13,
-      "price": 0.000459,
+      "price": 0.1886,
       "score": 213,
+      "category": "山寨"
+    },
+    {
+      "symbol": "H_USDT",
+      "direction": "short",
+      "change": -2.13,
+      "price": 0.11698,
+      "score": 213,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MMT_USDT",
+      "direction": "short",
+      "change": -2.13,
+      "price": 0.1192,
+      "score": 213,
+      "category": "山寨"
+    },
+    {
+      "symbol": "JUP_USDT",
+      "direction": "short",
+      "change": -2.13,
+      "price": 0.1513,
+      "score": 213,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PAXG_USDT",
+      "direction": "long",
+      "change": 2.13,
+      "price": 5302.4,
+      "score": 213,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AVAAI_USDT",
+      "direction": "long",
+      "change": 2.12,
+      "price": 0.00772,
+      "score": 212,
+      "category": "山寨"
+    },
+    {
+      "symbol": "GIGGLE_USDT",
+      "direction": "short",
+      "change": -2.12,
+      "price": 26.26,
+      "score": 212,
       "category": "山寨"
     },
     {
@@ -3122,90 +3450,114 @@
       "category": "山寨"
     },
     {
-      "symbol": "RLS_USDT",
+      "symbol": "A_USDT",
       "direction": "short",
-      "change": -2.1,
-      "price": 0.00514,
-      "score": 210,
+      "change": -2.11,
+      "price": 0.079,
+      "score": 211,
       "category": "山寨"
     },
     {
-      "symbol": "PHA_USDT",
+      "symbol": "HIVE_USDT",
       "direction": "short",
-      "change": -2.1,
-      "price": 0.0233,
-      "score": 210,
+      "change": -2.11,
+      "price": 0.0649,
+      "score": 211,
       "category": "山寨"
     },
     {
-      "symbol": "ROSE_USDT",
-      "direction": "short",
-      "change": -2.08,
-      "price": 0.01227,
-      "score": 208,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AERGO_USDT",
-      "direction": "short",
-      "change": -2.08,
-      "price": 0.05565,
-      "score": 208,
-      "category": "山寨"
-    },
-    {
-      "symbol": "YGG_USDT",
+      "symbol": "C_USDT",
       "direction": "long",
-      "change": 2.07,
-      "price": 0.0394,
+      "change": 2.1,
+      "price": 0.05143,
+      "score": 210,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MEME_USDT",
+      "direction": "short",
+      "change": -2.09,
+      "price": 0.000609,
+      "score": 209,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SKR_USDT",
+      "direction": "short",
+      "change": -2.09,
+      "price": 0.020588,
+      "score": 209,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PROVE_USDT",
+      "direction": "short",
+      "change": -2.08,
+      "price": 0.28661,
+      "score": 208,
+      "category": "山寨"
+    },
+    {
+      "symbol": "EVAA_USDT",
+      "direction": "short",
+      "change": -2.07,
+      "price": 0.4362,
       "score": 207,
       "category": "山寨"
     },
     {
-      "symbol": "RDNT_USDT",
-      "direction": "short",
-      "change": -2.06,
-      "price": 0.00522,
+      "symbol": "XAU_USDT",
+      "direction": "long",
+      "change": 2.06,
+      "price": 5286.32,
       "score": 206,
       "category": "山寨"
     },
     {
-      "symbol": "FLOKI_USDT",
+      "symbol": "FORTH_USDT",
       "direction": "short",
-      "change": -2.04,
-      "price": 0.00002836,
-      "score": 204,
+      "change": -2.06,
+      "price": 0.953,
+      "score": 206,
       "category": "山寨"
     },
     {
-      "symbol": "UNH_USDT",
-      "direction": "long",
-      "change": 2.04,
-      "price": 292.55,
-      "score": 204,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BABY_USDT",
+      "symbol": "ICX_USDT",
       "direction": "short",
-      "change": -2.03,
-      "price": 0.01209,
-      "score": 203,
+      "change": -2.06,
+      "price": 0.03608,
+      "score": 206,
       "category": "山寨"
     },
     {
-      "symbol": "BNB_USDT",
+      "symbol": "GALA_USDT",
       "direction": "short",
-      "change": -2.03,
-      "price": 610.95,
-      "score": 203,
+      "change": -2.05,
+      "price": 0.003625,
+      "score": 205,
       "category": "山寨"
     },
     {
-      "symbol": "ETHW_USDT",
+      "symbol": "WAXP_USDT",
       "direction": "short",
       "change": -2.02,
-      "price": 0.3052,
+      "price": 0.00629,
+      "score": 202,
+      "category": "山寨"
+    },
+    {
+      "symbol": "WCT_USDT",
+      "direction": "short",
+      "change": -2.02,
+      "price": 0.0583,
+      "score": 202,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BEL_USDT",
+      "direction": "short",
+      "change": -2.02,
+      "price": 0.097,
       "score": 202,
       "category": "山寨"
     },
@@ -3218,187 +3570,155 @@
       "category": "山寨"
     },
     {
-      "symbol": "JUP_USDT",
+      "symbol": "ACT_USDT",
       "direction": "short",
-      "change": -2.01,
-      "price": 0.1512,
-      "score": 201,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MELANIA_USDT",
-      "direction": "short",
-      "change": -2,
-      "price": 0.1076,
-      "score": 200,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SYS_USDT",
-      "direction": "short",
-      "change": -2,
-      "price": 0.01076,
-      "score": 200,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SEI_USDT",
-      "direction": "short",
-      "change": -2,
-      "price": 0.0686,
-      "score": 200,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CETUS_USDT",
-      "direction": "short",
-      "change": -2,
-      "price": 0.01571,
-      "score": 200,
-      "category": "山寨"
-    },
-    {
-      "symbol": "PUMP_USDT",
-      "direction": "long",
-      "change": 1.99,
-      "price": 0.00179,
+      "change": -1.99,
+      "price": 0.01376,
       "score": 199,
-      "category": "山寨"
-    },
-    {
-      "symbol": "W_USDT",
-      "direction": "short",
-      "change": -1.98,
-      "price": 0.01877,
-      "score": 198,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CELO_USDT",
-      "direction": "long",
-      "change": 1.95,
-      "price": 0.0783,
-      "score": 195,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TSTBSC_USDT",
-      "direction": "short",
-      "change": -1.95,
-      "price": 0.00955,
-      "score": 195,
-      "category": "山寨"
-    },
-    {
-      "symbol": "XAUT_USDT",
-      "direction": "long",
-      "change": 1.95,
-      "price": 5266,
-      "score": 195,
-      "category": "山寨"
-    },
-    {
-      "symbol": "PG_USDT",
-      "direction": "long",
-      "change": 1.94,
-      "price": 166.99,
-      "score": 194,
-      "category": "山寨"
-    },
-    {
-      "symbol": "PAXG_USDT",
-      "direction": "long",
-      "change": 1.92,
-      "price": 5296.9,
-      "score": 192,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ARKM_USDT",
-      "direction": "short",
-      "change": -1.92,
-      "price": 0.1072,
-      "score": 192,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BROCCOLIF3B_USDT",
-      "direction": "long",
-      "change": 1.9,
-      "price": 0.00375,
-      "score": 190,
-      "category": "山寨"
-    },
-    {
-      "symbol": "HEMI_USDT",
-      "direction": "short",
-      "change": -1.9,
-      "price": 0.0088,
-      "score": 190,
       "category": "山寨"
     },
     {
       "symbol": "STORJ_USDT",
       "direction": "short",
-      "change": -1.89,
+      "change": -1.99,
       "price": 0.0934,
+      "score": 199,
+      "category": "山寨"
+    },
+    {
+      "symbol": "IMX_USDT",
+      "direction": "short",
+      "change": -1.98,
+      "price": 0.1635,
+      "score": 198,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SAGA_USDT",
+      "direction": "short",
+      "change": -1.96,
+      "price": 0.03,
+      "score": 196,
+      "category": "山寨"
+    },
+    {
+      "symbol": "RENDER_USDT",
+      "direction": "short",
+      "change": -1.96,
+      "price": 1.4,
+      "score": 196,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TAC_USDT",
+      "direction": "short",
+      "change": -1.96,
+      "price": 0.004,
+      "score": 196,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SLP_USDT",
+      "direction": "short",
+      "change": -1.96,
+      "price": 0.00055,
+      "score": 196,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BAN_USDT",
+      "direction": "short",
+      "change": -1.96,
+      "price": 0.1127,
+      "score": 196,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ALLO_USDT",
+      "direction": "short",
+      "change": -1.9,
+      "price": 0.1086,
+      "score": 190,
+      "category": "山寨"
+    },
+    {
+      "symbol": "POWR_USDT",
+      "direction": "short",
+      "change": -1.9,
+      "price": 0.062,
+      "score": 190,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TREE_USDT",
+      "direction": "short",
+      "change": -1.9,
+      "price": 0.0722,
+      "score": 190,
+      "category": "山寨"
+    },
+    {
+      "symbol": "NOT_USDT",
+      "direction": "short",
+      "change": -1.89,
+      "price": 0.000364,
       "score": 189,
       "category": "山寨"
     },
     {
-      "symbol": "AIO_USDT",
+      "symbol": "JOE_USDT",
       "direction": "short",
-      "change": -1.88,
-      "price": 0.07518,
-      "score": 188,
+      "change": -1.89,
+      "price": 0.0364,
+      "score": 189,
       "category": "山寨"
     },
     {
-      "symbol": "COMP_USDT",
+      "symbol": "GRIFFAIN_USDT",
+      "direction": "short",
+      "change": -1.89,
+      "price": 0.00881,
+      "score": 189,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CVX_USDT",
+      "direction": "short",
+      "change": -1.89,
+      "price": 1.71,
+      "score": 189,
+      "category": "山寨"
+    },
+    {
+      "symbol": "OG_USDT",
       "direction": "short",
       "change": -1.86,
-      "price": 18.44,
+      "price": 2.951,
       "score": 186,
       "category": "山寨"
     },
     {
-      "symbol": "LSK_USDT",
+      "symbol": "COOKIE_USDT",
       "direction": "short",
-      "change": -1.85,
-      "price": 0.1273,
-      "score": 185,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TWT_USDT",
-      "direction": "long",
-      "change": 1.84,
-      "price": 0.5024,
+      "change": -1.84,
+      "price": 0.0176,
       "score": 184,
       "category": "山寨"
     },
     {
-      "symbol": "AIOZ_USDT",
+      "symbol": "SQD_USDT",
       "direction": "short",
       "change": -1.83,
-      "price": 0.0642,
+      "price": 0.0376,
       "score": 183,
       "category": "山寨"
     },
     {
-      "symbol": "XAU_USDT",
+      "symbol": "PTB_USDT",
       "direction": "long",
-      "change": 1.82,
-      "price": 5281.46,
-      "score": 182,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MAV_USDT",
-      "direction": "short",
-      "change": -1.82,
-      "price": 0.01399,
-      "score": 182,
+      "change": 1.83,
+      "price": 0.00111,
+      "score": 183,
       "category": "山寨"
     },
     {
@@ -3410,154 +3730,66 @@
       "category": "山寨"
     },
     {
-      "symbol": "IR_USDT",
+      "symbol": "YGG_USDT",
       "direction": "long",
-      "change": 1.81,
-      "price": 0.0733,
-      "score": 181,
-      "category": "山寨"
-    },
-    {
-      "symbol": "IMX_USDT",
-      "direction": "short",
-      "change": -1.8,
-      "price": 0.1639,
+      "change": 1.8,
+      "price": 0.0395,
       "score": 180,
       "category": "山寨"
     },
     {
-      "symbol": "HAEDAL_USDT",
-      "direction": "short",
-      "change": -1.79,
-      "price": 0.02576,
-      "score": 179,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AWE_USDT",
-      "direction": "short",
-      "change": -1.79,
-      "price": 0.05276,
-      "score": 179,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MEME_USDT",
-      "direction": "short",
-      "change": -1.77,
-      "price": 0.000609,
-      "score": 177,
-      "category": "山寨"
-    },
-    {
-      "symbol": "PTB_USDT",
+      "symbol": "KNC_USDT",
       "direction": "long",
-      "change": 1.77,
-      "price": 0.00115,
-      "score": 177,
+      "change": 1.8,
+      "price": 0.136,
+      "score": 180,
       "category": "山寨"
     },
     {
-      "symbol": "EVAA_USDT",
+      "symbol": "ORCA_USDT",
       "direction": "short",
-      "change": -1.77,
-      "price": 0.4385,
-      "score": 177,
+      "change": -1.78,
+      "price": 0.885,
+      "score": 178,
       "category": "山寨"
     },
     {
-      "symbol": "MOODENG_USDT",
+      "symbol": "GLM_USDT",
       "direction": "short",
-      "change": -1.77,
-      "price": 0.04987,
-      "score": 177,
+      "change": -1.76,
+      "price": 0.1336,
+      "score": 176,
       "category": "山寨"
     },
     {
-      "symbol": "ACN_USDT",
+      "symbol": "IAU_USDT",
       "direction": "long",
-      "change": 1.75,
-      "price": 207.42,
-      "score": 175,
+      "change": 1.74,
+      "price": 99.25,
+      "score": 174,
       "category": "山寨"
     },
     {
-      "symbol": "HIGH_USDT",
+      "symbol": "USUAL_USDT",
       "direction": "short",
-      "change": -1.75,
-      "price": 0.1405,
-      "score": 175,
+      "change": -1.74,
+      "price": 0.0124,
+      "score": 174,
       "category": "山寨"
     },
     {
-      "symbol": "POL_USDT",
-      "direction": "short",
-      "change": -1.73,
-      "price": 0.108,
-      "score": 173,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ONG_USDT",
-      "direction": "short",
-      "change": -1.73,
-      "price": 0.0625,
-      "score": 173,
-      "category": "山寨"
-    },
-    {
-      "symbol": "S_USDT",
-      "direction": "short",
-      "change": -1.73,
-      "price": 0.0398,
-      "score": 173,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CTSI_USDT",
-      "direction": "short",
-      "change": -1.73,
-      "price": 0.02392,
-      "score": 173,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ANIME_USDT",
+      "symbol": "AMZNX_USDT",
       "direction": "long",
       "change": 1.72,
-      "price": 0.004963,
+      "price": 210,
       "score": 172,
       "category": "山寨"
     },
     {
-      "symbol": "MITO_USDT",
-      "direction": "long",
-      "change": 1.72,
-      "price": 0.03834,
-      "score": 172,
-      "category": "山寨"
-    },
-    {
-      "symbol": "IN_USDT",
-      "direction": "short",
-      "change": -1.72,
-      "price": 0.06752,
-      "score": 172,
-      "category": "山寨"
-    },
-    {
-      "symbol": "FLUID_USDT",
-      "direction": "long",
-      "change": 1.72,
-      "price": 2.13,
-      "score": 172,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ACT_USDT",
+      "symbol": "ZKC_USDT",
       "direction": "short",
       "change": -1.71,
-      "price": 0.01382,
+      "price": 0.0862,
       "score": 171,
       "category": "山寨"
     },
@@ -3570,58 +3802,42 @@
       "category": "山寨"
     },
     {
-      "symbol": "PROVE_USDT",
-      "direction": "short",
-      "change": -1.71,
-      "price": 0.28796,
+      "symbol": "AEVO_USDT",
+      "direction": "long",
+      "change": 1.71,
+      "price": 0.02314,
       "score": 171,
       "category": "山寨"
     },
     {
-      "symbol": "MCD_USDT",
+      "symbol": "CELO_USDT",
       "direction": "long",
-      "change": 1.7,
-      "price": 340.7,
-      "score": 170,
+      "change": 1.69,
+      "price": 0.078,
+      "score": 169,
       "category": "山寨"
     },
     {
-      "symbol": "ALCH_USDT",
+      "symbol": "BIO_USDT",
       "direction": "short",
-      "change": -1.7,
-      "price": 0.07998,
-      "score": 170,
+      "change": -1.67,
+      "price": 0.0224,
+      "score": 167,
       "category": "山寨"
     },
     {
-      "symbol": "ORDER_USDT",
+      "symbol": "RARE_USDT",
       "direction": "short",
-      "change": -1.68,
-      "price": 0.0539,
-      "score": 168,
+      "change": -1.67,
+      "price": 0.01826,
+      "score": 167,
       "category": "山寨"
     },
     {
-      "symbol": "RIVER_USDT",
+      "symbol": "MOCA_USDT",
       "direction": "short",
       "change": -1.66,
-      "price": 10.754,
-      "score": 166,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AMZNX_USDT",
-      "direction": "long",
-      "change": 1.66,
-      "price": 209.99,
-      "score": 166,
-      "category": "山寨"
-    },
-    {
-      "symbol": "HIVE_USDT",
-      "direction": "short",
-      "change": -1.66,
-      "price": 0.0652,
+      "price": 0.016,
       "score": 166,
       "category": "山寨"
     },
@@ -3634,186 +3850,138 @@
       "category": "山寨"
     },
     {
-      "symbol": "MUBARAK_USDT",
+      "symbol": "SUPER_USDT",
+      "direction": "short",
+      "change": -1.65,
+      "price": 0.113,
+      "score": 165,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MANA_USDT",
+      "direction": "short",
+      "change": -1.65,
+      "price": 0.0952,
+      "score": 165,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MCD_USDT",
       "direction": "long",
-      "change": 1.64,
-      "price": 0.01362,
-      "score": 164,
-      "category": "山寨"
-    },
-    {
-      "symbol": "NAORIS_USDT",
-      "direction": "short",
-      "change": -1.64,
-      "price": 0.03119,
-      "score": 164,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SHELL_USDT",
-      "direction": "short",
-      "change": -1.64,
-      "price": 0.03,
-      "score": 164,
-      "category": "山寨"
-    },
-    {
-      "symbol": "KSM_USDT",
-      "direction": "short",
-      "change": -1.62,
-      "price": 4.992,
-      "score": 162,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RARE_USDT",
-      "direction": "short",
-      "change": -1.62,
-      "price": 0.01825,
-      "score": 162,
-      "category": "山寨"
-    },
-    {
-      "symbol": "JOE_USDT",
-      "direction": "short",
-      "change": -1.62,
-      "price": 0.0365,
-      "score": 162,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SLP_USDT",
-      "direction": "short",
-      "change": -1.61,
-      "price": 0.00055,
-      "score": 161,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AR_USDT",
-      "direction": "short",
-      "change": -1.6,
-      "price": 1.597,
-      "score": 160,
-      "category": "山寨"
-    },
-    {
-      "symbol": "JDON_USDT",
-      "direction": "short",
-      "change": -1.6,
-      "price": 26.52,
-      "score": 160,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ZKC_USDT",
-      "direction": "short",
-      "change": -1.59,
-      "price": 0.0864,
-      "score": 159,
-      "category": "山寨"
-    },
-    {
-      "symbol": "POWR_USDT",
-      "direction": "short",
-      "change": -1.58,
-      "price": 0.0623,
-      "score": 158,
-      "category": "山寨"
-    },
-    {
-      "symbol": "WAVES_USDT",
-      "direction": "short",
-      "change": -1.57,
-      "price": 0.4769,
-      "score": 157,
-      "category": "山寨"
-    },
-    {
-      "symbol": "IAU_USDT",
-      "direction": "long",
-      "change": 1.57,
-      "price": 99.19,
-      "score": 157,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ZBCN_USDT",
-      "direction": "short",
-      "change": -1.57,
-      "price": 0.0019998,
-      "score": 157,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ATOM_USDT",
-      "direction": "short",
-      "change": -1.55,
-      "price": 1.84,
-      "score": 155,
-      "category": "山寨"
-    },
-    {
-      "symbol": "HOOK_USDT",
-      "direction": "short",
-      "change": -1.55,
-      "price": 0.02292,
-      "score": 155,
+      "change": 1.63,
+      "price": 340.7,
+      "score": 163,
       "category": "山寨"
     },
     {
       "symbol": "CAKE_USDT",
       "direction": "short",
-      "change": -1.55,
-      "price": 1.2853,
-      "score": 155,
+      "change": -1.61,
+      "price": 1.286,
+      "score": 161,
       "category": "山寨"
     },
     {
-      "symbol": "AKT_USDT",
+      "symbol": "AIOT_USDT",
+      "direction": "long",
+      "change": 1.6,
+      "price": 0.02162,
+      "score": 160,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AWE_USDT",
+      "direction": "short",
+      "change": -1.59,
+      "price": 0.05275,
+      "score": 159,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TUT_USDT",
+      "direction": "short",
+      "change": -1.59,
+      "price": 0.00993,
+      "score": 159,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AMD_USDT",
+      "direction": "short",
+      "change": -1.58,
+      "price": 199.8,
+      "score": 158,
+      "category": "山寨"
+    },
+    {
+      "symbol": "VANA_USDT",
+      "direction": "short",
+      "change": -1.57,
+      "price": 1.438,
+      "score": 157,
+      "category": "山寨"
+    },
+    {
+      "symbol": "BLAST_USDT",
       "direction": "short",
       "change": -1.55,
-      "price": 0.3039,
+      "price": 0.000509,
       "score": 155,
       "category": "山寨"
     },
     {
       "symbol": "SUN_USDT",
       "direction": "short",
+      "change": -1.54,
+      "price": 0.015908,
+      "score": 154,
+      "category": "山寨"
+    },
+    {
+      "symbol": "AIOZ_USDT",
+      "direction": "short",
+      "change": -1.53,
+      "price": 0.0644,
+      "score": 153,
+      "category": "山寨"
+    },
+    {
+      "symbol": "JDON_USDT",
+      "direction": "short",
       "change": -1.52,
-      "price": 0.01591,
+      "price": 26.51,
       "score": 152,
       "category": "山寨"
     },
     {
-      "symbol": "DOT_USDT",
-      "direction": "long",
-      "change": 1.52,
-      "price": 1.607,
-      "score": 152,
+      "symbol": "BEAMX_USDT",
+      "direction": "short",
+      "change": -1.51,
+      "price": 0.001897,
+      "score": 151,
       "category": "山寨"
     },
     {
-      "symbol": "ES_USDT",
-      "direction": "long",
-      "change": 1.5,
-      "price": 0.1492,
+      "symbol": "LUMIA_USDT",
+      "direction": "short",
+      "change": -1.5,
+      "price": 0.0592,
       "score": 150,
       "category": "山寨"
     },
     {
-      "symbol": "GIGGLE_USDT",
+      "symbol": "STX_USDT",
       "direction": "short",
-      "change": -1.49,
-      "price": 26.47,
-      "score": 149,
+      "change": -1.5,
+      "price": 0.2555,
+      "score": 150,
       "category": "山寨"
     },
     {
-      "symbol": "MMT_USDT",
-      "direction": "short",
-      "change": -1.48,
-      "price": 0.12,
+      "symbol": "KO_USDT",
+      "direction": "long",
+      "change": 1.48,
+      "price": 81.73,
       "score": 148,
       "category": "山寨"
     },
@@ -3826,122 +3994,90 @@
       "category": "山寨"
     },
     {
-      "symbol": "TAC_USDT",
-      "direction": "short",
-      "change": -1.47,
-      "price": 0.00402,
-      "score": 147,
-      "category": "山寨"
-    },
-    {
-      "symbol": "RENDER_USDT",
-      "direction": "short",
-      "change": -1.47,
-      "price": 1.405,
-      "score": 147,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BEAMX_USDT",
-      "direction": "short",
-      "change": -1.45,
-      "price": 0.001899,
-      "score": 145,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AEVO_USDT",
+      "symbol": "FLUID_USDT",
       "direction": "long",
-      "change": 1.45,
-      "price": 0.0231,
-      "score": 145,
+      "change": 1.47,
+      "price": 2.135,
+      "score": 147,
       "category": "山寨"
     },
     {
-      "symbol": "ORCA_USDT",
+      "symbol": "HOOK_USDT",
+      "direction": "short",
+      "change": -1.46,
+      "price": 0.02294,
+      "score": 146,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ATOM_USDT",
       "direction": "short",
       "change": -1.45,
-      "price": 0.886,
+      "price": 1.837,
       "score": 145,
       "category": "山寨"
     },
     {
-      "symbol": "BAN_USDT",
+      "symbol": "HMSTR_USDT",
       "direction": "short",
       "change": -1.44,
-      "price": 0.11333,
+      "price": 0.0001575,
       "score": 144,
       "category": "山寨"
     },
     {
-      "symbol": "NTRN_USDT",
-      "direction": "long",
-      "change": 1.43,
-      "price": 0.01133,
+      "symbol": "VFY_USDT",
+      "direction": "short",
+      "change": -1.43,
+      "price": 0.01586,
       "score": 143,
       "category": "山寨"
     },
     {
-      "symbol": "ONT_USDT",
-      "direction": "long",
-      "change": 1.4,
-      "price": 0.04356,
-      "score": 140,
+      "symbol": "IN_USDT",
+      "direction": "short",
+      "change": -1.43,
+      "price": 0.06752,
+      "score": 143,
       "category": "山寨"
     },
     {
-      "symbol": "FORM_USDT",
+      "symbol": "NIL_USDT",
+      "direction": "short",
+      "change": -1.43,
+      "price": 0.0484,
+      "score": 143,
+      "category": "山寨"
+    },
+    {
+      "symbol": "MOVE_USDT",
       "direction": "short",
       "change": -1.4,
-      "price": 0.1896,
+      "price": 0.0212,
       "score": 140,
       "category": "山寨"
     },
     {
-      "symbol": "MASK_USDT",
+      "symbol": "SOON_USDT",
       "direction": "short",
-      "change": -1.4,
-      "price": 0.422,
-      "score": 140,
-      "category": "山寨"
-    },
-    {
-      "symbol": "WAXP_USDT",
-      "direction": "short",
-      "change": -1.4,
-      "price": 0.00632,
-      "score": 140,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TAIKO_USDT",
-      "direction": "long",
-      "change": 1.39,
-      "price": 0.1239,
+      "change": -1.39,
+      "price": 0.1631,
       "score": 139,
       "category": "山寨"
     },
     {
-      "symbol": "ARK_USDT",
+      "symbol": "CVC_USDT",
       "direction": "short",
       "change": -1.38,
-      "price": 0.1787,
+      "price": 0.0314,
       "score": 138,
       "category": "山寨"
     },
     {
-      "symbol": "REZ_USDT",
+      "symbol": "TSLAX_USDT",
       "direction": "short",
       "change": -1.37,
-      "price": 0.00289,
-      "score": 137,
-      "category": "山寨"
-    },
-    {
-      "symbol": "JPM_USDT",
-      "direction": "short",
-      "change": -1.37,
-      "price": 299.95,
+      "price": 401.66,
       "score": 137,
       "category": "山寨"
     },
@@ -3954,227 +4090,267 @@
       "category": "山寨"
     },
     {
-      "symbol": "MANA_USDT",
-      "direction": "short",
-      "change": -1.35,
-      "price": 0.0952,
+      "symbol": "MAGIC_USDT",
+      "direction": "long",
+      "change": 1.35,
+      "price": 0.06312,
       "score": 135,
       "category": "山寨"
     },
     {
-      "symbol": "FORTH_USDT",
+      "symbol": "EGLD_USDT",
       "direction": "short",
-      "change": -1.34,
-      "price": 0.96,
-      "score": 134,
+      "change": -1.35,
+      "price": 4.39,
+      "score": 135,
       "category": "山寨"
     },
     {
-      "symbol": "LUMIA_USDT",
-      "direction": "short",
-      "change": -1.33,
-      "price": 0.0592,
+      "symbol": "CSCO_USDT",
+      "direction": "long",
+      "change": 1.33,
+      "price": 79.36,
       "score": 133,
       "category": "山寨"
     },
     {
-      "symbol": "OG_USDT",
-      "direction": "short",
-      "change": -1.33,
-      "price": 2.959,
-      "score": 133,
+      "symbol": "草根文化_USDT",
+      "direction": "long",
+      "change": 1.32,
+      "price": 0.0006389,
+      "score": 132,
       "category": "山寨"
     },
     {
-      "symbol": "VANA_USDT",
+      "symbol": "PLUME_USDT",
       "direction": "short",
-      "change": -1.3,
-      "price": 1.439,
-      "score": 130,
+      "change": -1.29,
+      "price": 0.00921,
+      "score": 129,
+      "category": "山寨"
+    },
+    {
+      "symbol": "LRC_USDT",
+      "direction": "short",
+      "change": -1.28,
+      "price": 0.0323,
+      "score": 128,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TWT_USDT",
+      "direction": "long",
+      "change": 1.27,
+      "price": 0.5021,
+      "score": 127,
+      "category": "山寨"
+    },
+    {
+      "symbol": "XCU_USDT",
+      "direction": "long",
+      "change": 1.27,
+      "price": 6.064,
+      "score": 127,
+      "category": "山寨"
+    },
+    {
+      "symbol": "OP_USDT",
+      "direction": "short",
+      "change": -1.26,
+      "price": 0.1177,
+      "score": 126,
       "category": "山寨"
     },
     {
       "symbol": "MNT_USDT",
       "direction": "short",
-      "change": -1.3,
+      "change": -1.24,
       "price": 0.6295,
-      "score": 130,
+      "score": 124,
       "category": "山寨"
     },
     {
-      "symbol": "ASML_USDT",
+      "symbol": "AUCTION_USDT",
       "direction": "short",
-      "change": -1.3,
-      "price": 1449.53,
-      "score": 130,
+      "change": -1.23,
+      "price": 4.816,
+      "score": 123,
       "category": "山寨"
     },
     {
-      "symbol": "MOCA_USDT",
-      "direction": "short",
-      "change": -1.29,
-      "price": 0.01606,
-      "score": 129,
-      "category": "山寨"
-    },
-    {
-      "symbol": "FIDA_USDT",
-      "direction": "short",
-      "change": -1.29,
-      "price": 0.01536,
-      "score": 129,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SFP_USDT",
+      "symbol": "GOOGLX_USDT",
       "direction": "long",
-      "change": 1.28,
-      "price": 0.261,
-      "score": 128,
+      "change": 1.2,
+      "price": 310.16,
+      "score": 120,
       "category": "山寨"
     },
     {
-      "symbol": "TNSR_USDT",
+      "symbol": "F_USDT",
       "direction": "short",
-      "change": -1.28,
-      "price": 0.0463,
-      "score": 128,
-      "category": "山寨"
-    },
-    {
-      "symbol": "USUAL_USDT",
-      "direction": "short",
-      "change": -1.27,
-      "price": 0.01246,
-      "score": 127,
-      "category": "山寨"
-    },
-    {
-      "symbol": "KNC_USDT",
-      "direction": "long",
-      "change": 1.27,
-      "price": 0.1354,
-      "score": 127,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TSLAX_USDT",
-      "direction": "short",
-      "change": -1.26,
-      "price": 402.22,
-      "score": 126,
+      "change": -1.2,
+      "price": 0.00578,
+      "score": 120,
       "category": "山寨"
     },
     {
       "symbol": "ALT_USDT",
       "direction": "short",
       "change": -1.2,
-      "price": 0.00742,
+      "price": 0.0074,
       "score": 120,
       "category": "山寨"
     },
     {
-      "symbol": "CSCO_USDT",
-      "direction": "long",
-      "change": 1.2,
-      "price": 79.1,
-      "score": 120,
-      "category": "山寨"
-    },
-    {
-      "symbol": "PI_USDT",
-      "direction": "long",
-      "change": 1.2,
-      "price": 0.1692,
-      "score": 120,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AUCTION_USDT",
+      "symbol": "JPM_USDT",
       "direction": "short",
-      "change": -1.17,
-      "price": 4.822,
-      "score": 117,
+      "change": -1.19,
+      "price": 300.21,
+      "score": 119,
       "category": "山寨"
     },
     {
-      "symbol": "PARTI_USDT",
+      "symbol": "COTI_USDT",
+      "direction": "short",
+      "change": -1.19,
+      "price": 0.01165,
+      "score": 119,
+      "category": "山寨"
+    },
+    {
+      "symbol": "XAN_USDT",
+      "direction": "long",
+      "change": 1.18,
+      "price": 0.00685,
+      "score": 118,
+      "category": "山寨"
+    },
+    {
+      "symbol": "CYBER_USDT",
+      "direction": "short",
+      "change": -1.16,
+      "price": 0.5382,
+      "score": 116,
+      "category": "山寨"
+    },
+    {
+      "symbol": "PEP_USDT",
+      "direction": "long",
+      "change": 1.16,
+      "price": 169.89,
+      "score": 116,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ANIME_USDT",
       "direction": "long",
       "change": 1.14,
-      "price": 0.098,
+      "price": 0.004964,
       "score": 114,
       "category": "山寨"
     },
     {
-      "symbol": "ENJ_USDT",
+      "symbol": "ID_USDT",
       "direction": "short",
-      "change": -1.11,
-      "price": 0.01958,
-      "score": 111,
+      "change": -1.13,
+      "price": 0.0439,
+      "score": 113,
+      "category": "山寨"
+    },
+    {
+      "symbol": "SFP_USDT",
+      "direction": "long",
+      "change": 1.13,
+      "price": 0.2606,
+      "score": 113,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ASML_USDT",
+      "direction": "short",
+      "change": -1.12,
+      "price": 1447.55,
+      "score": 112,
+      "category": "山寨"
+    },
+    {
+      "symbol": "APR_USDT",
+      "direction": "short",
+      "change": -1.1,
+      "price": 0.09178,
+      "score": 110,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ONT_USDT",
+      "direction": "long",
+      "change": 1.1,
+      "price": 0.04323,
+      "score": 110,
       "category": "山寨"
     },
     {
       "symbol": "METAX_USDT",
       "direction": "short",
-      "change": -1.11,
-      "price": 646.54,
-      "score": 111,
+      "change": -1.1,
+      "price": 646.27,
+      "score": 110,
       "category": "山寨"
     },
     {
-      "symbol": "STABLE_USDT",
-      "direction": "long",
-      "change": 1.1,
-      "price": 0.03574,
-      "score": 110,
+      "symbol": "FIO_USDT",
+      "direction": "short",
+      "change": -1.09,
+      "price": 0.0082,
+      "score": 109,
       "category": "山寨"
     },
     {
       "symbol": "VIC_USDT",
       "direction": "short",
       "change": -1.09,
-      "price": 0.0453,
+      "price": 0.0452,
       "score": 109,
       "category": "山寨"
     },
     {
-      "symbol": "NOT_USDT",
-      "direction": "short",
-      "change": -1.08,
-      "price": 0.000367,
+      "symbol": "MITO_USDT",
+      "direction": "long",
+      "change": 1.08,
+      "price": 0.03827,
       "score": 108,
       "category": "山寨"
     },
     {
-      "symbol": "CELR_USDT",
+      "symbol": "TA_USDT",
       "direction": "short",
-      "change": -1.06,
-      "price": 0.002436,
-      "score": 106,
+      "change": -1.07,
+      "price": 0.03778,
+      "score": 107,
       "category": "山寨"
     },
     {
-      "symbol": "TRX_USDT",
+      "symbol": "TNSR_USDT",
       "direction": "short",
-      "change": -1.04,
-      "price": 0.28267,
-      "score": 104,
+      "change": -1.07,
+      "price": 0.0463,
+      "score": 107,
       "category": "山寨"
     },
     {
-      "symbol": "GOOGLX_USDT",
+      "symbol": "PARTI_USDT",
       "direction": "long",
       "change": 1.03,
-      "price": 309.91,
+      "price": 0.0978,
       "score": 103,
       "category": "山寨"
     },
     {
-      "symbol": "草根文化_USDT",
-      "direction": "long",
-      "change": 1.03,
-      "price": 0.0006389,
-      "score": 103,
+      "symbol": "PUFFER_USDT",
+      "direction": "short",
+      "change": -1.02,
+      "price": 0.0292,
+      "score": 102,
       "category": "山寨"
     },
     {
@@ -4194,243 +4370,147 @@
       "category": "山寨"
     },
     {
-      "symbol": "WCT_USDT",
+      "symbol": "ARB_USDT",
       "direction": "short",
-      "change": -1.01,
-      "price": 0.0588,
-      "score": 101,
+      "change": -1,
+      "price": 0.0986,
+      "score": 100,
       "category": "山寨"
     },
     {
-      "symbol": "NIL_USDT",
-      "direction": "short",
-      "change": -1.01,
-      "price": 0.0488,
-      "score": 101,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ARM_USDT",
+      "symbol": "AI_USDT",
       "direction": "short",
       "change": -0.99,
-      "price": 127.56,
+      "price": 0.02004,
       "score": 99,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SAGA_USDT",
-      "direction": "short",
-      "change": -0.98,
-      "price": 0.0303,
-      "score": 98,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CVC_USDT",
-      "direction": "short",
-      "change": -0.97,
-      "price": 0.03152,
-      "score": 97,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SOON_USDT",
-      "direction": "short",
-      "change": -0.97,
-      "price": 0.1636,
-      "score": 97,
-      "category": "山寨"
-    },
-    {
-      "symbol": "KO_USDT",
-      "direction": "long",
-      "change": 0.97,
-      "price": 81.36,
-      "score": 97,
-      "category": "山寨"
-    },
-    {
-      "symbol": "SUPER_USDT",
-      "direction": "short",
-      "change": -0.96,
-      "price": 0.1138,
-      "score": 96,
-      "category": "山寨"
-    },
-    {
-      "symbol": "FLOCK_USDT",
-      "direction": "short",
-      "change": -0.95,
-      "price": 0.06269,
-      "score": 95,
-      "category": "山寨"
-    },
-    {
-      "symbol": "HMSTR_USDT",
-      "direction": "short",
-      "change": -0.94,
-      "price": 0.0001585,
-      "score": 94,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BIO_USDT",
-      "direction": "short",
-      "change": -0.93,
-      "price": 0.02244,
-      "score": 93,
-      "category": "山寨"
-    },
-    {
-      "symbol": "AIA_USDT",
-      "direction": "long",
-      "change": 0.92,
-      "price": 0.08537,
-      "score": 92,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CKB_USDT",
-      "direction": "short",
-      "change": -0.91,
-      "price": 0.001526,
-      "score": 91,
-      "category": "山寨"
-    },
-    {
-      "symbol": "TUT_USDT",
-      "direction": "short",
-      "change": -0.89,
-      "price": 0.00997,
-      "score": 89,
-      "category": "山寨"
-    },
-    {
-      "symbol": "IEFA_USDT",
-      "direction": "short",
-      "change": -0.89,
-      "price": 98.32,
-      "score": 89,
-      "category": "山寨"
-    },
-    {
-      "symbol": "US30_USDT",
-      "direction": "short",
-      "change": -0.88,
-      "price": 48886.97,
-      "score": 88,
-      "category": "山寨"
-    },
-    {
-      "symbol": "MOVR_USDT",
-      "direction": "long",
-      "change": 0.87,
-      "price": 1.27,
-      "score": 87,
-      "category": "山寨"
-    },
-    {
-      "symbol": "A_USDT",
-      "direction": "short",
-      "change": -0.87,
-      "price": 0.0795,
-      "score": 87,
-      "category": "山寨"
-    },
-    {
-      "symbol": "ASTER_USDT",
-      "direction": "short",
-      "change": -0.86,
-      "price": 0.6946,
-      "score": 86,
-      "category": "山寨"
-    },
-    {
-      "symbol": "BAND_USDT",
-      "direction": "short",
-      "change": -0.86,
-      "price": 0.2071,
-      "score": 86,
       "category": "山寨"
     },
     {
       "symbol": "XAI_USDT",
       "direction": "long",
-      "change": 0.85,
-      "price": 0.00952,
-      "score": 85,
+      "change": 0.95,
+      "price": 0.00955,
+      "score": 95,
       "category": "山寨"
     },
     {
-      "symbol": "XCU_USDT",
-      "direction": "long",
-      "change": 0.85,
-      "price": 6.042,
-      "score": 85,
+      "symbol": "MTL_USDT",
+      "direction": "short",
+      "change": -0.94,
+      "price": 0.2752,
+      "score": 94,
       "category": "山寨"
     },
     {
-      "symbol": "MAGIC_USDT",
-      "direction": "long",
-      "change": 0.84,
-      "price": 0.06262,
+      "symbol": "ENJ_USDT",
+      "direction": "short",
+      "change": -0.91,
+      "price": 0.01957,
+      "score": 91,
+      "category": "山寨"
+    },
+    {
+      "symbol": "TRX_USDT",
+      "direction": "short",
+      "change": -0.91,
+      "price": 0.28263,
+      "score": 91,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ASTER_USDT",
+      "direction": "short",
+      "change": -0.9,
+      "price": 0.6941,
+      "score": 90,
+      "category": "山寨"
+    },
+    {
+      "symbol": "US30_USDT",
+      "direction": "short",
+      "change": -0.89,
+      "price": 48886.33,
+      "score": 89,
+      "category": "山寨"
+    },
+    {
+      "symbol": "NMR_USDT",
+      "direction": "short",
+      "change": -0.87,
+      "price": 7.832,
+      "score": 87,
+      "category": "山寨"
+    },
+    {
+      "symbol": "INIT_USDT",
+      "direction": "short",
+      "change": -0.87,
+      "price": 0.0796,
+      "score": 87,
+      "category": "山寨"
+    },
+    {
+      "symbol": "ALPINE_USDT",
+      "direction": "short",
+      "change": -0.84,
+      "price": 0.4253,
       "score": 84,
       "category": "山寨"
     },
     {
-      "symbol": "RED_USDT",
-      "direction": "long",
-      "change": 0.81,
-      "price": 0.1621,
-      "score": 81,
-      "category": "山寨"
-    },
-    {
-      "symbol": "CVX_USDT",
+      "symbol": "LISTA_USDT",
       "direction": "short",
-      "change": -0.81,
-      "price": 1.72,
-      "score": 81,
+      "change": -0.84,
+      "price": 0.0828,
+      "score": 84,
       "category": "山寨"
     },
     {
-      "symbol": "SKR_USDT",
+      "symbol": "DRIFT_USDT",
       "direction": "short",
-      "change": -0.8,
-      "price": 0.020903,
-      "score": 80,
+      "change": -0.83,
+      "price": 0.0832,
+      "score": 83,
       "category": "山寨"
     },
     {
-      "symbol": "AI_USDT",
+      "symbol": "SATS_USDT",
+      "direction": "short",
+      "change": -0.82,
+      "price": 1.09e-8,
+      "score": 82,
+      "category": "山寨"
+    },
+    {
+      "symbol": "LAYER_USDT",
       "direction": "long",
-      "change": 0.8,
-      "price": 0.02021,
-      "score": 80,
+      "change": 0.82,
+      "price": 0.086,
+      "score": 82,
       "category": "山寨"
     },
     {
       "symbol": "PEPE_USDT",
       "direction": "short",
-      "change": -3.9,
-      "price": 0.000003674,
-      "score": 390,
+      "change": -4.62,
+      "price": 0.000003658,
+      "score": 462,
       "category": "瘋狗"
     },
     {
       "symbol": "DOGE_USDT",
       "direction": "short",
-      "change": -3.73,
-      "price": 0.093,
-      "score": 373,
+      "change": -4.04,
+      "price": 0.09302,
+      "score": 404,
       "category": "瘋狗"
     },
     {
       "symbol": "WIF_USDT",
       "direction": "short",
-      "change": -2.3,
-      "price": 0.2036,
-      "score": 230,
+      "change": -3.3,
+      "price": 0.2025,
+      "score": 330,
       "category": "瘋狗"
     }
   ]
